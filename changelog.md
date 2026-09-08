@@ -2,6 +2,7 @@
 
 ## 2026-09-08
 
+- [debug] DEBUG task F1-T007: preview em tela em branco → causa raiz: `src/pages/Index.tsx` renderizava apenas um `div` vazio; interface de triagem criada e backend oficial configurado; correção aplicada.
 - [liderança comercial] Task F1-T003 concluída: contrato de campos da triagem registrado — proximidade (1º, obrigatório), objetivo (2º, obrigatório), ocupacao (3º, opcional), interesse_em_visita (4º, obrigatório), com textos, opções e ordem aprovados.
 - [liderança comercial] Task F1-T005 concluída: regras de distribuição e encerramento registradas — estados PENDENTE, ASSUMIDO e ENCERRADO_SEM_AGENDAMENTO; transições definidas (PENDENTE→ASSUMIDO por quem assume; ASSUMIDO→ENCERRADO com motivo obrigatório; ENCERRADO é estado final); reatribuição exclusiva da liderança/perfil autorizado com histórico preservado; encerramento pelo responsável ou gestão, com motivo livre obrigatório e registro completo (responsável, data/hora, motivo, responsável anterior).
 
