@@ -13,83 +13,9 @@
 | F1-T005 | Registrar regras de distribuição e encerramento humano | Liderança Comercial | SPEC-1-002 | Estados permitidos, responsável por transição e regra de reatribuição/encerramento estão aprovados. | `## BLOQUEIOS executáveis` (distribuição e encerramento) | Conferência documental do segundo bloqueio da SPEC-1-002; nenhum estado é configurado em ferramenta. | Liderança Comercial fornece as regras aprovadas. | Pare se uma transição, reatribuição ou encerramento não tiver responsável; não criar regra automática. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-08 |
 | F1-T006 | Registrar permissões mínimas do encaminhamento humano | Champion do cliente | SPEC-1-002 | Matriz curta define permissões de leitura, assunção, reatribuição e publicação para Champion e Consultor Comercial. | `## BLOQUEIOS executáveis` (papéis mínimos) | Conferência documental do terceiro bloqueio da SPEC-1-002; nenhuma permissão é concedida. | Champion confirma os papéis mínimos. | Pare se uma permissão ou papel estiver ausente; não alterar acesso de sistema. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-08-21 |
 
-## Decisão registrada — F1-T001
-
-- **Plataforma:** Skip
-- **URL de teste/produção:** https://fellice-fitness-8733f--preview.goskip.app (preview) / https://fellice-fitness-8733f.goskip.app (produção)
-- **Builder:** https://goskip.dev/rifelice-a3196/builder/09feac62-d564-4c83-969d-b786af1576ff
-- **Publicadores:** Karol e Márcio (ambos podem publicar versões)
-
-## Decisão registrada — F1-T002
-
-- **Canal operacional:** WhatsApp, telefone e e-mail
-- **Turno manhã:** Jaqueline
-- **Turno tarde:** Camila
-- **Turno noite:** Rodrigo
-- **Fim de semana:** regime de escala, alternando entre Jaqueline, Camila e Rodrigo
-- **Supervisora comercial:** Mel
-
-## Decisão registrada — F1-T003
-
-| Ordem | Campo | Pergunta | Opções | Obrigatório |
-|---|---|---|---|---|
-| 1º | `proximidade` | "Mora ou trabalha perto?" | Moro no Itaigara ou em bairros vizinhos (Pituba, Caminho das Árvores, Costa Azul); Trabalho na região do Itaigara; Passo com frequência pela região; Moro/trabalho em outra região, mas me desloco para treinar; Ainda não conheço bem a região | Sim |
-| 2º | `objetivo` | "Qual é o seu principal objetivo ao procurar uma academia hoje?" | Emagrecimento; Ganho de massa muscular; Condicionamento físico e resistência; Saúde, mobilidade e qualidade de vida; Recuperação de lesões; Melhorar a performance esportiva; Ainda não defini meu objetivo | Sim |
-| 3º | `ocupacao` | "Qual é a sua ocupação atual?" | CLT; Autônomo/Empresário; Executivo/Gestor; Estudante; Aposentado; Profissional da saúde, educação ou outra área com horário irregular; Prefiro não informar | Não |
-| 4º | `interesse_em_visita` | "Você tem interesse em conhecer a academia e fazer uma aula experimental?" | Sim, quero agendar uma visita presencial; Sim, quero agendar uma aula experimental; Quero receber mais informações antes de decidir; Não tenho interesse no momento | Sim |
-
-## Decisão registrada — F1-T004
-
-- **Base legal:** Lei Geral de Proteção de Dados (LGPD)
-- **Texto de consentimento:** "O lead autoriza que a ACADEMIA se utilize dos meios eletrônicos (e-mail, telefone, mensagens SMS e Whatsapp) com o objetivo de enviar notícias, avisos, dicas, promoções e outras informações relevantes acerca do funcionamento da academia."
-- **Cobertura:** e-mail, telefone, SMS e WhatsApp
-
-## Decisão registrada — F1-T005
-
-### Estados permitidos
-
-- `PENDENTE` — caso encaminhado, mas ainda não assumido pelo responsável.
-- `ASSUMIDO` — caso recebido e assumido pelo responsável pelo atendimento.
-- `ENCERRADO_SEM_AGENDAMENTO` — caso encerrado sem agendamento realizado.
-
-Nenhum outro estado pode existir sem nova aprovação da Liderança Comercial.
-
-### Transições de estado
-
-| Transição | Quem realiza | Condição |
-|---|---|---|
-| PENDENTE → ASSUMIDO | Responsável que assume o caso | Assunção direta |
-| ASSUMIDO → ENCERRADO_SEM_AGENDAMENTO | Responsável pelo atendimento | Motivo do encerramento obrigatório |
-| PENDENTE → ENCERRADO_SEM_AGENDAMENTO | — | Não deve ocorrer diretamente; o caso deve ser assumido antes |
-| ENCERRADO_SEM_AGENDAMENTO → qualquer | — | Estado final; não retorna |
-
-A liderança/gestão pode intervir quando necessário, respeitando a matriz de permissões da F1-T006.
-
-### Reatribuição
-
-- **Quem:** exclusivamente liderança/perfil autorizado (não o responsável comum do caso).
-- **Quando:** por necessidade operacional — ausência ou indisponibilidade do responsável, troca de turno, redistribuição de carteira, erro na distribuição inicial ou determinação da liderança comercial.
-- **Regra:** o caso passa ao novo responsável com histórico preservado; a reatribuição não apaga nem reinicia o histórico de atendimento.
-
-### Encerramento sem agendamento
-
-- **Quem:** responsável pelo atendimento ou usuário com permissão de gestão.
-- **Quando:** após o atendimento, quando não houver agendamento a realizar ou a oportunidade não puder/não fizer sentido prosseguir naquele momento.
-- **Motivo:** obrigatório, de preenchimento livre, para preservar o contexto da decisão.
-- **Registro mínimo no histórico:** responsável pelo encerramento; data e hora; motivo informado; responsável anterior, caso tenha ocorrido reatribuição.
-
-## Decisão registrada — F1-T006
-
-| Ação | Champion (Karol/Márcio) | Consultor Comercial |
-|---|---|---|
-| Ler a fila | ✅ | ✅ |
-| Assumir caso | ✅ | ✅ |
-| Reatribuir caso | ✅ | ❌ |
-| Publicar versões | ✅ | ❌ |
-
 ## Leva 2 — Construção
 
 | ID | Task | Dono | SPEC | Critério | Evidência esperada | Status |
 |---|---|---|---|---|---|---|
 | F1-T007 | Formulário de captura e triagem rastreável | Executor com aprovação do Champion | SPEC-1-001 | Formulário, persistência, eventos, UTMs e consentimento LGPD funcionando | QA Skip 0.0.8, submissão/evento HTTP 200 e aprovação humana no preview | ✅ concluída — 2026-09-08 |
-| F1-T008 | Fila de encaminhamento humano com contexto preservado | Executor com aprovação do Champion | SPEC-1-002 | Fila, estados, permissões e histórico funcionando sem integração externa | Análise e depois QA/teste humano | pendente — aguarda análise |
+| F1-T008 | Fila de encaminhamento humano com contexto preservado | Executor com aprovação do Champion | SPEC-1-002 | Fila, estados, permissões e histórico funcionando sem integração externa | QA Skip 0.0.12, handoff/evento HTTP 200, usuário consultor validado e aprovação humana no preview | ✅ concluída — 2026-09-08 |
