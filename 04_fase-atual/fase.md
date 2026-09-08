@@ -10,7 +10,7 @@
 | F1-T002 | Registrar canal humano e cobertura por turno | Champion do cliente | SPEC-1-002 | Canal operacional está nomeado e cada turno tem responsável identificado. | `## BLOQUEIOS executáveis` (canal e responsável por turno) | Conferência documental do primeiro bloqueio da SPEC-1-002; nenhuma fila, webhook ou mensagem é criada. | Champion tem a decisão de canal e cobertura. | Pare se houver canal ou turno sem responsável; não apontar WhatsApp, CRM ou outro destino. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-08-21 |
 | F1-T003 | Registrar contrato de campos da triagem | Liderança Comercial | SPEC-1-001 | A tabela aprovada define texto, ordem, opções e obrigatoriedade de `objetivo`, `proximidade`, `ocupacao` e `interesse_em_visita`. | `## BLOQUEIOS executáveis` (contrato de respostas) | Conferência documental do segundo bloqueio da SPEC-1-001; nenhum campo é configurado na plataforma. | Liderança Comercial fornece as escolhas aprovadas. | Pare se qualquer campo/valor/opção estiver ausente ou ambíguo; não inventar resposta padrão. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-08 |
 | F1-T004 | Registrar aviso de privacidade e consentimento | Champion do cliente | SPEC-1-001 | Texto ou referência exata do aviso/consentimento aplicável ao contato está aprovado e registrado. | `## BLOQUEIOS executáveis` (privacidade/consentimento) | Conferência documental do terceiro bloqueio da SPEC-1-001; nenhum dado real é coletado. | Champion fornece o texto ou a referência aprovada. | Pare se o aviso não cobrir a coleta de contato; não redigir ou publicar por inferência. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-08-21 |
-| F1-T005 | Registrar regras de distribuição e encerramento humano | Liderança Comercial | SPEC-1-002 | Estados permitidos, responsável por transição e regra de reatribuição/encerramento estão aprovados. | `## BLOQUEIOS executáveis` (distribuição e encerramento) | Conferência documental do segundo bloqueio da SPEC-1-002; nenhum estado é configurado em ferramenta. | Liderança Comercial fornece as regras aprovadas. | Pare se uma transição, reatribuição ou encerramento não tiver responsável; não criar regra automática. | bloqueada — aguarda decisão humana | pendente |
+| F1-T005 | Registrar regras de distribuição e encerramento humano | Liderança Comercial | SPEC-1-002 | Estados permitidos, responsável por transição e regra de reatribuição/encerramento estão aprovados. | `## BLOQUEIOS executáveis` (distribuição e encerramento) | Conferência documental do segundo bloqueio da SPEC-1-002; nenhum estado é configurado em ferramenta. | Liderança Comercial fornece as regras aprovadas. | Pare se uma transição, reatribuição ou encerramento não tiver responsável; não criar regra automática. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-08 |
 | F1-T006 | Registrar permissões mínimas do encaminhamento humano | Champion do cliente | SPEC-1-002 | Matriz curta define permissões de leitura, assunção, reatribuição e publicação para Champion e Consultor Comercial. | `## BLOQUEIOS executáveis` (papéis mínimos) | Conferência documental do terceiro bloqueio da SPEC-1-002; nenhuma permissão é concedida. | Champion confirma os papéis mínimos. | Pare se uma permissão ou papel estiver ausente; não alterar acesso de sistema. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-08-21 |
 
 ## Decisão registrada — F1-T001
@@ -43,6 +43,40 @@
 - **Base legal:** Lei Geral de Proteção de Dados (LGPD)
 - **Texto de consentimento:** "O lead autoriza que a ACADEMIA se utilize dos meios eletrônicos (e-mail, telefone, mensagens SMS e Whatsapp) com o objetivo de enviar notícias, avisos, dicas, promoções e outras informações relevantes acerca do funcionamento da academia."
 - **Cobertura:** e-mail, telefone, SMS e WhatsApp
+
+## Decisão registrada — F1-T005
+
+### Estados permitidos
+
+- `PENDENTE` — caso encaminhado, mas ainda não assumido pelo responsável.
+- `ASSUMIDO` — caso recebido e assumido pelo responsável pelo atendimento.
+- `ENCERRADO_SEM_AGENDAMENTO` — caso encerrado sem agendamento realizado.
+
+Nenhum outro estado pode existir sem nova aprovação da Liderança Comercial.
+
+### Transições de estado
+
+| Transição | Quem realiza | Condição |
+|---|---|---|
+| PENDENTE → ASSUMIDO | Responsável que assume o caso | Assunção direta |
+| ASSUMIDO → ENCERRADO_SEM_AGENDAMENTO | Responsável pelo atendimento | Motivo do encerramento obrigatório |
+| PENDENTE → ENCERRADO_SEM_AGENDAMENTO | — | Não deve ocorrer diretamente; o caso deve ser assumido antes |
+| ENCERRADO_SEM_AGENDAMENTO → qualquer | — | Estado final; não retorna |
+
+A liderança/gestão pode intervir quando necessário, respeitando a matriz de permissões da F1-T006.
+
+### Reatribuição
+
+- **Quem:** exclusivamente liderança/perfil autorizado (não o responsável comum do caso).
+- **Quando:** por necessidade operacional — ausência ou indisponibilidade do responsável, troca de turno, redistribuição de carteira, erro na distribuição inicial ou determinação da liderança comercial.
+- **Regra:** o caso passa ao novo responsável com histórico preservado; a reatribuição não apaga nem reinicia o histórico de atendimento.
+
+### Encerramento sem agendamento
+
+- **Quem:** responsável pelo atendimento ou usuário com permissão de gestão.
+- **Quando:** após o atendimento, quando não houver agendamento a realizar ou a oportunidade não puder/não fizer sentido prosseguir naquele momento.
+- **Motivo:** obrigatório, de preenchimento livre, para preservar o contexto da decisão.
+- **Registro mínimo no histórico:** responsável pelo encerramento; data e hora; motivo informado; responsável anterior, caso tenha ocorrido reatribuição.
 
 ## Decisão registrada — F1-T006
 
