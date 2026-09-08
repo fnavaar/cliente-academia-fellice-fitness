@@ -2,6 +2,8 @@
 
 ## 2026-09-08
 
+- [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano aprovado no preview.
+- [debug] DEBUG task F1-T008: lead era salvo, mas a fila não aparecia por falta de autenticação na visão do atendente; evento HANDOFF_CREATED falhava por regra de criação protegida; login autorizado e evento público de criação corrigidos, com leitura/ações protegidas.
 - [champion] Task F1-T007 concluída: formulário de captura e triagem rastreável implementado no Skip 51806, com persistência no Skip Cloud, campos aprovados, UTMs, eventos e consentimento LGPD; QA 0.0.8 passou e teste humano foi aprovado no preview.
 - [debug] DEBUG task F1-T007: falha no evento de conclusão corrigida usando `leadSubmissionId.current`; submissão e evento sintéticos retornaram HTTP 200.
 - [liderança comercial] Task F1-T003 concluída: contrato de campos da triagem registrado — proximidade (1º, obrigatório), objetivo (2º, obrigatório), ocupacao (3º, opcional), interesse_em_visita (4º, obrigatório), com textos, opções e ordem aprovados.
