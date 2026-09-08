@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-08
+
+- [liderança comercial] Task F1-T003 concluída: contrato de campos da triagem registrado — proximidade (1º, obrigatório), objetivo (2º, obrigatório), ocupacao (3º, opcional), interesse_em_visita (4º, obrigatório), com textos, opções e ordem aprovados.
+
 ## 2026-08-21
 
 - Preparada a base operacional local da Fase 1, com tasks e SPECs da fase atual.
