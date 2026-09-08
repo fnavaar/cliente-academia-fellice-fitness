@@ -86,3 +86,10 @@ A liderança/gestão pode intervir quando necessário, respeitando a matriz de p
 | Assumir caso | ✅ | ✅ |
 | Reatribuir caso | ✅ | ❌ |
 | Publicar versões | ✅ | ❌ |
+
+## Leva 2 — Construção
+
+| ID | Task | Dono | SPEC | Critério | Evidência esperada | Status |
+|---|---|---|---|---|---|---|
+| F1-T007 | Formulário de captura e triagem rastreável | Executor com aprovação do Champion | SPEC-1-001 | Formulário, persistência, eventos, UTMs e consentimento LGPD funcionando | QA Skip 0.0.8, submissão/evento HTTP 200 e aprovação humana no preview | ✅ concluída — 2026-09-08 |
+| F1-T008 | Fila de encaminhamento humano com contexto preservado | Executor com aprovação do Champion | SPEC-1-002 | Fila, estados, permissões e histórico funcionando sem integração externa | Análise e depois QA/teste humano | pendente — aguarda análise |
