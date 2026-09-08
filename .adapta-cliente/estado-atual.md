@@ -1,13 +1,13 @@
 # Estado atual — Adapta Cliente
 
-- task_id: F1-T007
+- task_id: F1-T008
 - champion: Karol e Márcio
-- spec: 04-fase-atual/specs/spec-1-001-captura-e-triagem-rastreavel.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada — 2026-09-08T15:31-03:00 — “implemente tudo! estamos muito atrasados...”
-- teste_humano: aprovado — 2026-09-08T16:09-03:00 — “testei o formulário, está aprovado”
-- verificacao_automatica: passou — Skip QA 0.0.8 aprovado; submissão e evento sintéticos retornaram HTTP 200; migrações aplicadas
-- aprendizado: capturado: 06_notas/aprendizado-continuo/AP-2026-09-08-1609-salvamento-evento.md
-- ultima_acao: F1-T007 concluída após revalidação automática, correção do salvamento e aprovação humana
-- proxima_acao: aguardar novo pedido para analisar a próxima task; não iniciar automaticamente
-- atualizado_em: 2026-09-08T16:09:00-03:00
+- spec: 04-fase-atual/specs/spec-1-002-encaminhamento-humano-com-contexto.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente
+- teste_humano: pendente
+- verificacao_automatica: pendente — análise de baseline concluída; nenhuma alteração de produto nesta etapa
+- aprendizado: pendente
+- ultima_acao: F1-T008 analisada; Skip Cloud e frontend auditados; fila de encaminhamento ainda não existe
+- proxima_acao: aguardar autorização explícita para implementar a fila de encaminhamento
+- atualizado_em: 2026-09-08T16:16:00-03:00
