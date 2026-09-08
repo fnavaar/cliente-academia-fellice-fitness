@@ -1,8 +1,8 @@
 # Status operacional
 
 - **Fase atual:** Fase 1 — porta de entrada qualificada e encaminhamento humano.
-- **Estado:** leva de desbloqueio completa (6/6). Todas as decisões humanas exigidas pelas SPECs estão registradas.
-- **Limite atual:** nenhuma publicação, conector ou ação externa foi executada. Publicação continua dependendo de aceite humano do Champion.
+- **Estado:** leva de desbloqueio completa (6/6) e primeira task de construção concluída após teste humano aprovado.
+- **Limite atual:** produção não publicada; fila de encaminhamento ainda não construída.
 
 ## Leva 1 — Desbloqueio (concluída)
 
@@ -15,13 +15,21 @@
 | F1-T005 | Registrar regras de distribuição e encerramento humano | Liderança Comercial | 2026-09-08 |
 | F1-T006 | Registrar permissões mínimas do encaminhamento humano | Champion | 2026-08-21 |
 
-## Próxima leva — Construção (a planejar)
+## Leva 2 — Construção
 
-As decisões registradas liberam o planejamento das tasks de construção contra as SPECs:
+| ID | Task | SPEC | Status |
+|---|---|---|---|
+| F1-T007 | Formulário de captura e triagem rastreável | SPEC-1-001 | ✅ concluída — 2026-09-08 |
+| F1-T008 | Fila de encaminhamento humano com contexto preservado | SPEC-1-002 | pendente — aguarda análise |
 
-| SPEC | Entrega | Bloqueios resolvidos |
-|---|---|---|
-| SPEC-1-001 | Formulário de captura e triagem rastreável (plataforma, campos, consentimento) | F1-T001, F1-T003, F1-T004 |
-| SPEC-1-002 | Fila de encaminhamento humano com contexto (estados, transições, permissões) | F1-T002, F1-T005, F1-T006 |
+### F1-T007 — Evidências
 
-**Próxima ação:** selecionar e analisar a primeira task de construção. A ordem sugerida pela SPEC-1-002 é validar SPEC-1-001 (formulário) antes da fila.
+- Projeto Skip 51806: Fellice Fitness
+- Preview: https://fellice-fitness-8733f--preview.goskip.app
+- Versão QA: 0.0.8
+- Skip Cloud: coleções de formulário, versões, submissões e eventos; migrações 0001–0004 aplicadas
+- QA: setup, análise estática, build, integrações e testes passaram
+- Teste humano: aprovado pelo responsável em 2026-09-08
+- Produção: ainda não publicada
+
+**Próxima ação permitida:** novo pedido para analisar F1-T008. Não iniciar automaticamente.
