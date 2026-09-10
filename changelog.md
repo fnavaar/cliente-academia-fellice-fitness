@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-10
+
+- [consultoria] Fase 2 liberada documentalmente no repositório do cliente: autoagendamento assistido e continuidade da jornada.
+- [consultoria] Publicadas SPEC-2-001 e SPEC-2-002 e as tasks F2-T001 a F2-T005.
+- [limite] Nenhuma alteração foi feita no app, Skip, banco ou integrações; as cinco tasks ativas são decisões humanas de desbloqueio.
+
 ## 2026-09-08
 
 - [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano aprovado no preview.

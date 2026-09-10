@@ -1,26 +1,26 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "phase": 1,
+  "phase": 2,
   "versions": {
     "package": "0.9.5",
     "adapta": "0.9.5",
     "adaptaCliente": "0.9.5"
   },
-  "generatedAt": "2026-08-21T14:48:40.825Z",
+  "generatedAt": "2026-09-10T13:18:00-03:00",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "aa59e949f02a0304124ed1dfd132111edfba8b49768b1b8286393a6077ad217e",
+      "sha256": "d179358c24b3164c249ced29900afd1ff2c3298b66983e53933aadef9900b535",
       "classification": "fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-1-001-captura-e-triagem-rastreavel.md",
-      "sha256": "f638769aee4edb5669a00628e6b3df0b8aa89717baf9b7b087f6e4b4cf10dc0d",
+      "path": "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md",
+      "sha256": "478175969a0a6ecd469cebad4276fa218bfd5013285e9eec2ec8f4d5824bf73f",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-1-002-encaminhamento-humano-com-contexto.md",
-      "sha256": "110b617cb5acb7e9e0b54f29609e9e0f6dcc07abe1ebe003e7852fc8cf7c08e5",
+      "path": "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md",
+      "sha256": "88124c6b6aae4d26e5ec68da9fd19cc8dafbcc3dd3f2856c6c19ba4c678cf13c",
       "classification": "spec-fase-atual"
     }
   ]
