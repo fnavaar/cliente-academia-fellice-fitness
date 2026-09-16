@@ -3,11 +3,11 @@
 - task_id: F2-T001
 - champion: Karol e Márcio
 - spec: 04-fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- etapa: bloqueada
-- autorizacao_implementacao: ausente
-- teste_humano: pendente
-- verificacao_automatica: pendente — análise documental concluída; nenhuma alteração no app, Skip ou banco
-- aprendizado: pendente
-- ultima_acao: F2-T001 analisada; duração, capacidade e grade inicial ainda não foram informadas pelo Subgerente Comercial
-- proxima_acao: registrar decisão aprovada sobre duração do slot, capacidade por horário e grade inicial
-- atualizado_em: 2026-09-16T08:45:48-03:00
+- etapa: concluida
+- autorizacao_implementacao: nao_aplicavel — task documental; decisão humana registrada
+- teste_humano: nao_aplicavel — registro conferido contra a decisão informada
+- verificacao_automatica: pendente — sem alteração de produto nesta task
+- aprendizado: sem_sinal: task documental sem falha técnica
+- ultima_acao: decisão do Subgerente Comercial registrada em fase.md, STATUS.md e changelog.md
+- proxima_acao: aguardar novo pedido para analisar F2-T002; não iniciar automaticamente
+- atualizado_em: 2026-09-16T11:52:00-03:00
