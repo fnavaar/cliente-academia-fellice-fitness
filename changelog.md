@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-16
+
+- [subgerente comercial] Task F2-T001 concluída: duração do slot de 30 minutos, capacidade padrão de 1 atendimento por slot e grade inicial registradas (segunda a sexta das 08:00 às 19:30; sábado das 09:00 às 13:30), com exceção de capacidade para 2 atendimentos simultâneos entre 11:30 e 16:30. Registro documental apenas; nenhum slot, agenda ou publicação foi criado no Skip.
+
 ## 2026-09-10
 
 - [consultoria] Fase 2 liberada documentalmente no repositório do cliente: autoagendamento assistido e continuidade da jornada.
