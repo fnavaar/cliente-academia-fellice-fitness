@@ -3,11 +3,11 @@
 - task_id: F2-T002
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- etapa: bloqueada
-- autorizacao_implementacao: nao_aplicavel — task documental; depende de decisão humana
+- etapa: concluida
+- autorizacao_implementacao: nao_aplicavel — task documental; decisão humana registrada
 - teste_humano: nao_aplicavel — registro conferido contra a decisão informada
 - verificacao_automatica: pendente — sem alteração de produto nesta task
-- aprendizado: pendente
-- ultima_acao: F2-T001 concluída (2026-09-16); F2-T002 analisada contra a SPEC-2-001
-- proxima_acao: aguardar decisão do Champion — papel e usuário responsável por manter e fechar a agenda
-- atualizado_em: 2026-09-16T11:58:00-03:00
+- aprendizado: sem_sinal: task documental executada sem falha técnica
+- ultima_acao: decisão do Champion registrada em fase.md, STATUS.md e changelog.md (papel Consultor Comercial; usuários Camila, Jaqueline e Rodrigo; Subgerente e Champion também podem exercer)
+- proxima_acao: aguardar novo pedido para analisar F2-T003; não iniciar automaticamente
+- atualizado_em: 2026-09-16T12:04:00-03:00
