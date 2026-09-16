@@ -1,7 +1,7 @@
 # SPEC-2-001 — Agenda de disponibilidade e reserva de horário
 
 **Fase:** 2  
-**Status:** bloqueada — configuração operacional pendente  
+**Status:** pronta para implementação controlada — configuração ainda não implementada  
 **Dono:** Subgerente Comercial, Champion do cliente e liderança Comercial  
 **Origem no escopo:** D-001, D-003, RQ-005 e Fase 2 de `03-Projeto/02-Escopo-Definitivo.md`  
 **Degrau da solução:** recurso nativo da plataforma de pré-agendamento — a disponibilidade é configurada manualmente pela operação; não integra agenda externa, Kommo, Lóvavel ou qualquer conector nesta fase.
@@ -11,7 +11,7 @@
 - **Estado atual:** leads qualificados chegam ao encaminhamento humano ou permanecem sem caminho de autoagendamento; a confirmação de horário depende de contato manual. Fontes: `03-Projeto/requisitos.md` §RQ-005; `03-Projeto/02-Escopo-Definitivo.md` §§Fase 1 e Fase 2.
 - **Estado desejado:** um lead que concluiu a triagem da SPEC-1-001 (ou que está em encaminhamento da SPEC-1-002) pode ver os horários disponíveis, selecionar um e criar uma tentativa de agendamento rastreável, sem dupla reserva e com os dados mínimos aprovados pelo Comercial.
 - **Decisões já fechadas:** a disponibilidade é configurada manualmente pela operação até que uma integração de agenda seja validada na Fase 4; não há confirmação automática D-1/D-0 nesta fase; não há integração de escrita com CRM ou agenda externa; falha de agenda encaminha para atendimento humano.
-- **Bloqueios:** duração do slot, capacidade por horário, horários e dias iniciais disponíveis, responsável por manter e fechar a agenda, e campos mínimos obrigatórios para conclusão do agendamento não estão documentados nas fontes. O Ethos deve preparar o roteiro de teste, mas deve parar antes de criar slots, configurar disponibilidade ou registrar qualquer tentativa real até esses itens serem registrados pelos responsáveis.
+- **Decisões documentais resolvidas:** duração, capacidade, grade, responsável pela agenda e campos mínimos foram registrados nas tasks F2-T001..F2-T003 em 16/09/2026. A implementação continua bloqueada por execução task a task, ambiente de teste, evidências e aceite humano; nenhuma decisão autoriza produção por inferência.
 
 ## BLOQUEIOS executáveis
 
@@ -121,15 +121,20 @@ Nesta fase, "agendamento concluído" significa tentativa com os campos mínimos 
 - **Como demonstrar:** processar fixtures válidos, com conflito, com desistência e sem slots; mostrar estados, `appointment_id`, contexto e eventos; desativar a grade em teste e confirmar que histórico não foi apagado; acionar SPEC-2-002 no cenário de encaminhamento.
 - **Como operar depois:** responsável da agenda (indicado pelo Champion) mantém e fecha slots; Subgerente ou Gestão monitora estado das tentativas; Liderança Comercial revisa campos mínimos antes de cada mudança de versão; Champion aprova toda publicação.
 - **Como monitorar:** volume de tentativas por estado (`TENTATIVA`, `CONCLUIDO`, `DESISTENCIA`, `ENCAMINHAMENTO_HUMANO`), conflitos detectados, slots abertos e capacidade restante; conversão para agendamento não é interpretada até a Fase 3.
-- **Pendência conhecida:** grade inicial, duração, capacidade e responsável devem ser fornecidos antes da execução; isso não autoriza conexão com agenda externa ou publicação por inferência.
+- **Estado após desbloqueio:** grade, duração, capacidade e responsável já estão registrados; isso não autoriza conexão com agenda externa ou publicação por inferência. A primeira task de implementação é F2-IMP-001.
 
 ## Tasks vinculadas
 
-| ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
-|---|---|---|---|---|---|---|---|---|
-| F2-T001 | Registrar duração do slot, capacidade por horário e grade inicial de dias/horários | Subgerente Comercial | SPEC-2-001 | Duração em minutos, capacidade máxima e tabela de dias/horários estão registrados e aprovados. | Primeiro bloqueio executável. | Tabela de grade com duração e capacidade aprovadas pelo Subgerente. | Decisão do Subgerente Comercial. | bloqueada — aguarda decisão humana |
-| F2-T002 | Registrar responsável por manter e fechar a agenda | Champion do cliente | SPEC-2-001 | Nome do papel e usuário responsável pela agenda estão registrados e aprovados. | Segundo bloqueio executável. | Papel e usuário identificados e aprovados pelo Champion. | Decisão do Champion. | bloqueada — aguarda decisão humana |
-| F2-T003 | Registrar campos mínimos obrigatórios para conclusão do agendamento | Liderança Comercial | SPEC-2-001 | Tabela de campos obrigatórios para `CONCLUIDO` está aprovada e registrada. | Terceiro bloqueio executável. | Tabela de campos aprovada pela liderança Comercial. | Decisão da liderança Comercial. | bloqueada — aguarda decisão humana |
+| ID | Task | SPEC | Critério | Recorte da prova | Pré-condições | Status |
+|---|---|---|---|---|---|---|
+| F2-T001 | Registrar duração, capacidade e grade inicial | SPEC-2-001 | Decisão documental registrada e aprovada | Nenhum slot criado | Decisão do Subgerente | concluída — documental |
+| F2-T002 | Registrar responsável pela agenda | SPEC-2-001 | Papel e usuários registrados e aprovados | Nenhuma permissão concedida | Decisão do Champion | concluída — documental |
+| F2-T003 | Registrar campos mínimos do agendamento | SPEC-2-001 | Campos obrigatórios e opcional aprovados | Nenhum campo configurado | Decisão da Liderança Comercial | concluída — documental |
+| F2-IMP-001 | Preparar contrato técnico e fixtures de agenda/tentativa | SPEC-2-001 | Modelo cobre slot, tentativa, estados, vínculo e idempotência | Migration/modelo + fixtures sintéticas | F2-T001..T003 | elegível |
+| F2-IMP-002 | Configurar grade de disponibilidade de teste | SPEC-2-001 | Grade decidida materializada em ambiente isolado | Criar/editar/bloquear/reabrir fixture | F2-IMP-001 + aceite | bloqueada |
+| F2-IMP-003 | Implementar seleção e conclusão do agendamento | SPEC-2-001 | CA-2.01, CA-2.03 e CA-2.05 | Fluxo válido/incompleto/fallback | F2-IMP-002 + aceite | bloqueada |
+| F2-IMP-004 | Provar conflito, idempotência, desistência e rollback | SPEC-2-001 | CA-2.02, CA-2.04 e CA-2.05 | RED/GREEN/regressão sintéticos | F2-IMP-003 + aceite | bloqueada |
+| F2-IMP-005 | Consolidar TDD e aceitar a agenda | SPEC-2-001 | CA-2.01..CA-2.05 | Evidências e teste humano | F2-IMP-004 + evidências | bloqueada |
 
 ## Emendas
 
