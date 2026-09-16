@@ -10,7 +10,7 @@
 | F2-T002 | Registrar responsável por manter e fechar a agenda | Champion do cliente | SPEC-2-001 | Nome do papel e usuário responsável pela agenda estão registrados e aprovados pelo Champion. | `## BLOQUEIOS executáveis` (responsável da agenda) | Conferência documental do segundo bloqueio da SPEC-2-001; nenhuma permissão é concedida. | Champion tem a decisão sobre quem gerencia a disponibilidade. | Pare se papel ou usuário não forem informados; não apontar usuário sem aprovação explícita. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
 | F2-T003 | Registrar campos mínimos obrigatórios para conclusão do agendamento | Liderança Comercial | SPEC-2-001 | Tabela de campos obrigatórios para que uma tentativa transite para `CONCLUIDO` está aprovada e registrada. | `## BLOQUEIOS executáveis` (contrato de campos mínimos) | Conferência documental do terceiro bloqueio da SPEC-2-001; nenhum campo é configurado na plataforma. | Liderança Comercial fornece as escolhas aprovadas. | Pare se qualquer campo obrigatório ou critério de conclusão estiver ausente ou ambíguo; não inventar campo mínimo. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
 | F2-T004 | Registrar papéis, permissões e regra de encaminhamento para humano | Champion + Liderança Comercial | SPEC-2-002 | Matriz de leitura/escrita por papel (Consultor, Subgerente, Gestão, Champion) e regra de atribuição inicial para tentativas em `ENCAMINHAMENTO_HUMANO` estão registradas e aprovadas. | `## BLOQUEIOS executáveis` (papéis e regra de encaminhamento) | Conferência documental do primeiro e segundo bloqueios da SPEC-2-002; nenhuma permissão é concedida na plataforma. | Champion e liderança Comercial fornecem as decisões de acesso e encaminhamento. | Pare se qualquer papel, permissão ou regra de atribuição estiver ausente; não conceder acesso por inferência. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
-| F2-T005 | Registrar responsável por encerrar ou reatribuir tentativas paradas | Liderança Comercial | SPEC-2-002 | Papel responsável pela escalada e critério de parada estão registrados e aprovados pela liderança Comercial. | `## BLOQUEIOS executáveis` (escalada e encerramento) | Conferência documental do terceiro bloqueio da SPEC-2-002; nenhum estado é configurado na plataforma. | Liderança Comercial fornece o papel e o critério de parada. | Pare se papel de escalada ou critério de parada não forem informados; não definir prazo automático. | bloqueada — aguarda decisão humana | pendente |
+| F2-T005 | Registrar responsável por encerrar ou reatribuir tentativas paradas | Liderança Comercial | SPEC-2-002 | Papel responsável pela escalada e critério de parada estão registrados e aprovados pela liderança Comercial. | `## BLOQUEIOS executáveis` (escalada e encerramento) | Conferência documental do terceiro bloqueio da SPEC-2-002; nenhum estado é configurado na plataforma. | Liderança Comercial fornece o papel e o critério de parada. | Pare se papel de escalada ou critério de parada não forem informados; não definir prazo automático. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
 
 ## Decisão registrada — F2-T001 (2026-09-16)
 
@@ -77,3 +77,25 @@
 - A sinalização de escalada pelo Subgerente/Gestão é permissão da matriz; o **critério de parada** e o **responsável por encerrar/reatribuir tentativas paradas** seguem pendentes na F2-T005 (terceiro bloqueio da SPEC-2-002).
 - **Aprovado por:** Champion (matriz de permissões) e Liderança Comercial (regra de encaminhamento) — decisões informadas via consultoria em 2026-09-16.
 - **Limite:** registro documental apenas — nenhuma permissão, conta ou configuração foi criada no Skip.
+
+## Decisão registrada — F2-T005 (2026-09-16)
+
+**Escalada de tentativas paradas (aprovada pela Liderança Comercial):**
+
+| Item | Decisão |
+|---|---|
+| Papel responsável pela escalada | **Gestão/Subgerente Comercial + Supervisora Comercial (Mel)** |
+| Critério de parada | Tentativa em `ENCAMINHAMENTO_HUMANO` **sem ação até o fim do turno de origem** (turnos conforme F1-T002: manhã, tarde, noite) |
+| Poderes do responsável | **Ambos** — reatribuir a outro consultor **ou** encerrar com motivo obrigatório |
+
+- **Coerência com a matriz da F2-T004:** o papel decidido encaixa na permissão já registrada — Subgerente/Gestão sinalizam escalada e agora também respondem por ela; a Supervisora Comercial (Mel), que na F1-T002 acompanha toda a equipe, integra o papel de escalada.
+- **Coerência com F1-T005:** reatribuição e encerramento permanecem nas mãos de liderança (Gestão/Subgerente/Supervisora), como na Fase 1; a fronteira entre superfícies (fila da Fase 1 × visão da Fase 2) segue a nota da F2-T004.
+- **Sem ação automática:** o critério de parada alimenta **sinalização visual** para o responsável (RN-2.10); nenhum estado muda automaticamente. O encerramento exige motivo obrigatório, coerente com RN-2.09 e F1-T005.
+- **Aprovado por:** Liderança Comercial (decisão informada via consultoria em 2026-09-16).
+- **Limite:** registro documental apenas — nenhuma regra de escalada foi configurada no Skip; a implementação da sinalização ocorre na fase de implementação, com autorização própria.
+
+## Marco da Fase 2 (2026-09-16)
+
+- **5/5 tasks de desbloqueio concluídas** — todos os bloqueios documentais das SPEC-2-001 e SPEC-2-002 estão resolvidos.
+- **Implementação não iniciada:** nenhuma slot, agenda, visão, conta, permissão ou publicação foi criada no Skip.
+- **Próxima etapa possível:** implementação da agenda de disponibilidade (SPEC-2-001) e da visão operacional (SPEC-2-002), em novo ciclo, com análise, autorização explícita e teste humano.
