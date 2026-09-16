@@ -7,6 +7,7 @@
 - **Progresso:** 3/5 tasks de desbloqueio concluídas.
 - **Implementação:** não iniciada.
 - **Bloqueios da SPEC-2-001:** todos resolvidos documentalmente (grade/capacidade, responsável pela agenda e campos mínimos registrados em 2026-09-16).
+- **Bloqueios da SPEC-2-002:** 0/3 resolvidos; F2-T004 cobre os dois primeiros (matriz de permissões e regra de encaminhamento); F2-T005 cobre o terceiro (escalada).
 
 ## Tasks ativas
 
@@ -21,7 +22,7 @@
 Para analisar F2-T004, abrir:
 
 1. `04_fase-atual/fase.md`;
-2. `04_fase-atual/specs/spec-2-002-encaminhamento-humano-e-continuidade.md`.
+2. `04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md`.
 
 ## Limite operacional
 
