@@ -1,16 +1,46 @@
-# Fase 2 — Tarefas gerais
+# Fase 2 — Tarefas
 
-> Leva 1: tarefas de desbloqueio autorizadas. Elas não criam slot, agenda, conta, conector ou publicação; registram as decisões humanas exigidas pelas SPECs. São independentes entre si.
+<!-- fase-format:2 -->
 
-## Tasks
+> A Fase 2 tem duas levas: desbloqueios documentais já concluídos e implementação do autoagendamento/visão operacional ainda não iniciada. F2-IMP-001 é a única task elegível. Tasks novas entram sem UUID; o sincronizador/portal deve gerar os IDs.
 
-| ID | Task | Dono | SPEC | Critério | Subseção da SPEC | Recorte da prova | Evidência esperada | Pré-condições | Ponto de parada | Status |
-|---|---|---|---|---|---|---|---|---|---|---|
-| F2-T001 | Registrar duração do slot, capacidade por horário e grade inicial de dias/horários | Subgerente Comercial | SPEC-2-001 | Duração em minutos, capacidade máxima por slot e tabela de dias/horários disponíveis estão registrados e aprovados pelo Subgerente. | `## BLOQUEIOS executáveis` (duração, capacidade e grade) | Conferência documental do primeiro bloqueio da SPEC-2-001; nenhum slot ou agenda é criado. | Subgerente tem a decisão de grade e capacidade operacional. | Pare se duração, capacidade ou grade não forem informados; não inventar horários nem duração padrão. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
-| F2-T002 | Registrar responsável por manter e fechar a agenda | Champion do cliente | SPEC-2-001 | Nome do papel e usuário responsável pela agenda estão registrados e aprovados pelo Champion. | `## BLOQUEIOS executáveis` (responsável da agenda) | Conferência documental do segundo bloqueio da SPEC-2-001; nenhuma permissão é concedida. | Champion tem a decisão sobre quem gerencia a disponibilidade. | Pare se papel ou usuário não forem informados; não apontar usuário sem aprovação explícita. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
-| F2-T003 | Registrar campos mínimos obrigatórios para conclusão do agendamento | Liderança Comercial | SPEC-2-001 | Tabela de campos obrigatórios para que uma tentativa transite para `CONCLUIDO` está aprovada e registrada. | `## BLOQUEIOS executáveis` (contrato de campos mínimos) | Conferência documental do terceiro bloqueio da SPEC-2-001; nenhum campo é configurado na plataforma. | Liderança Comercial fornece as escolhas aprovadas. | Pare se qualquer campo obrigatório ou critério de conclusão estiver ausente ou ambíguo; não inventar campo mínimo. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
-| F2-T004 | Registrar papéis, permissões e regra de encaminhamento para humano | Champion + Liderança Comercial | SPEC-2-002 | Matriz de leitura/escrita por papel (Consultor, Subgerente, Gestão, Champion) e regra de atribuição inicial para tentativas em `ENCAMINHAMENTO_HUMANO` estão registradas e aprovadas. | `## BLOQUEIOS executáveis` (papéis e regra de encaminhamento) | Conferência documental do primeiro e segundo bloqueios da SPEC-2-002; nenhuma permissão é concedida na plataforma. | Champion e liderança Comercial fornecem as decisões de acesso e encaminhamento. | Pare se qualquer papel, permissão ou regra de atribuição estiver ausente; não conceder acesso por inferência. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
-| F2-T005 | Registrar responsável por encerrar ou reatribuir tentativas paradas | Liderança Comercial | SPEC-2-002 | Papel responsável pela escalada e critério de parada estão registrados e aprovados pela liderança Comercial. | `## BLOQUEIOS executáveis` (escalada e encerramento) | Conferência documental do terceiro bloqueio da SPEC-2-002; nenhum estado é configurado na plataforma. | Liderança Comercial fornece o papel e o critério de parada. | Pare se papel de escalada ou critério de parada não forem informados; não definir prazo automático. | bloqueada — aguarda decisão humana | ✅ concluída — 2026-09-16 |
+## Tasks documentais concluídas
+
+- [x] Registrar a grade inicial da agenda @"Karol e Márcio" #projeto
+  > F2-T001 / SPEC-2-001. Critério: duração, capacidade e grade inicial registradas. Evidência: decisão do Subgerente registrada em 16/09/2026. Pré-condição: decisão humana recebida. Leva 1 documental. Estado final: regras disponíveis para implementação; nenhum slot criado.
+- [x] Registrar o responsável pela agenda @"Karol e Márcio" #projeto
+  > F2-T002 / SPEC-2-001. Critério: papel e usuários responsáveis registrados. Evidência: decisão do Champion registrada em 16/09/2026. Pré-condição: aprovação do Champion. Leva 1 documental. Estado final: responsável definido; nenhuma permissão concedida.
+- [x] Registrar os campos mínimos do agendamento @"Karol e Márcio" #projeto
+  > F2-T003 / SPEC-2-001. Critério: nome, telefone/canal, localidade e profissão obrigatórios; e-mail opcional. Evidência: decisão da Liderança Comercial registrada em 16/09/2026. Pré-condição: decisão humana recebida. Leva 1 documental. Estado final: contrato de campos definido; nenhum campo configurado.
+- [x] Registrar permissões e encaminhamento humano @"Karol e Márcio" #projeto
+  > F2-T004 / SPEC-2-002. Critério: matriz de acesso e fila única registradas. Evidência: decisões do Champion e da Liderança Comercial registradas em 16/09/2026. Pré-condição: decisões humanas recebidas. Leva 1 documental. Estado final: regras disponíveis para implementação; nenhuma permissão concedida.
+- [x] Registrar a escalada de tentativas paradas @"Karol e Márcio" #projeto
+  > F2-T005 / SPEC-2-002. Critério: Gestão/Subgerente + Supervisora Mel, parada no fim do turno, reatribuição ou encerramento com motivo. Evidência: decisão da Liderança Comercial registrada em 16/09/2026. Pré-condição: decisão humana recebida. Leva 1 documental. Estado final: regra disponível para implementação; nenhuma automação criada.
+
+## Tasks de implementação — novo ciclo
+
+- [ ] Preparar o contrato técnico e as fixtures de agenda @"Karol e Márcio" #projeto
+  > F2-IMP-001 / SPEC-2-001. Critérios: modelo cobre slot, capacidade, tentativa, estados, vínculo com triagem e idempotência; fixtures sintéticas cobrem caminho válido, campos ausentes, indisponibilidade, desistência e encaminhamento. Evidência: migration/modelo revisável, schema sanitizado, fixtures e RED/GREEN inicial. Pré-condições: F2-T001..T003 concluídas. Leva 2. Ponto de parada: qualquer regra/arquitetura não definida ou dado real. Estado final: contrato e fixtures prontos em teste, sem slot real. **Única task elegível.**
+- [ ] Configurar a grade de disponibilidade em ambiente de teste @"Karol e Márcio" #projeto
+  > F2-IMP-002 / SPEC-2-001. Critérios: slot 30 min; capacidade 1 e exceção 2 entre 11:30–16:30; grade seg–sex 08:00–19:30 e sáb 09:00–13:30; manutenção limitada aos papéis decididos. Evidência: criar/editar/bloquear/reabrir fixture e rollback. Pré-condição: F2-IMP-001 aceita e teste humano. Leva 3. Ponto de parada: exposição pública ou grade de produção. Estado final: grade sintética controlável e não publicada.
+- [ ] Implementar a seleção e conclusão do agendamento @"Karol e Márcio" #projeto
+  > F2-IMP-003 / SPEC-2-001. Critérios: slots abertos visíveis; appointment vinculado à triagem; nome, telefone/canal, localidade e profissão exigidos; e-mail opcional; conclusão somente com campos mínimos; fallback sem confirmação falsa. Evidência: fixtures válida/incompleta e estados observáveis. Pré-condição: F2-IMP-002 aceita. Leva 4. Ponto de parada: mensagem externa, CRM ou agenda externa. Estado final: fluxo sintético de tentativa implementado no teste.
+- [ ] Provar conflito, idempotência, desistência e rollback da agenda @"Karol e Márcio" #projeto
+  > F2-IMP-004 / SPEC-2-001. Critérios: concorrência deixa no máximo uma confirmação; reprocessamento não duplica; desistência preserva eventos/libera capacidade; falha/timeout/sem slots encaminha; rollback preserva histórico. Evidência: roteiro RED/GREEN/regressão com IDs sintéticos. Pré-condição: F2-IMP-003 aceita. Leva 5. Estado final: bordas da agenda demonstradas em teste.
+- [ ] Consolidar o TDD e aceitar a agenda de teste @"Karol e Márcio" #projeto
+  > F2-IMP-005 / SPEC-2-001. Critérios: CA-2.01..CA-2.05 demonstrados; evidências sanitizadas; preview pronto para teste do Champion. Evidência: RED/GREEN/regressão, recibo e aceite humano. Pré-condição: F2-IMP-004 aceita. Leva 6. Ponto de parada: reprovação mantém a task aberta e encaminha debug. Estado final: SPEC-2-001 aceita ou reprovada explicitamente.
+- [ ] Criar a visão operacional de tentativas @"Karol e Márcio" #projeto
+  > F2-IMP-006 / SPEC-2-002. Critérios: visão mostra estado, contexto da triagem, origem, versão e horário; reprocessamento atualiza sem duplicar; visão não conclui por conta própria; falha conserva estado anterior. Evidência: lista/detalhe, fixtures e trilha de eventos; rota acessível no preview. Pré-condição: F2-IMP-005 aceita. Leva 7. Estado final: visão interna funcional em teste, sem publicação.
+- [ ] Aplicar permissões, fila e assunção de tentativas @"Karol e Márcio" #projeto
+  > F2-IMP-007 / SPEC-2-002. Critérios: Consultor limitado; Subgerente/Gestão veem todos; Champion configura; Marketing não vê dados individuais; primeiro Consultor assume; dono, assumed_at e motivo são registrados; não autorizado não altera. Evidência: usuários sintéticos autorizado/não autorizado e auditoria. Pré-condição: F2-IMP-006 aceita. Leva 8. Estado final: RBAC e fila demonstrados em teste.
+- [ ] Implementar a escalada visual e o rollback da fila @"Karol e Márcio" #projeto
+  > F2-IMP-008 / SPEC-2-002. Critérios: parada até o fim do turno sinaliza; Gestão/Subgerente/Supervisora Mel reatribuem ou encerram com motivo; nenhum estado muda automaticamente; rollback preserva registros. Evidência: turnos sintéticos, parada, sinalização, reatribuição, encerramento e rollback. Pré-condição: F2-IMP-007 aceita. Leva 9. Estado final: escalada demonstrada sem automação indevida.
+- [ ] Consolidar o TDD e aceitar a visão operacional @"Karol e Márcio" #projeto
+  > F2-IMP-009 / SPEC-2-002. Critérios: CA-2.06..CA-2.10 demonstrados; permissões negativas, reprocessamento, assunção, escalada e rollback evidenciados; Champion aprova ou reprova. Evidência: pacote sanitizado e recibo humano. Pré-condição: F2-IMP-008 aceita. Leva 10. Estado final: SPEC-2-002 aceita ou reprovada explicitamente; Fase 2 ainda não avança sem liberação formal.
+
+## Gate Fase 2 → Fase 3
+
+A Fase 3 só pode ser considerada depois que F2-IMP-001..F2-IMP-009 forem concluídas com evidências e aceites humanos, CA-2.01..CA-2.10 forem demonstrados e o handoff/manifesto estiver reconciliado. Este arquivo não autoriza abertura da Fase 3.
 
 ## Decisão registrada — F2-T001 (2026-09-16)
 
@@ -91,11 +121,11 @@
 - **Coerência com a matriz da F2-T004:** o papel decidido encaixa na permissão já registrada — Subgerente/Gestão sinalizam escalada e agora também respondem por ela; a Supervisora Comercial (Mel), que na F1-T002 acompanha toda a equipe, integra o papel de escalada.
 - **Coerência com F1-T005:** reatribuição e encerramento permanecem nas mãos de liderança (Gestão/Subgerente/Supervisora), como na Fase 1; a fronteira entre superfícies (fila da Fase 1 × visão da Fase 2) segue a nota da F2-T004.
 - **Sem ação automática:** o critério de parada alimenta **sinalização visual** para o responsável (RN-2.10); nenhum estado muda automaticamente. O encerramento exige motivo obrigatório, coerente com RN-2.09 e F1-T005.
-- **Aprovado por:** Liderança Comercial (decisão informada via consultoria em 2026-09-16).
+- **Aprovado por:** Liderança Comercial (decisão informada via consultoria em 2026-09-16)
 - **Limite:** registro documental apenas — nenhuma regra de escalada foi configurada no Skip; a implementação da sinalização ocorre na fase de implementação, com autorização própria.
 
 ## Marco da Fase 2 (2026-09-16)
 
 - **5/5 tasks de desbloqueio concluídas** — todos os bloqueios documentais das SPEC-2-001 e SPEC-2-002 estão resolvidos.
 - **Implementação não iniciada:** nenhuma slot, agenda, visão, conta, permissão ou publicação foi criada no Skip.
-- **Próxima etapa possível:** implementação da agenda de disponibilidade (SPEC-2-001) e da visão operacional (SPEC-2-002), em novo ciclo, com análise, autorização explícita e teste humano.
+- **Próxima etapa possível:** implementação da agenda de disponibilidade (SPEC-2-001) e da visão operacional (SPEC-2-002), em novo ciclo, com análise, autorização explícita e teste humano. Nada nesta documentação autoriza publicação de produção.

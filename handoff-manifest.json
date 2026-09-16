@@ -6,22 +6,37 @@
     "adapta": "0.9.5",
     "adaptaCliente": "0.9.5"
   },
-  "generatedAt": "2026-09-10T13:18:00-03:00",
+  "generatedAt": "2026-09-16T15:11:04-03:00",
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "d179358c24b3164c249ced29900afd1ff2c3298b66983e53933aadef9900b535",
+      "sha256": "46067f3090dec12197723fef33a835fe5a9ca5bf7fcafe51e8f1bf4d4d1507ce",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md",
-      "sha256": "478175969a0a6ecd469cebad4276fa218bfd5013285e9eec2ec8f4d5824bf73f",
+      "sha256": "49eaa6c67f27a2177c08a31530c166d59d894d46",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md",
-      "sha256": "88124c6b6aae4d26e5ec68da9fd19cc8dafbcc3dd3f2856c6c19ba4c678cf13c",
+      "sha256": "d1b92b08e60768f6b2ea6e58a6f361890174c045",
       "classification": "spec-fase-atual"
+    },
+    {
+      "path": "STATUS.md",
+      "sha256": "a04fc635664b51e706778cf1c4b8b1bbd322e18f59eb28122915a12db5d54318",
+      "classification": "status"
+    },
+    {
+      "path": "changelog.md",
+      "sha256": "89a63bd2e14749cea571d2aef1f497c74b1d62005cc6dc82b545dc34eca927b2",
+      "classification": "changelog"
+    },
+    {
+      "path": ".adapta-cliente/estado-atual.md",
+      "sha256": "7fbdfb597aa48073fc1da07087756d41846f2243be49c9520a72d738128bd877",
+      "classification": "estado-operacional"
     }
   ]
 }
