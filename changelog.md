@@ -2,6 +2,7 @@
 
 ## 2026-09-16
 
+- [champion] Task F2-T002 concluída: responsável por manter e fechar a agenda registrado — papel de Consultor Comercial exercido por Camila, Jaqueline e Rodrigo; Subgerente Comercial e Champion também podem exercer o papel. Publicação de versões do app segue a matriz da F1-T006 (apenas Champion); nenhuma permissão foi concedida no Skip.
 - [subgerente comercial] Task F2-T001 concluída: duração do slot de 30 minutos, capacidade padrão de 1 atendimento por slot e grade inicial registradas (segunda a sexta das 08:00 às 19:30; sábado das 09:00 às 13:30), com exceção de capacidade para 2 atendimentos simultâneos entre 11:30 e 16:30. Registro documental apenas; nenhum slot, agenda ou publicação foi criado no Skip.
 
 ## 2026-09-10
