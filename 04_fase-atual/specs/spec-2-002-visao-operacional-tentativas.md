@@ -1,7 +1,7 @@
 # SPEC-2-002 — Visão operacional de tentativas e agendamentos
 
 **Fase:** 2  
-**Status:** bloqueada — configuração operacional pendente  
+**Status:** pronta para implementação controlada — configuração ainda não implementada  
 **Dono:** Champion do cliente e liderança Comercial  
 **Origem no escopo:** D-001, D-003, RQ-002, RQ-005 e Fase 2 de `03-Projeto/02-Escopo-Definitivo.md`  
 **Degrau da solução:** recurso nativo da plataforma de pré-agendamento — registra uma visão/fila operacional de tentativas de agendamento com contexto do lead; não integra Kommo, Lóvavel ou agenda externa nesta fase.
@@ -11,7 +11,7 @@
 - **Estado atual:** o consultor não tem visibilidade consolidada do estado de cada tentativa de agendamento; leads encaminhados por dúvida ou por falha de agenda chegam sem contexto estruturado. Fontes: `03-Projeto/requisitos.md` §RQ-002 e §RQ-005; `03-Projeto/02-Escopo-Definitivo.md` §§Fase 1 e Fase 2; `spec-1-002-encaminhamento-humano-com-contexto.md`.
 - **Estado desejado:** o Consultor Comercial, o Subgerente e a Gestão têm uma visão operacional que mostra cada tentativa de agendamento com seu estado atual (`TENTATIVA`, `CONCLUIDO`, `DESISTENCIA`, `ENCAMINHAMENTO_HUMANO`), o contexto da triagem da Fase 1 e os dados do horário escolhido quando houver.
 - **Decisões já fechadas:** a visão não envia mensagem, não cria oportunidade no Kommo, não altera o CRM e não confirma presença; o agendamento só é `CONCLUIDO` quando a SPEC-2-001 assim registrar. O consultor vê somente tentativas atribuídas a ele ou em `ENCAMINHAMENTO_HUMANO`. A Gestão/Subgerente vê todos os estados.
-- **Bloqueios:** os papéis com permissão de leitura e escrita nessa visão, a regra de encaminhamento para humano quando o lead não consegue agendar e o responsável por encerrar ou reatribuir tentativas paradas não estão documentados nas fontes.
+- **Decisões documentais resolvidas:** papéis, permissões, fila única, regra de encaminhamento e escalada foram registrados nas tasks F2-T004..F2-T005 em 16/09/2026. A visão continua não implementada e depende da SPEC-2-001, execução controlada, evidências e aceite humano.
 
 ## BLOQUEIOS executáveis
 
@@ -112,14 +112,18 @@ Um consultor autorizado abre a visão operacional e identifica, sem pedir novame
 - **Como demonstrar:** criar tentativa sintética em `ENCAMINHAMENTO_HUMANO`, mostrar atribuição e contexto na visão, assumir com Consultor autorizado, repetir o envio e comprovar ausência de duplicata; simular parada e verificar sinalização de escalada; em seguida testar rollback.
 - **Como operar depois:** liderança Comercial mantém responsável de escalada atualizado; Champion aprova qualquer publicação ou mudança de papéis; Consultor atualiza somente o estado das tentativas atribuídas a ele.
 - **Como monitorar:** quantidade de tentativas por estado, encaminhamentos sem dono, tempo médio até assunção (sem SLA automático nesta fase), escaladas e rollbacks; conversão até agendamento fica fora desta fase até a Fase 3.
-- **Pendência conhecida:** papéis, regra de encaminhamento e critério de escalada precisam ser declarados pelo Champion e pela liderança Comercial antes da publicação; esta SPEC não concede acesso a contas externas.
+- **Estado após desbloqueio:** papéis, regra de encaminhamento e critério de escalada estão registrados; a SPEC ainda não concede acesso a contas externas e a visão permanece não implementada. A execução começa somente após a conclusão aceita da SPEC-2-001.
 
 ## Tasks vinculadas
 
-| ID | Task | Dono | SPEC | Critério | Recorte da prova | Evidência esperada | Pré-condições | Status |
-|---|---|---|---|---|---|---|---|---|
-| F2-T004 | Registrar papéis, permissões e regra de encaminhamento para humano | Champion + Liderança Comercial | SPEC-2-002 | Matriz de leitura/escrita por papel e regra de atribuição inicial estão registradas e aprovadas. | Primeiro e segundo bloqueios executáveis. | Matriz de permissões e regra de encaminhamento documentadas e aprovadas. | Decisões do Champion e da liderança Comercial. | bloqueada — aguarda decisão humana |
-| F2-T005 | Registrar responsável por encerrar ou reatribuir tentativas paradas | Liderança Comercial | SPEC-2-002 | Papel responsável pela escalada e critério de parada estão registrados e aprovados. | Terceiro bloqueio executável. | Papel de escalada e critério documentados e aprovados pela liderança Comercial. | Decisão da liderança Comercial. | bloqueada — aguarda decisão humana |
+| ID | Task | SPEC | Critério | Recorte da prova | Pré-condições | Status |
+|---|---|---|---|---|---|---|
+| F2-T004 | Registrar permissões e encaminhamento humano | SPEC-2-002 | Matriz e fila única registradas e aprovadas | Nenhuma permissão concedida | Decisões do Champion/Liderança | concluída — documental |
+| F2-T005 | Registrar escalada de tentativas paradas | SPEC-2-002 | Papel, parada e poderes registrados e aprovados | Nenhuma automação criada | Decisão da Liderança Comercial | concluída — documental |
+| F2-IMP-006 | Criar visão operacional de tentativas | SPEC-2-002 | CA-2.06 e CA-2.08 | Lista/detalhe, contexto e idempotência | F2-IMP-005 + aceite | bloqueada |
+| F2-IMP-007 | Aplicar permissões, fila e assunção segura | SPEC-2-002 | CA-2.07 e CA-2.09 | Usuários sintéticos autorizado/não autorizado | F2-IMP-006 + aceite | bloqueada |
+| F2-IMP-008 | Implementar escalada visual e rollback da fila | SPEC-2-002 | CA-2.09 e CA-2.10 | Parada, sinalização, reatribuição e rollback | F2-IMP-007 + aceite | bloqueada |
+| F2-IMP-009 | Consolidar TDD e aceitar a visão operacional | SPEC-2-002 | CA-2.06..CA-2.10 | Evidências e teste humano | F2-IMP-008 + evidências | bloqueada |
 
 ## Emendas
 
