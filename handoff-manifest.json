@@ -10,17 +10,17 @@
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "46067f3090dec12197723fef33a835fe5a9ca5bf7fcafe51e8f1bf4d4d1507ce",
+      "sha256": "51aee5503501bf4121e49f771b4621f0598d15be612ccf8c07c69f101386a9dc",
       "classification": "fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md",
-      "sha256": "49eaa6c67f27a2177c08a31530c166d59d894d46",
+      "sha256": "478175969a0a6ecd469cebad4276fa218bfd5013285e9eec2ec8f4d5824bf73f",
       "classification": "spec-fase-atual"
     },
     {
       "path": "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md",
-      "sha256": "d1b92b08e60768f6b2ea6e58a6f361890174c045",
+      "sha256": "88124c6b6aae4d26e5ec68da9fd19cc8dafbcc3dd3f2856c6c19ba4c678cf13c",
       "classification": "spec-fase-atual"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "path": "changelog.md",
-      "sha256": "89a63bd2e14749cea571d2aef1f497c74b1d62005cc6dc82b545dc34eca927b2",
+      "sha256": "1b51639cb75bdf6cf7bf04c2e5cddd2fd6528839d067039261324feed3538f56",
       "classification": "changelog"
     },
     {
