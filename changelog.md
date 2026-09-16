@@ -2,6 +2,7 @@
 
 ## 2026-09-16
 
+- [liderança comercial] Task F2-T003 concluída: contrato de campos mínimos para concluir o agendamento registrado — nome, telefone/canal de retorno, localidade (residencial ou comercial, o que for mais perto da sede) e profissão obrigatórios; e-mail opcional. Justificativa: o lead potencial mora ou trabalha próximo à academia. Campos obrigatórios ausentes impedem a transição para CONCLUIDO (RN-2.03/CA-2.03). Registro documental apenas; nenhum campo foi configurado no Skip.
 - [champion] Task F2-T002 concluída: responsável por manter e fechar a agenda registrado — papel de Consultor Comercial exercido por Camila, Jaqueline e Rodrigo; Subgerente Comercial e Champion também podem exercer o papel. Publicação de versões do app segue a matriz da F1-T006 (apenas Champion); nenhuma permissão foi concedida no Skip.
 - [subgerente comercial] Task F2-T001 concluída: duração do slot de 30 minutos, capacidade padrão de 1 atendimento por slot e grade inicial registradas (segunda a sexta das 08:00 às 19:30; sábado das 09:00 às 13:30), com exceção de capacidade para 2 atendimentos simultâneos entre 11:30 e 16:30. Registro documental apenas; nenhum slot, agenda ou publicação foi criado no Skip.
 
