@@ -2,7 +2,7 @@
 
 <!-- fase-format:2 -->
 
-> A Fase 2 tem duas levas: desbloqueios documentais já concluídos e implementação do autoagendamento/visão operacional ainda não iniciada. F2-IMP-001 é a única task elegível. Tasks novas entram sem UUID; o sincronizador/portal deve gerar os IDs.
+> A Fase 2 tem duas levas: desbloqueios documentais concluídos em 2026-09-16 e a implementação do autoagendamento/visão operacional em curso — F2-IMP-001 concluída com aceite humano em 2026-09-17; F2-IMP-002 é a próxima task elegível.
 
 ## Tasks documentais concluídas
 
@@ -19,10 +19,10 @@
 
 ## Tasks de implementação — novo ciclo
 
-- [ ] Preparar o contrato técnico e as fixtures de agenda @"Karol e Márcio" #projeto
-  > F2-IMP-001 / SPEC-2-001. Critérios: modelo cobre slot, capacidade, tentativa, estados, vínculo com triagem e idempotência; fixtures sintéticas cobrem caminho válido, campos ausentes, indisponibilidade, desistência e encaminhamento. Evidência: migration/modelo revisável, schema sanitizado, fixtures e RED/GREEN inicial. Pré-condições: F2-T001..T003 concluídas. Leva 2. Ponto de parada: qualquer regra/arquitetura não definida ou dado real. Estado final: contrato e fixtures prontos em teste, sem slot real. **Única task elegível.**
+- [x] Preparar o contrato técnico e as fixtures de agenda @"Karol e Márcio" #projeto
+  > F2-IMP-001 / SPEC-2-001. Critérios: modelo cobre slot, capacidade, tentativa, estados, vínculo com triagem e idempotência; fixtures sintéticas cobrem caminho válido, campos ausentes, indisponibilidade, desistência e encaminhamento. Evidência: migrações 0007 (coleções agenda_slots, lead_appointments, lead_appointment_events) e 0008 (seed sintético) no Skip 51806 v0.0.20; pipeline QA completo ok; provas ao vivo — duplicata recusada (HTTP 400, índice único lead_submission_id+slot_id), criação pública aceita, leitura anônima sem vazamento, leitura autenticada com 6 tentativas/4 eventos; contrato técnico revisado e aprovado; teste humano do consultor aprovado em 17/09/2026 ("entrei e testado, está aparecendo. tudo ok, aprovado"); usuário sintético de teste removido após validação (0010). Pré-condições: F2-T001..T003 concluídas. Leva 2. Estado final: contrato e fixtures prontos em teste, sem slot real, sem publicação.
 - [ ] Configurar a grade de disponibilidade em ambiente de teste @"Karol e Márcio" #projeto
-  > F2-IMP-002 / SPEC-2-001. Critérios: slot 30 min; capacidade 1 e exceção 2 entre 11:30–16:30; grade seg–sex 08:00–19:30 e sáb 09:00–13:30; manutenção limitada aos papéis decididos. Evidência: criar/editar/bloquear/reabrir fixture e rollback. Pré-condição: F2-IMP-001 aceita e teste humano. Leva 3. Ponto de parada: exposição pública ou grade de produção. Estado final: grade sintética controlável e não publicada.
+  > F2-IMP-002 / SPEC-2-001. Critérios: slot 30 min; capacidade 1 e exceção 2 entre 11:30–16:30; grade seg–sex 08:00–19:30 e sáb 09:00–13:30; manutenção limitada aos papéis decididos. Evidência: criar/editar/bloquear/reabrir fixture e rollback. Pré-condição: F2-IMP-001 aceita e teste humano. Leva 3. Ponto de parada: exposição pública ou grade de produção. Estado final: grade sintética controlável e não publicada. **Próxima task elegível.**
 - [ ] Implementar a seleção e conclusão do agendamento @"Karol e Márcio" #projeto
   > F2-IMP-003 / SPEC-2-001. Critérios: slots abertos visíveis; appointment vinculado à triagem; nome, telefone/canal, localidade e profissão exigidos; e-mail opcional; conclusão somente com campos mínimos; fallback sem confirmação falsa. Evidência: fixtures válida/incompleta e estados observáveis. Pré-condição: F2-IMP-002 aceita. Leva 4. Ponto de parada: mensagem externa, CRM ou agenda externa. Estado final: fluxo sintético de tentativa implementado no teste.
 - [ ] Provar conflito, idempotência, desistência e rollback da agenda @"Karol e Márcio" #projeto
