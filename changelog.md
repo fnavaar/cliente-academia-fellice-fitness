@@ -1,8 +1,10 @@
-## 2026-09-16 — Reconciliação Fase 2 após auditoria do preview
+## 2026-09-17 — Implementação F2-IMP-001
 
-- [auditoria] Comparado o GitHub com o preview `https://fellice-fitness-8733f--preview.goskip.app`: a triagem F1 está presente; agenda/seleção de slot/campos de agendamento não aparecem; `/queue` retorna 404; nenhuma entrega da Fase 2 foi comprovada no produto.
-- [tasks] Criadas documentalmente as tasks F2-IMP-001..F2-IMP-009 para materializar SPEC-2-001 e SPEC-2-002. F2-IMP-001 é a única elegível; as demais dependem de provas e aceite humano.
-- [limite] Nenhum arquivo de código, migration, schema, banco, configuração do Skip ou publicação foi alterado nesta reconciliação; a mudança é de documentação operacional no GitHub.
+- [champion via consultoria] Task F2-IMP-001 concluída: contrato técnico e fixtures sintéticas de agenda/tentativa implementados no Skip 51806 (v0.0.20) — migração 0007 criou as coleções `agenda_slots` (slot, duração 30 min, capacidade 1/2, ABERTO/RESERVADO/BLOQUEADO), `lead_appointments` (TENTATIVA/CONCLUIDO/DESISTENCIA/ENCAMINHAMENTO_HUMANO, índice único lead_submission_id+slot_id como âncora de idempotência RN-2.05/CA-2.02) e `lead_appointment_events` (append-only); migração 0008 semeou fixtures 100% sintéticas cobrindo caminho válido, campos ausentes, slot bloqueado, capacidade 2, desistência e encaminhamento humano.
+- [verificação] Pipeline QA completo passou (setup, análise estática, build, integrações, testes). Provas ao vivo via API: duplicata de reserva recusada pelo banco (HTTP 400), criação pública de tentativa aceita, leitura anônima de tentativas sem vazamento (lista vazia), leitura autenticada com login de consultor retornando 6 tentativas e 4 eventos. Teste humano do consultor aprovado em 17/09/2026 ("entrei e testado, está aparecendo. tudo ok, aprovado") — site sem rotas novas, dados protegidos, grade pública legível.
+- [segurança] Usuário sintético de teste criado (0009) para a validação de leitura autenticada e removido após o aceite (0010); senha provisória deixou de existir.
+- [limite] Nenhuma tela criada, nenhum dado real tratado, nenhuma integração externa, nenhuma publicação em produção. Contrato técnico completo registrado no workspace da consultoria; pendências LGPD (base legal do agendamento) e semântica de reagendamento (RN-2.06) registradas no STATUS para validação antes de F2-IMP-003.
+- [correção de registro] A auditoria de 16/09 registrou "`/queue` retorna 404"; a rota real do atendente na Fase 1 é `/fila`, que existe e renderiza o login corretamente.
 
 # Changelog
 
@@ -13,6 +15,12 @@
 - [liderança comercial] Task F2-T003 concluída: contrato de campos mínimos para concluir o agendamento registrado — nome, telefone/canal de retorno, localidade e profissão obrigatórios; e-mail opcional. Registro documental apenas; nenhum campo foi configurado no Skip.
 - [champion] Task F2-T002 concluída: responsável por manter e fechar a agenda registrado — Consultores Comerciais Camila, Jaqueline e Rodrigo; Subgerente Comercial e Champion também podem exercer o papel. Nenhuma permissão foi concedida no Skip.
 - [subgerente comercial] Task F2-T001 concluída: duração 30 min, capacidade 1, exceção 2 entre 11:30–16:30 e grade seg–sex 08:00–19:30/sáb 09:00–13:30. Registro documental apenas; nenhum slot ou agenda foi criado no Skip.
+
+## 2026-09-16 — Reconciliação Fase 2 após auditoria do preview
+
+- [auditoria] Comparado o GitHub com o preview `https://fellice-fitness-8733f--preview.goskip.app`: a triagem F1 está presente; agenda/seleção de slot/campos de agendamento não aparecem; `/queue` retorna 404; nenhuma entrega da Fase 2 foi comprovada no produto.
+- [tasks] Criadas documentalmente as tasks F2-IMP-001..F2-IMP-009 para materializar SPEC-2-001 e SPEC-2-002. F2-IMP-001 é a única elegível; as demais dependem de provas e aceite humano.
+- [limite] Nenhum arquivo de código, migration, schema, banco, configuração do Skip ou publicação foi alterado nesta reconciliação; a mudança é de documentação operacional no GitHub.
 
 ## 2026-09-10
 
