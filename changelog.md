@@ -1,3 +1,10 @@
+## 2026-09-17 — Fechamento F2-IMP-004 (conflito, idempotência, desistência e rollback)
+
+- [consultor] Task F2-IMP-004 concluída (4/9 da implementação da Fase 2): teste humano aprovado pelo consultor em 17/09/2026 ("testado e funcionou") após duas rodadas de debug — a fechadura de capacidade por slot está ativa no servidor (hook `enforce_slot_capacity.js` em create/update/delete de reservas) e na página `/agendar` (esconde slot cheio, mostra vagas restantes, bloqueia clique).
+- [verificação] Revalidação final 5/5 (v0.0.45): apenas as 4 fixtures sintéticas na base, 0 slots ocupados, grade intacta (248 slots), /agendar e triagem respondendo 200; fechadura reprovada ativa após a limpeza (reserva em slot vazio aceita, slot cheio recusada com HTTP 400).
+- [segurança] Migrações 0022/0023 removeram todas as reservas dos testes humanos e provas (deleteRule null provado novamente: DELETE via API recusado com HTTP 403); nenhuma senha ou credencial registrada; usuário sintético de verificação permanece para o ciclo de fechamento e será removido no próximo aceite.
+- [limite] Nenhuma publicação em produção, nenhuma integração externa, nenhum dado real. Pendências para a call de setup: LGPD (base legal do agendamento), RN-2.06 e capacidade 2 no sábado. Próxima task elegível: F2-IMP-005 (aceite final da SPEC-2-001 pelo Champion), que exige novo ciclo de análise + autorização explícita.
+
 ## 2026-09-17 — DEBUG F2-IMP-004 (rodada 2) — fechadura de capacidade no servidor
 
 - [consultor] DEBUG task F2-IMP-004 (rodada 2): reteste humano reproduziu a falha — a página escondia slot cheio, mas o contador de ocupação nunca era atualizado por nenhuma camada e o servidor aceitava reservas acima da capacidade via API direta; consultor também reportou que era possível agendar mais de uma pessoa nos demais horários → causa raiz: filtro cosmético na página sem enforcement no servidor → **corrigido** com hook `enforce_slot_capacity.js` em `lead_appointments` (create/update/delete): conta as reservas ativas (CONCLUIDO+TENTATIVA) do slot, rejeita acima da capacidade com HTTP 400 "Este horário acabou de encher. Escolha outro, por favor." e mantém `agenda_slot_occupancy` sincronizada após cada escrita; migração 0021 ressincronizou todos os contadores e limpou as provas (v0.0.43). Provas ao vivo: 1ª e 2ª reservas aceitas em slot cap 2 (HTTP 200/200), 3ª recusada (400), desistência libera a vaga (PATCH 200 + nova reserva 200, contador 2/2), cenário exato do reteste (slot 1200 com 3 ativas) reproduzido e recusado sem criar registro. Gate: aguardando 2º reteste humano.
@@ -55,7 +62,7 @@
 
 ## 2026-09-08
 
-- [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano foi aprovado no preview.
+- [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano aprovado no preview.
 - [debug] DEBUG task F1-T008: lead era salvo, mas a fila não aparecia por falta de autenticação na visão do atendente; evento HANDOFF_CREATED falhava por regra de criação protegida; login autorizado e evento público de criação corrigidos, com leitura/ações protegidas.
 - [champion] Task F1-T007 concluída: formulário de captura e triagem rastreável implementado no Skip 51806, com persistência no Skip Cloud, campos aprovados, UTMs, eventos e consentimento LGPD; QA 0.0.8 passou e teste humano foi aprovado no preview.
 - [debug] DEBUG task F1-T007: falha no evento de conclusão corrigida usando leadSubmissionId.current; submissão e evento sintéticos retornaram HTTP 200.
