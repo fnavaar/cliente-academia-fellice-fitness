@@ -12,3 +12,4 @@
 - 2026-09-17T16:08:00-03:00 · task F2-IMP-003 · capturado · `AP-2026-09-17-1608-changelog-truncado.md`
 - 2026-09-17T19:38:00-03:00 · task F2-IMP-004 · capturado · `AP-2026-09-17-1938-capacidade-e-number-required.md`
 - 2026-09-17T19:47:00-03:00 · task F2-IMP-004 · capturado · `AP-2026-09-17-1947-enforcement-no-servidor.md`
+- 2026-09-17T20:30:00-03:00 · task F2-IMP-005 · capturado · `AP-2026-09-17-2030-mecanismo-vs-interface.md`
