@@ -4,13 +4,14 @@
 - task_id: F2-IMP-004
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- etapa: aguardando_teste_humano
+- etapa: em_correcao
 - autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "vamos prosseguir"
-- teste_humano: pendente
-- verificacao_automatica: passou — Skip 51806 v0.0.31, pipeline completo ok; roteiro RED/GREEN/regressão executado ao vivo: (1) CONCORRÊNCIA — lead A CONCLUIDO no slot cap 1, lead B recusado pelo índice único e registrado como TENTATIVA com conflict_detected=true + evento APPOINTMENT_CONFLICT; (2) IDEMPOTÊNCIA — reenvio idêntico recusado (HTTP 400 validation_not_unique), 1 registro preservado; (3) DESISTÊNCIA — DESISTENCIA + APPOINTMENT_ABANDONED, slot liberado e re-reservado pelo lead D; (4) ROLLBACK — down-migration real executada (revertido até 0013): grade removida e recriada, tentativas/eventos preservados, ambiente restaurado (0017); limitação registrada: concorrência é provada pelo índice único do banco, não por transação distribuída
+- teste_humano: falhou — 2026-09-17, Ricardo Junior: "estou agendando no mesmo horário que tem informado 2 vagas e está permitindo mais de 2" — relato correto; reproduzido: slot cap 2 com 3 reservas CONCLUIDO; a capacidade não é controlada em nenhuma camada (o índice único só impede o MESMO lead no MESMO slot)
+- teste_humano_detalhe: a prova de concorrência da F2-IMP-004 usou slot cap 1 (índice único recusa o 2º) e não exercitou o limite de capacidade 2 — lacuna da prova, não do modelo
+- verificacao_automatica: passou parcialmente — roteiro de bordas ok exceto o limite de capacidade por slot, que exige controle de contagem (não existe no contrato atual)
 - aprendizado: pendente
-- ultima_acao: roteiro de bordas executado; rollback real provado; ambiente restaurado (grade 248, fixtures 4, usuário de verificação ativo para o teste humano)
-- proxima_acao: teste humano do consultor — conferir roteiro e registros; depois remover usuário de verificação (0018)
-- gate: aceite humano antes de liberar F2-IMP-005
+- ultima_acao: falha reproduzida e causa raiz identificada — falta enforcement de capacidade (contagem de reservas ativas por slot)
+- proxima_acao: implementar controle de capacidade na página /agendar (contagem de reservas ativas por slot antes de confirmar) + migração de limpeza das reservas de teste excedentes
+- gate: debug em curso; volta ao teste humano após a correção
 - limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
 - atualizado_em: 2026-09-17T16:30:00-03:00
