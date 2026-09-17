@@ -1,3 +1,10 @@
+## 2026-09-17 — Implementação F2-IMP-005 (consolidação e aceite da SPEC-2-001)
+
+- [champion via consultoria] Task F2-IMP-005 implementada (autorização do consultor Ricardo: "vamos prosseguir"): pacote de evidências sanitizadas da SPEC-2-001 publicado em `06_notas/aceites/pacote-evidencias-spec-2-001.md` — CA-2.01..CA-2.05 com provas executadas (dados 100% sintéticos, v0.0.45), provas de segurança transversais e pendências destacadas; roteiro de teste do Champion publicado em `06_notas/aceites/roteiro-teste-champion-spec-2-001.md` — 5 cenários no preview (reserva válida, limite de vagas, campos obrigatórios, desistência, fallback humano); recibo de aceite aberto no `04_fase-atual/fase.md` com veredito pendente.
+- [observação registrada] CA-2.03 é cumprido no fluxo do lead (página); via API direta o servidor ainda não rejeita CONCLUIDO sem campos mínimos — registrada como recomendação de fortalecimento pós-aceite (nova task, novo ciclo), não bloqueia o aceite.
+- [teste humano] O teste desta task é o veredito do Champion (Karol e Márcio) sobre a SPEC-2-001, usando o roteiro publicado — ACEITO encerra a SPEC-2-001 e libera F2-IMP-006; REPROVADO mantém a task aberta e vai para debug. Pendente.
+- [limite] Nenhum código, migração ou configuração do Skip foi alterada nesta task; apenas documentos de aceite. Nenhuma publicação em produção.
+
 ## 2026-09-17 — Fechamento F2-IMP-004 (conflito, idempotência, desistência e rollback)
 
 - [consultor] Task F2-IMP-004 concluída (4/9 da implementação da Fase 2): teste humano aprovado pelo consultor em 17/09/2026 ("testado e funcionou") após duas rodadas de debug — a fechadura de capacidade por slot está ativa no servidor (hook `enforce_slot_capacity.js` em create/update/delete de reservas) e na página `/agendar` (esconde slot cheio, mostra vagas restantes, bloqueia clique).
