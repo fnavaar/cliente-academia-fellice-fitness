@@ -6,12 +6,12 @@
 - spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "vamos prosseguir"
-- teste_humano: falhou e corrigido — Ricardo reproduziu a falha de capacidade (slot cap 2 aceitou 3+); debug executado; aguardando reteste
-- teste_humano_detalhe: falha reproduzida e corrigida — ver debug summary no changelog
-- verificacao_automatica: passou — v0.0.40, pipeline completo ok; correção em 3 camadas: (1) migração 0018 criou agenda_slot_occupancy (ocupação por slot, recalculada, leitura pública, escrita só consultor/champion); (2) página /agendar esconde slot cheio (active >= capacity), mostra vagas restantes e bloqueia clique; (3) ambiente limpo (0020 removeu as reservas de teste, deleteRule null provado — API recusa DELETE anônimo/consultor, HTTP 403)
+- teste_humano: falhou 2x e corrigido — 1ª falha: nenhuma camada contava ocupação (corrigida na rodada 1); 2ª falha (reteste): página escondia slot cheio mas o contador não era atualizado e o servidor aceitava acima da capacidade via API direta (corrigida na rodada 2 com hook de servidor); aguardando 2º reteste
+- teste_humano_detalhe: rodada 2 — hook enforce_slot_capacity.js em lead_appointments (create/update/delete): conta reservas ativas (CONCLUIDO+TENTATIVA) por slot, rejeita acima da capacidade com HTTP 400 "Este horário acabou de encher", sincroniza agenda_slot_occupancy após cada escrita; migração 0021 ressincronizou contadores e limpou provas
+- verificacao_automatica: passou — v0.0.43, pipeline completo ok; provas ao vivo: recusa em slot cheio (HTTP 400), 2 reservas aceitas em cap 2 (200/200), 3ª recusada (400), desistência libera vaga (PATCH 200 + nova reserva 200), contador correto (2/2), cenário exato do reteste reproduzido e recusado sem efeito colateral
 - aprendizado: pendente
-- ultima_acao: debug concluído — capacidade controlada, ambiente limpo (4 fixtures, ocupação zerada, grade 248)
-- proxima_acao: reteste humano do consultor — reservar 2 vagas num slot cap 2 e confirmar que a 3ª é bloqueada
+- ultima_acao: fechadura de capacidade no servidor implementada e provada; contadores ressincronizados; ambiente com 7 reservas (3 do teste humano no slot 1200 — recusa ativa para novas, 4 fixtures)
+- proxima_acao: 2º reteste humano — reservar 2 vagas num slot cap 2 e confirmar que a 3ª é recusada; depois fechamento e limpeza das 3 reservas do teste humano via migração
 - gate: aceite humano antes de liberar F2-IMP-005
 - limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
-- atualizado_em: 2026-09-17T16:45:00-03:00
+- atualizado_em: 2026-09-17T17:05:00-03:00
