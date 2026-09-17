@@ -11,3 +11,4 @@
 - 2026-09-17T15:51:00-03:00 · task F2-IMP-002 · sem sinal reutilizável · geração da grade e ciclo de vida passaram na primeira execução após validação local prévia da lógica (réplica do gerador testada antes do apply); padrão do AP-2026-09-17-1527 aplicado preventivamente
 - 2026-09-17T16:08:00-03:00 · task F2-IMP-003 · capturado · `AP-2026-09-17-1608-changelog-truncado.md`
 - 2026-09-17T19:38:00-03:00 · task F2-IMP-004 · capturado · `AP-2026-09-17-1938-capacidade-e-number-required.md`
+- 2026-09-17T19:47:00-03:00 · task F2-IMP-004 · capturado · `AP-2026-09-17-1947-enforcement-no-servidor.md`
