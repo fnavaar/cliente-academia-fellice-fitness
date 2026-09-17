@@ -2,7 +2,7 @@
 
 <!-- fase-format:2 -->
 
-> A Fase 2 tem duas levas: desbloqueios documentais concluídos em 2026-09-16 e a implementação do autoagendamento/visão operacional em curso — F2-IMP-001, F2-IMP-002 e F2-IMP-003 concluídas com aceite humano em 2026-09-17; F2-IMP-004 é a próxima task elegível.
+> A Fase 2 tem duas levas: desbloqueios documentais concluídos em 2026-09-16 e a implementação do autoagendamento/visão operacional em curso — F2-IMP-001..F2-IMP-004 concluídas com aceite humano em 2026-09-17; F2-IMP-005 em teste humano do Champion (pacote de evidências e roteiro publicados).
 
 ## Tasks documentais concluídas
 
@@ -25,10 +25,10 @@
   > F2-IMP-002 / SPEC-2-001. Critérios: slot 30 min; capacidade 1 e exceção 2 entre 11:30–16:30; grade seg–sex 08:00–19:30 e sáb 09:00–13:30; manutenção limitada aos papéis decididos. Evidência: migração 0011 no Skip 51806 v0.0.23 gerou 248 slots sintéticos (14 dias; seg–sex 23 blocos 08:00–19:00, sáb 9 blocos 09:00–13:00; capacidade 2 nos blocos que começam entre 11:30 e 16:30 exatos — interpretação corrigida pelo consultor em 17/09/2026, 11 blocos/dia útil; capacidade 2 também nos 8 blocos de sábado dentro da janela [VALIDAR NA CALL DE SETUP]); ciclo de vida provado via API com usuário sintético temporário — criar, editar capacidade, bloquear, reabrir e apagar ok; sem login não cria slot (HTTP 400); fixtures antigas removidas; rollback cirúrgico por created_by='grade-teste'; teste humano do consultor aprovado em 17/09/2026 ("funcionou" — grade conferida via API e login do papel de agenda validado na /fila); usuário sintético removido após validação (0013). Pré-condição: F2-IMP-001 aceita e teste humano. Leva 3. Estado final: grade sintética controlável e não publicada.
 - [x] Implementar a seleção e conclusão do agendamento @"Karol e Márcio" #projeto
   > F2-IMP-003 / SPEC-2-001. Critérios: slots abertos visíveis; appointment vinculado à triagem; nome, telefone/canal, localidade e profissão exigidos; e-mail opcional; conclusão somente com campos mínimos; fallback sem confirmação falsa. Evidência: página /agendar criada no Skip 51806 v0.0.26 (grade agrupada por dia com selo "2 vagas" → formulário de campos mínimos → confirmação com código de reserva), rota registrada em App.tsx e link "Prefere escolher um horário? Agende aqui" na triagem; pipeline QA completo ok; provas ao vivo — 248 slots ABERTO carregados, tentativa válida → CONCLUIDO com concluded_at e evento APPOINTMENT_CONCLUDED, fallback ENCAMINHAMENTO_HUMANO com handoff_reason, reescolha de slot atualiza a mesma tentativa sem duplicar (RN-2.06), página HTTP 200 no preview; teste humano do consultor aprovado em 17/09/2026 ("teste realizado e funcionou" — fluxo completo percorrido no preview); usuário de verificação removido após aceite (0015). Pré-condição: F2-IMP-002 aceita. Leva 4. Estado final: fluxo sintético de tentativa implementado no teste, sem mensagem externa, sem CRM, sem agenda externa.
-- [ ] Provar conflito, idempotência, desistência e rollback da agenda @"Karol e Márcio" #projeto
-  > F2-IMP-004 / SPEC-2-001. Critérios: concorrência deixa no máximo uma confirmação; reprocessamento não duplica; desistência preserva eventos/libera capacidade; falha/timeout/sem slots encaminha; rollback preserva histórico. Evidência: roteiro RED/GREEN/regressão com IDs sintéticos. Pré-condição: F2-IMP-003 aceita. Leva 5. Estado final: bordas da agenda demonstradas em teste. **Próxima task elegível.**
+- [x] Provar conflito, idempotência, desistência e rollback da agenda @"Karol e Márcio" #projeto
+  > F2-IMP-004 / SPEC-2-001. Critérios: concorrência deixa no máximo uma confirmação; reprocessamento não duplica; desistência preserva eventos/libera capacidade; falha/timeout/sem slots encaminha; rollback preserva histórico. Evidência: fechadura de capacidade no servidor (hook enforce_slot_capacity.js em create/update/delete + contador agenda_slot_occupancy sincronizado) e na página /agendar (esconde slot cheio, mostra vagas restantes); 2 rodadas de debug documentadas em 06_notas/debug/ (debug-2026-09-17-capacidade-por-slot.md); provas ao vivo — 2 reservas aceitas em slot cap 2 (HTTP 200/200), 3ª recusada (HTTP 400), desistência libera vaga, rollback preserva histórico, DELETE via API recusado (403); teste humano aprovado em 17/09/2026 ("testado e funcionou") após 2 rodadas de debug; ambiente limpo (v0.0.45: 4 fixtures, 248 slots, 0 ocupados). Pré-condição: F2-IMP-003 aceita. Leva 5. Estado final: bordas da agenda demonstradas em teste. **Concluída.**
 - [ ] Consolidar o TDD e aceitar a agenda de teste @"Karol e Márcio" #projeto
-  > F2-IMP-005 / SPEC-2-001. Critérios: CA-2.01..CA-2.05 demonstrados; evidências sanitizadas; preview pronto para teste do Champion. Evidência: RED/GREEN/regressão, recibo e aceite humano. Pré-condição: F2-IMP-004 aceita. Leva 6. Ponto de parada: reprovação mantém a task aberta e encaminha debug. Estado final: SPEC-2-001 aceita ou reprovada explicitamente.
+  > F2-IMP-005 / SPEC-2-001. Critérios: CA-2.01..CA-2.05 demonstrados; evidências sanitizadas; preview pronto para teste do Champion. Evidência: pacote de evidências publicado em 06_notas/aceites/pacote-evidencias-spec-2-001.md (CA-2.01..CA-2.05 com provas executadas, dados 100% sintéticos) e roteiro de teste do Champion em 06_notas/aceites/roteiro-teste-champion-spec-2-001.md (5 cenários no preview); recibo de aceite aberto neste arquivo. Pré-condição: F2-IMP-004 aceita. Leva 6. Ponto de parada: reprovação mantém a task aberta e encaminha debug. Estado atual: aguardando veredito do Champion — SPEC-2-001 aceita ou reprovada explicitamente.
 - [ ] Criar a visão operacional de tentativas @"Karol e Márcio" #projeto
   > F2-IMP-006 / SPEC-2-002. Critérios: visão mostra estado, contexto da triagem, origem, versão e horário; reprocessamento atualiza sem duplicar; visão não conclui por conta própria; falha conserva estado anterior. Evidência: lista/detalhe, fixtures e trilha de eventos; rota acessível no preview. Pré-condição: F2-IMP-005 aceita. Leva 7. Estado final: visão interna funcional em teste, sem publicação.
 - [ ] Aplicar permissões, fila e assunção de tentativas @"Karol e Márcio" #projeto
@@ -123,6 +123,15 @@ A Fase 3 só pode ser considerada depois que F2-IMP-001..F2-IMP-009 forem conclu
 - **Sem ação automática:** o critério de parada alimenta **sinalização visual** para o responsável (RN-2.10); nenhum estado muda automaticamente. O encerramento exige motivo obrigatório, coerente com RN-2.09 e F1-T005.
 - **Aprovado por:** Liderança Comercial (decisão informada via consultoria em 2026-09-16)
 - **Limite:** registro documental apenas — nenhuma regra de escalada foi configurada no Skip; a implementação da sinalização ocorre na fase de implementação, com autorização própria.
+
+## Recibo de aceite — SPEC-2-001 (aberto em 2026-09-17)
+
+- **Task:** F2-IMP-005 — Consolidar o TDD e aceitar a agenda de teste.
+- **Pacote de evidências:** `06_notas/aceites/pacote-evidencias-spec-2-001.md` (CA-2.01..CA-2.05 com provas executadas; dados 100% sintéticos).
+- **Roteiro de teste do Champion:** `06_notas/aceites/roteiro-teste-champion-spec-2-001.md` (5 cenários no preview, 10–15 min).
+- **Veredito do Champion (Karol e Márcio):** ☐ ACEITO ☐ REPROVADO — pendente.
+- **Pendências destacadas para decisão consciente:** LGPD (base legal do agendamento), RN-2.06 (semântica de reagendamento) e capacidade 2 no sábado.
+- **Ponto de parada:** reprovação mantém a task aberta e encaminha debug; aceite encerra a SPEC-2-001 e libera F2-IMP-006.
 
 ## Marco da Fase 2 (2026-09-16)
 
