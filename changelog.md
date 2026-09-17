@@ -1,8 +1,15 @@
+## 2026-09-17 — Fechamento F2-IMP-005 (veredito ACEITO — SPEC-2-001 aceita)
+
+- [champion] Task F2-IMP-005 concluída (5/9 da implementação da Fase 2): veredito **ACEITO** do Champion (Karol e Márcio) registrado via consultor Ricardo Junior ("aceito") em 17/09/2026 — **SPEC-2-001 encerrada**.
+- [verificação] Revalidação independente no fechamento (do zero, v0.0.48): CA-2.01 campos completos na fixture e na criação pela página; CA-2.02 fechadura ativa (2ª reserva 200, 3ª recusada 400); CA-2.04 eventos preservados (CREATED+CONCLUDED+ABANDONED) e vaga liberada; CA-2.05 fallback com handoff_reason; páginas / e /agendar 200; ambiente limpo — 4 fixtures, 248 slots, 0 ocupados (migrações 0024–0026 removeram os registros dos testes do Champion).
+- [achado do consultor] Continuidade triagem → agendamento registrada como pendência #4: botão "Agende aqui" no painel lateral da triagem; lead redigita nome/canal na /agendar; agendamento não herda o lead_submission_id da triagem (vínculo hoje apenas estrutural). Decisão do Champion pendente: aceitar como está, mover o botão para o final do fluxo e/ou implementar a passagem de contexto.
+- [limite] Nenhum código de produto alterado nesta task (apenas documentos de aceite e migrações de limpeza de dados de teste). Nenhuma publicação em produção. Próxima task elegível: F2-IMP-006 (visão operacional, SPEC-2-002) — exige novo ciclo de análise + autorização explícita.
+
 ## 2026-09-17 — Implementação F2-IMP-005 (consolidação e aceite da SPEC-2-001)
 
 - [champion via consultoria] Task F2-IMP-005 implementada (autorização do consultor Ricardo: "vamos prosseguir"): pacote de evidências sanitizadas da SPEC-2-001 publicado em `06_notas/aceites/pacote-evidencias-spec-2-001.md` — CA-2.01..CA-2.05 com provas executadas (dados 100% sintéticos, v0.0.45), provas de segurança transversais e pendências destacadas; roteiro de teste do Champion publicado em `06_notas/aceites/roteiro-teste-champion-spec-2-001.md` — 5 cenários no preview (reserva válida, limite de vagas, campos obrigatórios, desistência, fallback humano); recibo de aceite aberto no `04_fase-atual/fase.md` com veredito pendente.
 - [observação registrada] CA-2.03 é cumprido no fluxo do lead (página); via API direta o servidor ainda não rejeita CONCLUIDO sem campos mínimos — registrada como recomendação de fortalecimento pós-aceite (nova task, novo ciclo), não bloqueia o aceite.
-- [teste humano] O teste desta task é o veredito do Champion (Karol e Márcio) sobre a SPEC-2-001, usando o roteiro publicado — ACEITO encerra a SPEC-2-001 e libera F2-IMP-006; REPROVADO mantém a task aberta e vai para debug. Pendente.
+- [teste humano] 5/5 cenários do roteiro cumpridos em 17/09/2026: cenários 1, 2, 3 e 5 executados pelo Champion via consultor (reserva válida com código, horário some ao esgotar, bloqueio de campos obrigatórios, fallback humano); cenário 4 (desistência) provado pelo operador via API conforme o roteiro previa — PATCH DESISTENCIA 200, evento ABANDONED, 3 eventos preservados, contador 2→1 (a tela de desistência é escopo da SPEC-2-002, F2-IMP-006/007).
 - [limite] Nenhum código, migração ou configuração do Skip foi alterada nesta task; apenas documentos de aceite. Nenhuma publicação em produção.
 
 ## 2026-09-17 — Fechamento F2-IMP-004 (conflito, idempotência, desistência e rollback)
