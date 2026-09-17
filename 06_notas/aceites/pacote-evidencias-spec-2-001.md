@@ -58,6 +58,7 @@
 1. **LGPD — base legal do agendamento:** o consentimento da F1-T004 cobre comunicações; a base legal dos campos do agendamento (execução de serviço solicitado) precisa de validação com compliance. Flagrada desde a F2-IMP-001.
 2. **RN-2.06 — semântica de reagendamento:** reescolha de slot atualiza a mesma tentativa (decisão de implementação); confirmar se é a semântica desejada pelo negócio.
 3. **Capacidade 2 no sábado:** a regra da janela 11:30–16:30 é aplicada também aos blocos de sábado dentro da janela — confirmar se é a intenção do Subgerente Comercial.
+4. **Continuidade triagem → agendamento (achado do consultor em 17/09):** o botão "Agende aqui" fica no painel lateral da triagem (não no final); quem preenche a triagem e clica nele **redigita nome e canal** na /agendar, e o agendamento nasce com `lead_submission_id` novo — **não herda o vínculo com a triagem concluída**. O critério "appointment vinculado à triagem" é hoje apenas estrutural. Decidir: (a) aceitar como está, (b) mover o botão para o final do fluxo e/ou (c) implementar a passagem do contexto da triagem para a /agendar.
 
 ## 5. Como este pacote foi verificado
 
