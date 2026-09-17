@@ -4,14 +4,13 @@
 - task_id: F2-IMP-003
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "vamos prosseguir"
 - teste_humano: pendente
-- verificacao_automatica: pendente
+- verificacao_automatica: passou — Skip 51806 v0.0.25, pipeline completo ok; página /agendar criada (grade → dados mínimos → confirmação) + rota + link na triagem; provas ao vivo: 248 slots ABERTO carregados, tentativa válida → CONCLUIDO com concluded_at e evento, fallback ENCAMINHAMENTO_HUMANO com motivo, reescolha de slot atualiza sem duplicar (1 registro), página responde HTTP 200 no preview; usuário temporário de verificação ativo (0014)
 - aprendizado: pendente
-- analise: concluída em 2026-09-17 — base pronta (grade 248 slots v0.0.23, coleção lead_appointments com índice de idempotência); Index.tsx e App.tsx inspecionados (padrões: createRecord com fetch, useRef para leadSubmissionId, rotas em App.tsx); plano: página /agendar com 3 passos (grade → dados → confirmação), criação de TENTATIVA + eventos, validação de campos mínimos no cliente para CONCLUIDO, fallback para ENCAMINHAMENTO_HUMANO; pendências LGPD e RN-2.06 registradas no STATUS não bloqueiam (validação com Champion segue paralela)
-- ultima_acao: relatório de análise de F2-IMP-003 entregue ao consultor
-- proxima_acao: aguardar autorização para implementar
-- gate: autorização explícita do consultor antes de implementar; teste humano do Champion depois da prova
+- ultima_acao: implementação concluída e provas executadas
+- proxima_acao: teste humano do consultor — percorrer /agendar no preview (fluxo válido e caminho de erro); depois remover usuário temporário (0015)
+- gate: aceite humano antes de liberar F2-IMP-004
 - limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
-- atualizado_em: 2026-09-17T16:00:00-03:00
+- atualizado_em: 2026-09-17T16:10:00-03:00
