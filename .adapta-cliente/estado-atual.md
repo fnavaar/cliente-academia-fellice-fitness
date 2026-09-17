@@ -4,16 +4,13 @@
 - task_id: F2-IMP-001
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- tasks_documentais: F2-T001..F2-T005 concluídas
-- tasks_implementacao: F2-IMP-001..F2-IMP-009 preparadas; apenas F2-IMP-001 elegível
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "pode implementar da forma que você acredita"
 - teste_humano: pendente
-- verificacao_automatica: pendente
+- verificacao_automatica: passou — Skip 51806 v0.0.17, pipeline completo (setup/staticAnalysis/build/integrations/test) ok; 3 coleções criadas (agenda_slots, lead_appointments, lead_appointment_events); fixtures semeadas; índice único (lead_submission_id, slot_id) provado ao vivo (duplicata HTTP 400); criação pública provada ao vivo; leitura autenticada provada (HTTP 400 sem login)
 - aprendizado: pendente
-- analise: concluída em 2026-09-16 — SPEC-2-001 lida integralmente; Skip 51806 inspecionado (migrações 0001–0006, coleções Fase 1, sem coleções de agenda); plano de migration de agenda/tentativa/eventos + fixtures sintéticas apresentado; nada implementado
-- ultima_acao: relatório de análise de F2-IMP-001 entregue ao consultor
-- proxima_acao: aguardar autorização para implementar
-- gate: autorização explícita do consultor antes de implementar; teste humano do Champion depois da prova
+- ultima_acao: implementação concluída (migrações 0007/0008 + fixtures + contrato), evidências ao vivo coletadas
+- proxima_acao: teste humano do Champion/consultor — revisar contrato e coleções no ambiente de teste
+- gate: aceite humano antes de liberar F2-IMP-002
 - limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
-- atualizado_em: 2026-09-16T17:25:00-03:00
+- atualizado_em: 2026-09-17T11:20:00-03:00
