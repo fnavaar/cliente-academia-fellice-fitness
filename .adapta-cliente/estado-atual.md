@@ -1,17 +1,16 @@
 # Estado atual — Adapta Cliente
 
 - fase: 2
-- task_id: F2-IMP-005
+- task_id: F2-IMP-006
 - champion: Karol e Márcio
-- spec: 04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md
-- etapa: concluida
-- autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "vamos prosseguir" (após relatório de análise da F2-IMP-005)
-- teste_humano: aprovado — 2026-09-17, veredito ACEITO do Champion registrado via Ricardo Junior ("aceito"); 5/5 cenários do roteiro (1, 2, 3 e 5 pelo Champion; cenário 4 provado pelo operador via API conforme roteiro)
-- teste_humano_detalhe: SPEC-2-001 encerrada com aceite formal; recibo preenchido no fase.md; revalidação independente no fechamento confirmou CA-2.01..CA-2.05
-- verificacao_automatica: passou — v0.0.48, pipeline ok; revalidação do zero: fechadura ativa (200/200/400), eventos preservados, fallback ok, páginas 200, ambiente limpo (4 fixtures, 248 slots, 0 ocupados)
+- spec: 04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md
+- etapa: aguardando_autorizacao
+- autorizacao_implementacao: ausente
+- teste_humano: pendente
+- verificacao_automatica: pendente
 - aprendizado: pendente
-- ultima_acao: F2-IMP-005 concluída — SPEC-2-001 aceita pelo Champion (5/9 da implementação)
-- proxima_acao: aguardar pedido do consultor para iniciar F2-IMP-006 (visão operacional, SPEC-2-002) com novo ciclo de análise
-- gate: fechada; F2-IMP-006 elegível e exige novo ciclo de análise + autorização explícita
+- ultima_acao: análise profunda concluída via rota proxima-task — baseline lido sem alteração de produto (v0.0.48, 4 fixtures, 248 slots, 0 ocupados); recorte definido: visão de LEITURA com contexto (CA-2.06) + idempotência de reprocessamento (CA-2.08); assunção/permissões ficam na F2-IMP-007
+- proxima_acao: aguardar autorização para implementar
+- gate: autorização explícita antes de implementar
 - limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
-- atualizado_em: 2026-09-17T17:30:00-03:00
+- atualizado_em: 2026-09-17T17:35:00-03:00
