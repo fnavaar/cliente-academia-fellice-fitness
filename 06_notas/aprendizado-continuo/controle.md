@@ -7,3 +7,4 @@
 - 2026-09-16T12:14:00-03:00 · task F2-T003 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T14:16:00-03:00 · task F2-T004 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T14:28:00-03:00 · task F2-T005 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
+- 2026-09-17T15:27:00-03:00 · task F2-IMP-001 · capturado · `AP-2026-09-17-1527-jsvm-set-e-slot-opcional.md`
