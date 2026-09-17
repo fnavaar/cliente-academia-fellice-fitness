@@ -1,4 +1,9 @@
-## 2026-09-17 — DEBUG F2-IMP-004 — capacidade por slot
+## 2026-09-17 — DEBUG F2-IMP-004 (rodada 2) — fechadura de capacidade no servidor
+
+- [consultor] DEBUG task F2-IMP-004 (rodada 2): reteste humano reproduziu a falha — a página escondia slot cheio, mas o contador de ocupação nunca era atualizado por nenhuma camada e o servidor aceitava reservas acima da capacidade via API direta; consultor também reportou que era possível agendar mais de uma pessoa nos demais horários → causa raiz: filtro cosmético na página sem enforcement no servidor → **corrigido** com hook `enforce_slot_capacity.js` em `lead_appointments` (create/update/delete): conta as reservas ativas (CONCLUIDO+TENTATIVA) do slot, rejeita acima da capacidade com HTTP 400 "Este horário acabou de encher. Escolha outro, por favor." e mantém `agenda_slot_occupancy` sincronizada após cada escrita; migração 0021 ressincronizou todos os contadores e limpou as provas (v0.0.43). Provas ao vivo: 1ª e 2ª reservas aceitas em slot cap 2 (HTTP 200/200), 3ª recusada (400), desistência libera a vaga (PATCH 200 + nova reserva 200, contador 2/2), cenário exato do reteste (slot 1200 com 3 ativas) reproduzido e recusado sem criar registro. Gate: aguardando 2º reteste humano.
+- [nota técnica] O guardrail do Skip rejeitou a primeira versão do hook (v0.0.41): callbacks do JSVM executam em pool separado e não enxergam declarações de topo — toda a lógica foi movida para dentro de cada callback. Fixture antiga apontando para slot inexistente fazia a capacidade cair no default 1 — recusa "correta" por motivo errado, detectada e contornada nas provas.
+
+## 2026-09-17 — DEBUG F2-IMP-004 (rodada 1) — capacidade por slot
 
 - [consultor] DEBUG task F2-IMP-004: teste humano reproduziu falha real — slot com "2 vagas" aceitava 3+ reservas (o índice único só impede o MESMO lead no MESMO slot; nenhuma camada contava a ocupação) → causa raiz: ausência de controle de capacidade por slot (RN-2.01/CA-2.02 sem enforcement); a prova de conflito da task usava slot cap 1, onde o índice disfarçava o limite → **corrigido** em 3 camadas: migração 0018 criou `agenda_slot_occupancy` (ocupação por slot, recalculada, leitura pública, escrita só champion/consultor); página /agendar esconde slot cheio, mostra vagas restantes e bloqueia clique; migrações 0019/0020 limparam as reservas de teste (deleteRule null provado: API recusou DELETE com HTTP 403 — correto). Ambiente limpo: 248 slots, 4 fixtures, ocupação zerada (v0.0.40). Nota técnica: campo number `required` no PocketBase rejeita 0 ("Cannot be blank") — 3 builds falhos até a causa; corrigido sem `required` (0 é estado válido). Gate: aguardando reteste humano.
 
@@ -50,7 +55,7 @@
 
 ## 2026-09-08
 
-- [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano aprovado no preview.
+- [champion] Task F1-T008 concluída: fila de encaminhamento humano com contexto preservado implementada no Skip 51806; autenticação de atendente, estados, eventos, idempotência e encerramento com motivo validados; QA 0.0.12 passou e teste humano foi aprovado no preview.
 - [debug] DEBUG task F1-T008: lead era salvo, mas a fila não aparecia por falta de autenticação na visão do atendente; evento HANDOFF_CREATED falhava por regra de criação protegida; login autorizado e evento público de criação corrigidos, com leitura/ações protegidas.
 - [champion] Task F1-T007 concluída: formulário de captura e triagem rastreável implementado no Skip 51806, com persistência no Skip Cloud, campos aprovados, UTMs, eventos e consentimento LGPD; QA 0.0.8 passou e teste humano foi aprovado no preview.
 - [debug] DEBUG task F1-T007: falha no evento de conclusão corrigida usando leadSubmissionId.current; submissão e evento sintéticos retornaram HTTP 200.
