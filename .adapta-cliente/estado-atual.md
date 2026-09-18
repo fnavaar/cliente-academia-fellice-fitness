@@ -4,14 +4,14 @@
 - task_id: F2-IMP-007
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md
-- etapa: aguardando_teste_humano
+- etapa: concluida
 - autorizacao_implementacao: confirmada — 2026-09-17, Ricardo Junior: "vamos prosseguir" (após relatório de análise da F2-IMP-007)
-- teste_humano: pendente — entrar na /visao com o login consultor enviado no chat, clicar "Assumir caso" na tentativa "Lead Fila Teste" e conferir dono/hora; tentar com o login sem permissão e ver o bloqueio
-- teste_humano_detalhe: botão Assumir na /visao (só ENCAMINHAMENTO_HUMANO sem dono — fila única); dono + assumed_at gravados pelo servidor + evento APPOINTMENT_ASSUMED na trilha; hook recusa troca/remoção de dono sem reatribuição formal (F2-IMP-008); papel gestao bloqueado na leitura e escrita (regra da coleção — 404, sem vazamento)
-- verificacao_automatica: passou — v0.0.66, pipeline ok; provas ao vivo: assunção via API (dono+assumed_at gravados, status preservado), troca de dono recusada 400, remoção de dono recusada 400, evento APPOINTMENT_ASSUMED criado, papel gestao sem leitura (0 itens) e sem escrita (404), /visao 200
-- aprendizado: pendente
-- ultima_acao: F2-IMP-007 implementada — assunção com dono/assumed_at + bloqueio por papel (CA-2.07 + CA-2.09)
-- proxima_acao: teste humano pelo consultor; após aceite, limpeza (0039: assunção da prova + tentativa de teste + usuários sintéticos) e liberação da F2-IMP-008
-- gate: aceite humano antes de liberar F2-IMP-008
-- limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada; reatribuição/escalada/rollback são a F2-IMP-008
-- atualizado_em: 2026-09-17T18:10:00-03:00
+- teste_humano: aprovado — 2026-09-18, Ricardo Junior: "Testei e funcionou"
+- teste_humano_detalhe: assunção na /visao com dono e hora exibidos; bloqueio do papel sem permissão confirmado; revalidação independente 7/7; limpeza pós-aceite 0041 removeu usuários sintéticos, tentativas 007/007b e eventos delas (login 400 provado)
+- verificacao_automatica: passou — v0.0.71, QA completo; provas: assunção via API, 400/400 nos updates indevidos, gestao sem leitura/escrita, eventos na trilha, páginas 200, ambiente limpo
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-18-0940-migracao-jsvm-app-parametro.md
+- ultima_acao: F2-IMP-007 concluída e registrada (fase.md, STATUS.md, changelog.md, debug doc, controle de aprendizado; v0.0.71)
+- proxima_acao: novo ciclo de análise da F2-IMP-008 (escalada visual, reatribuição, encerramento e rollback da fila — SPEC-2-002)
+- gate: F2-IMP-007 encerrada; F2-IMP-008 exige análise e autorização explícita antes de implementar
+- limite: nenhuma publicação em produção, integração externa ou Fase 3 autorizada
+- atualizado_em: 2026-09-18T09:50:00-03:00
