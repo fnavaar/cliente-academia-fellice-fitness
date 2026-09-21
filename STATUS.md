@@ -3,12 +3,12 @@
 - **Fase atual:** Fase 2 — autoagendamento assistido e continuidade da jornada.
 - **Caminho canônico:** `04_fase-atual/` — underscore depois de `04`; `04-fase-atual/` não existe.
 - **Fase 1:** encerrada; F1-T001 a F1-T008 concluídas, com teste humano registrado para F1-T007 e F1-T008.
-- **Fase 2:** desbloqueios documentais concluídos em 2026-09-16; implementação em curso desde 2026-09-17 — F2-IMP-007 concluída com aceite humano em 2026-09-18.
+- **Fase 2:** desbloqueios documentais concluídos em 2026-09-16; implementação em curso desde 2026-09-17 — F2-IMP-007 concluída com aceite humano em 2026-09-18; F2-IMP-008 concluída com aceite humano em 2026-09-21.
 - **Progresso documental:** 5/5 tasks de decisão concluídas.
-- **Progresso de implementação:** 7/9 tasks concluídas (78%); **SPEC-2-001 ACEITA**; F2-IMP-008 é a próxima elegível.
-- **Produto no preview:** triagem F1; grade de teste (248 slots); página /agendar com fechadura de capacidade no servidor; **página /visao funcional** — visão operacional de tentativas com contexto da triagem (objetivo, proximidade, ocupação, interesse, UTMs), filtros por estado e detalhe completo; **fila com assunção segura** — botão "Assumir caso" grava dono + assumed_at pelo servidor e evento APPOINTMENT_ASSUMED; rota do atendente `/fila`.
+- **Progresso de implementação:** 8/9 tasks concluídas (89%); **SPEC-2-001 ACEITA**; F2-IMP-009 é a próxima task de consolidação da SPEC-2-002.
+- **Produto no preview:** triagem F1; grade de teste (248 slots); página /agendar com fechadura de capacidade no servidor; **página /visao funcional** — visão operacional de tentativas com contexto da triagem (objetivo, proximidade, ocupação, interesse, UTMs), filtros por estado e detalhe completo; **fila com assunção, escalada, reatribuição, encerramento e rollback seguros** — ações atômicas, trilha de eventos e restauração sem apagar registros; rota do atendente `/fila`.
 - **Bloqueios documentais:** resolvidos para SPEC-2-001 e SPEC-2-002.
-- **Implementação:** F2-IMP-001..006 concluídas com aceite humano em 2026-09-17; F2-IMP-007 concluída com aceite humano em 2026-09-18; nenhuma publicação em produção.
+- **Implementação:** F2-IMP-001..006 concluídas com aceite humano em 2026-09-17; F2-IMP-007 concluída com aceite humano em 2026-09-18; F2-IMP-008 concluída com aceite humano em 2026-09-21; nenhuma publicação em produção.
 
 ## Tasks documentais concluídas
 
@@ -27,8 +27,8 @@
 - F2-IMP-005 — TDD integrado e aceite da agenda. ✅ concluída — 2026-09-17 (**SPEC-2-001 ACEITA pelo Champion**): pacote de evidências e roteiro de teste publicados; teste humano 5/5 cenários; veredito ACEITO no recibo do fase.md; revalidação independente 5/5 + ambiente limpo (v0.0.48)
 - F2-IMP-006 — visão operacional de tentativas. ✅ concluída — 2026-09-17 (página /visao no Skip 51806 v0.0.59: login autenticado, lista com filtros por estado e contadores, contexto da triagem completo no card e no detalhe, motivo do encaminhamento em destaque; campos de contexto em lead_appointments (0029) preenchidos nas fixtures (0030); hook copia o contexto da triagem no create — prova 0031 de herança completa; CA-2.08 provado (recriação recusada 400); debug de sessão órfã corrigido (bootstrap com authRefresh); teste humano aprovado ("verificado" — 4 tentativas, filtros corretos, contexto completo, sem botões de ação); usuário sintético removido — 0034)
 - F2-IMP-007 — permissões, fila e assunção de tentativas. ✅ concluída — 2026-09-18 (RBAC pelas regras das coleções lead_appointments/lead_appointment_events + hook protect_assumption.js como defesa em profundidade; migrações 0035–0039; debug r1 documentado em 06_notas/debug/ (actor_id vazio — authStore lido no momento do clique); provas ao vivo v0.0.66: assunção grava dono+assumed_at (servidor) + evento APPOINTMENT_ASSUMED, troca/remoção de dono recusadas 400, papel gestao sem leitura (0 itens) e sem escrita (404); teste humano aprovado ("Testei e funcionou"); revalidação independente 7/7 provas refazeitas do zero; limpeza pós-aceite — 0040 no-op silencioso corrigido pela 0041 (aprendizado AP-2026-09-18-0940): usuários sintéticos removidos (login 400), tentativas 007/007b e eventos delas removidos; v0.0.71)
-- F2-IMP-008 — escalada visual, reatribuição, encerramento e rollback. **Elegível** (pré-condição F2-IMP-007 aceita).
-- F2-IMP-009 — TDD integrado e aceite da visão operacional. Bloqueada por F2-IMP-008 e evidências.
+- F2-IMP-008 — escalada visual, reatribuição, encerramento e rollback. ✅ concluída — 2026-09-21 (Skip v0.0.75/v0.0.76; pipeline QA completo; teste humano aprovado; correções r1/r2; revalidação independente; migração 0046 aplicada, usuários/fixtures sintéticos removidos, fixture-base restaurada, fila ativa; logins sintéticos retornam 400; rotas do preview respondem 200)
+- F2-IMP-009 — TDD integrado e aceite da visão operacional. **Bloqueada por F2-IMP-008 e evidências; próxima task elegível para análise.**
 
 ## Pendências registradas
 
@@ -37,12 +37,12 @@
 - **Capacidade 2 no sábado [VALIDAR NA CALL DE SETUP]:** a regra da F2-T001 não distingue dia da semana; a grade gerada aplica capacidade 2 também aos blocos de sábado dentro da janela 11:30–13:00. Se o sábado deve ficar todo com capacidade 1, ajustar em emenda da SPEC.
 - **Continuidade triagem → agendamento (achado do consultor, 17/09):** botão "Agende aqui" no painel lateral da triagem; lead redigita nome/canal na /agendar e o agendamento não herda o lead_submission_id da triagem. Decisão do Champion pendente: aceitar como está, mover o botão para o final do fluxo e/ou implementar a passagem de contexto.
 - **Fortalecimento do CA-2.03 (pós-aceite):** validação de campos mínimos hoje no fluxo da página; via API direta o servidor ainda não rejeita CONCLUIDO sem campos — recomendada task de fortalecimento no servidor.
-- **Restrição de leitura por atribuição (F2-IMP-008):** o consultor hoje lê todas as tentativas (fila única); a visão restrita "só as atribuídas a ele ou em ENCAMINHAMENTO_HUMANO" entra na F2-IMP-008 junto da escalada, conforme registrado no changelog da F2-IMP-007.
+- **Restrição de leitura por atribuição:** a visão mantém a fila única de tentativas humanas; eventual refinamento de visibilidade por dono não foi alterado no fechamento da F2-IMP-008 e deve ser tratado apenas com requisito e task próprios.
 
 ## Próxima ação segura
 
-Executar somente F2-IMP-008 (escalada visual, reatribuição, encerramento e rollback da fila, SPEC-2-002) no ambiente de teste — com análise, autorização explícita e teste humano. Nenhuma publicação em produção ou Fase 3 é autorizada por este status.
+Iniciar somente a análise da F2-IMP-009 (TDD integrado e aceite da visão operacional), com novo ciclo e autorização explícita. Nenhuma publicação em produção ou Fase 3 é autorizada por este status.
 
 ## Limite operacional
 
-As tasks F2-T001..T005 registraram decisões humanas. F2-IMP-001..007 materializaram fundação de dados, grade de teste, fluxo de agendamento, fechadura de capacidade, aceite formal da SPEC-2-001, visão operacional de leitura e fila com assunção segura no ambiente de teste — sem publicação em produção e sem dado real. Nenhuma integração externa, conta real, conector ou publicação de produção foi criada.
+As tasks F2-T001..T005 registraram decisões humanas. F2-IMP-001..008 materializaram fundação de dados, grade de teste, fluxo de agendamento, fechadura de capacidade, aceite formal da SPEC-2-001, visão operacional de leitura, fila com assunção segura, escalada, reatribuição, encerramento e rollback no ambiente de teste — sem publicação em produção e sem dado real. Nenhuma integração externa, conta real, conector ou publicação de produção foi criada.
