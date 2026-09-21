@@ -16,3 +16,4 @@
 - 2026-09-17T20:55:00-03:00 · task F2-IMP-006 · capturado · `AP-2026-09-17-2055-sessao-orfa.md`
 - 2026-09-18T09:40:00-03:00 · task F2-IMP-007 · capturado · `AP-2026-09-18-0940-migracao-jsvm-app-parametro.md`
 - 2026-09-21T10:49:00-03:00 · task F2-IMP-008 · capturado · `AP-2026-09-21-1049-limpeza-pos-aceite-fixtures.md`
+- 2026-09-21T15:15:00-03:00 · task F2-IMP-009 (debug r1) · capturado · `AP-2026-09-21-1515-identidade-no-render.md`
