@@ -18,3 +18,4 @@
 - 2026-09-21T10:49:00-03:00 · task F2-IMP-008 · capturado · `AP-2026-09-21-1049-limpeza-pos-aceite-fixtures.md`
 - 2026-09-21T15:15:00-03:00 · task F2-IMP-009 (debug r1) · capturado · `AP-2026-09-21-1515-identidade-no-render.md`
 - 2026-09-21T17:25:00-03:00 · task F2-IMP-009 (debug r2) · capturado · `AP-2026-09-21-1725-hard-refresh-reteste-preview.md`
+- 2026-09-21T14:50:00-03:00 · task F2-IMP-009 (fechamento) · sem sinal reutilizável · limpeza pós-aceite seguiu o padrão já capturado no AP-2026-09-21-1049; fechamento documental sem falha técnica
