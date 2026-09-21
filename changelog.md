@@ -1,3 +1,11 @@
+## 2026-09-21 — Debug r1 F2-IMP-009 (dono exibido errado após troca de usuário na /visao)
+
+- [consultor] Teste humano da consolidação (21/09/2026): cenários 1, 3 e 4 OK; cenário 2 falhou — ao sair do Consultor A e entrar com o Consultor B (na mesma montagem da página), o card assumido pelo A exibia "Assumida por você" e o "responsável anterior" do B aparecia como ID cru; cenário 5 parcial (o roteiro pedia assunção durante o rollback, mas a UI esconde o botão por design — o bloqueio server-side já estava provado via API).
+- [causa raiz] `myUserId` era estado React capturado no mount (e na assunção); login/logout na mesma montagem não remonta a página e a comparação `dono === myUserId` ficava obsoleta — mesma família do debug da F2-IMP-007 r1 (authStore lido fora do momento do render/ação).
+- [correção] v0.0.78 (`0bffd92`): a identidade passa a ser lida do authStore no render (`myUserId` derivado, sem useState); migração 0048 criou fixtures de reteste (caso assumido pelo Consultor A + 2 casos sem dono, incluindo um dedicado ao cenário 5). Pipeline QA completo OK.
+- [verificação] Prova no navegador reproduzindo a falha exata: Consultor A → Sair → Consultor B sem recarregar a página — o card do A agora exibe "Assumida por z5wgyiffrdnv028" (ID correto, não "você") e o card reatribuído ao B exibe "por você" + responsável anterior corretos.
+- [limite] Reteste humano do cenário 2 e do cenário 5 (com a fixture "Lead Reteste Rollback r1") volta ao pendente; nenhuma publicação em produção.
+
 ## 2026-09-21 — Debug r2 F2-IMP-008 (exibição do responsável anterior)
 
 - [consultor] Reteste do passo 4 (21/09/2026): a reatribuição funcionou (dono → `lljzgyj2w6rimak`, `responsavel_anterior` preservado no banco, eventos ASSUMED + REASSIGNED na trilha), mas o card da `/visao` não exibia o responsável anterior.
