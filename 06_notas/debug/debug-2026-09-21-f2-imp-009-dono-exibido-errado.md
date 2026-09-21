@@ -23,6 +23,13 @@ v0.0.78 (`0bffd92`): `myUserId` deixa de ser `useState` e passa a ser **derivado
 - Bloqueio do cenário 5 confirmado como comportamento por design: com a fila em rollback a UI esconde o botão e o servidor recusa a ação (HTTP 400 "ações da fila estão temporariamente desativadas", provado via API na consolidação). O roteiro foi ajustado para o consultor apenas **verificar** a ausência do botão durante o rollback.
 - Nota sobre o cenário 2 original: a fixture "Lead Consolidação Encaminhamento" já tinha sido assumida pelo Consultor A no próprio teste (comportamento correto da fila única), razão pela qual o card não oferecia "Assumir caso" para o A repetir — a nova fixture "Lead Reteste Fila r1" cobre o fluxo limpo.
 
+## Rodada r2 (mesmo dia) — sintoma persistiu no reteste; causa: cache do navegador
+
+- **Relato:** passos 1, 3, 4 e 5 ok; passo 2 ainda exibia "Assumida por você" após trocar para o Consultor B (screenshot anexado ao relato).
+- **Investigação:** servidor íntegro — trilha de eventos mostra `APPOINTMENT_ASSUMED` único com actor `z5wgyiffrdnv028` (Consultor A, 14:07:40) e dono correto no registro; o bundle servido no preview (`index-B7eLHk-R.js`, v0.0.78) contém a correção e não contém o marcador antigo (`setMyUserId`); prova em navegador novo (sem cache) exibiu o comportamento correto.
+- **Causa raiz r2:** cache do navegador — a aba do teste continuou executando o bundle da v0.0.77. Mesmo padrão do reteste da F2-IMP-008 r2, resolvido com Ctrl+F5. Nenhuma mudança de produto nesta rodada.
+- **Procedimento de reteste:** Ctrl+F5 (hard refresh) na `/visao` após entrar com o Consultor B — ou abrir o preview em janela anônima/aba nova; se persistir, capturar screenshot com o console aberto.
+
 ## Gate atual
 
-aguardando teste humano — reteste dos cenários 2 e 5 com as fixtures "Lead Reteste Fila r1" e "Lead Reteste Rollback r1".
+aguardando teste humano — reteste do passo 2 com hard refresh (cenário 5 já reprovado/aprovado no r2: passos 3, 4 e 5 ok).
