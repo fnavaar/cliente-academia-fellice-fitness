@@ -5,8 +5,8 @@
 - 2026-09-16T11:52:00-03:00 · task F2-T001 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T12:04:00-03:00 · task F2-T002 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T12:14:00-03:00 · task F2-T003 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
-- 2026-09-16T14:16:00-03:00 · task F2-T004 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
-- 2026-09-16T14:28:00-03:00 · task F2-T005 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
+- 2026-09-16T14:16:00-03:00 · task F2-T004 · sem sinal reutilizável · decisão documental executada sem falha técnica; decisão registrada na primeira passada
+- 2026-09-16T14:28:00-03:00 · task F2-T005 · sem sinal reutilizável · decisão documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-17T15:27:00-03:00 · task F2-IMP-001 · capturado · `AP-2026-09-17-1527-jsvm-set-e-slot-opcional.md`
 - 2026-09-17T15:51:00-03:00 · task F2-IMP-002 · sem sinal reutilizável · geração da grade e ciclo de vida passaram na primeira execução após validação local prévia da lógica (réplica do gerador testada antes do apply); padrão do AP-2026-09-17-1527 aplicado preventivamente
 - 2026-09-17T16:08:00-03:00 · task F2-IMP-003 · capturado · `AP-2026-09-17-1608-changelog-truncado.md`
@@ -21,3 +21,4 @@
 - 2026-09-21T14:50:00-03:00 · task F2-IMP-009 (fechamento) · sem sinal reutilizável · limpeza pós-aceite seguiu o padrão já capturado no AP-2026-09-21-1049; fechamento documental sem falha técnica
 - 2026-09-24T14:34:00-03:00 · task B3-01 · capturado · `AP-2026-09-24-1434-taxonomia-utm.md`
 - 2026-09-24T16:34:00-03:00 · task B3-02 · capturado · `AP-2026-09-24-1634-metrica-norte-formula.md`
+- 2026-09-24T16:47:00-03:00 · task B3-03 · capturado · `AP-2026-09-24-1647-vinculo-triagem-agendamento.md`
