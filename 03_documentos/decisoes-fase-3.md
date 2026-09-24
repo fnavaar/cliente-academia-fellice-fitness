@@ -3,10 +3,15 @@
 Preencher uma seção por vez. Uma seção pendente, incompleta ou sem confirmação verificável não libera implementação.
 
 ## B3-01 — Taxonomia de origem e campanha
-- **Status:** PENDENTE
-- **Decisor:** Champion do cliente
-- **Decisão:** [preencher agrupamento de utm_source, utm_medium e utm_campaign e granularidade]
-- **Data/confirmação verificável:** [preencher]
+- **Status:** CONCLUÍDA — 2026-09-24
+- **Decisor:** Champion do cliente — Karol
+- **Decisão:**
+  - `utm_source`: manter cada fonte separada.
+  - `utm_medium`: manter cada valor separado.
+  - `utm_campaign`: usar de maneira agrupada por campanha.
+  - valores ausentes ou não reconhecidos: cada valor fica em seu próprio grupo.
+  - granularidade: campanha, conforme agrupamento definido acima.
+- **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”; regra complementar confirmada no chat: “mantenha cada valor separado”.
 
 ## B3-02 — Fórmula e janela da métrica norte
 - **Status:** PENDENTE
