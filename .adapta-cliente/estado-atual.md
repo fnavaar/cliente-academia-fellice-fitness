@@ -8,6 +8,6 @@
 - teste_humano: pendente
 - verificacao_automatica: passou — Fase 3, B3-01, SPEC-3-001 e registro canônico de decisões conferidos; nenhuma alteração de produto executada
 - aprendizado: pendente
-- ultima_acao: autorização formal de abertura da Fase 3 registrada no contexto da conversa; primeira task selecionada como B3-01 e análise documental concluída sem implementação
-- proxima_acao: Champion registrar B3-01 em `03_documentos/decisoes-fase-3.md` com agrupamento de `utm_source`, `utm_medium` e `utm_campaign`, granularidade, data e confirmação verificável
-- atualizado_em: 2026-09-24T13:55:43-03:00
+- ultima_acao: decisão B3-01 recebida no chat em 2026-09-24; `utm_source`, `utm_campaign` e tratamento de ausentes foram informados, mas a regra de `utm_medium` e a data/confirmação verificável ficaram ambíguas/incompletas; decisão não registrada para não inferir regra
+- proxima_acao: Champion esclarecer a regra operacional de `utm_medium` e informar a data da decisão; depois registrar B3-01 no arquivo canônico
+- atualizado_em: 2026-09-24T14:00:00-03:00
