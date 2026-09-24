@@ -44,3 +44,4 @@
 - Reconciliada a liberação documental da Fase 3 com o estado atual do Plano: cinco decisões B3-01..B3-05 liberadas ao Champion, 10 cards na Jornada e decisão P1 registrada.
 - Promovida a Fase 3 para a unidade ativa; a Fase 2 foi arquivada em `05_entregas/fase-2/`.
 - Mantidos os bloqueios: nenhuma implementação começa antes das decisões humanas e dos aceites previstos nas SPECs.
+- **B3-01 concluída documentalmente:** Karol decidiu manter `utm_source` separado por fonte, `utm_medium` separado por valor, agrupar `utm_campaign` por campanha e colocar valores ausentes/não reconhecidos em grupo próprio. Decisão registrada em `03_documentos/decisoes-fase-3.md`; nenhuma configuração, agregação ou código foi criado. Próxima decisão: B3-02.
