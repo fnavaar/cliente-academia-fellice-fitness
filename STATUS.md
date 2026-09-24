@@ -3,6 +3,7 @@
 ## Estado atual
 
 - **Fase atual:** Fase 3 — dashboard de conversão por formulário e campanha.
+- **Progresso da Fase 3:** 2/9 tasks de topo concluídas (22,2%): B3-01 e B3-02; 7 tasks permanecem pendentes.
 - **Gate anterior:** Fase 2 encerrada em 2026-09-21 — 14/14 tasks concluídas (F2-T001..T005 documentais + F2-IMP-001..009 de implementação); SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09) pelo Champion via consultor Ricardo Junior; `check-fase-2.md` APROVADO COM RESSALVAS em 21/09 com active-sha256=9baf0925b3663386dbb5a97365d4436bd38bde528799905afdb0aa0567025c32 (repo HEAD 1287e3d).
 - **Gate atual:** B3-01 e B3-02 foram concluídas documentalmente em 24/09/2026. B3-02 definiu numerador “Agendamentos concluídos no período”, denominador “Encaminhamentos humanos no mesmo período” e janela “Últimos 30 dias corridos”, com confirmação verificável de Karol. Permanecem pendentes B3-03, B3-04 e B3-05; a SPEC-3-001 permanece bloqueada até B3-03, e a SPEC-3-002 permanece bloqueada até B3-04 e B3-05, além do aceite da SPEC-3-001.
 - **Run:** `20260924T142019775Z-0b177fbe` (liberação das tarefas de decisão da Fase 3 e transferência de responsabilidade ao Champion).
@@ -20,4 +21,4 @@
 
 ## Próxima ação
 
-Revisar e confirmar o registro documental da B3-02. Depois do aceite humano da B3-02, a próxima decisão é B3-03; somente após B3-03 revalidar a SPEC-3-001. Nenhuma implementação, publicação de produção, mudança de permissão ou integração externa é autorizada antes do gate aplicável.
+Em novo pedido, analisar a B3-03 — vínculo entre triagem e agendamento. Não iniciar a implementação da SPEC-3-001 antes do registro da B3-03; nenhuma publicação de produção, mudança de permissão ou integração externa é autorizada antes do gate aplicável.
