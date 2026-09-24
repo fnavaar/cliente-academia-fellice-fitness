@@ -39,8 +39,8 @@ das tarefas que já têm um.
   > Conferir a SPEC-3-001, CA-3.01 a CA-3.05, seus testes humanos e as evidências de consolidação; registrar aceite ou correções antes de encerrar esta SPEC.
 - [x] Definir a fórmula e a janela da métrica norte @"Karol e Márcio" #aculturamento [interno]  <!-- id:2ce9c4fb-c143-4519-ba1f-e0ce80807e9b -->
   > B3-02 concluída documentalmente em 24/09/2026: numerador “Agendamentos concluídos no período”, denominador “Encaminhamentos humanos no mesmo período”, janela “Últimos 30 dias corridos” e confirmação verificável de Karol. Nenhuma métrica foi configurada e nenhum produto foi alterado.
-- [ ] Decidir o vínculo entre triagem e agendamento @"Karol e Márcio" #aculturamento [interno]  <!-- id:bcc00bba-0eb4-4821-9ccf-b74755969f43 -->
-  > O Champion preenche B3-03 em `03-Projeto/decisoes-fase-3.md` com o tratamento de agendamentos sem `lead_submission_id`, data e confirmação verificável. Nenhum código, banco ou integração é alterado.
+- [x] Decidir o vínculo entre triagem e agendamento @"Karol e Márcio" #aculturamento [interno]  <!-- id:bcc00bba-0eb4-4821-9ccf-b74755969f43 -->
+  > B3-03 concluída documentalmente em 24/09/2026: preservar o vínculo da triagem; o agendamento deve manter o `lead_submission_id` de origem quando a continuidade estiver disponível; casos sem vínculo permanecem como cobertura incompleta, sem atribuição por inferência. Nenhum código, banco, configuração, integração ou produto foi alterado.
 - [ ] Definir a matriz de acesso ao dashboard @"Karol e Márcio" #aculturamento [interno]  <!-- id:617b477e-d9f6-4256-ab84-530b932596fc -->
   > O Champion preenche B3-04 em `03-Projeto/decisoes-fase-3.md` com os papéis de leitura, preservando a proibição de dados de contato individuais para Marketing, data e confirmação verificável. Nenhuma permissão é concedida nesta tarefa.
 - [ ] Aprovar o critério de congelamento do baseline @"Karol e Márcio" #aculturamento [interno]  <!-- id:d30d0144-19d9-421d-b2a4-5c6bf4942533 -->
