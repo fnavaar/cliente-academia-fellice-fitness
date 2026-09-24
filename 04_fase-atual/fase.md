@@ -37,8 +37,8 @@ das tarefas que já têm um.
   > Iniciar somente depois de B3-01, B3-02, B3-04 e B3-05 estarem registrados pelo Champion em `03-Projeto/decisoes-fase-3.md` e de a SPEC-3-001 estar aceita. No ambiente de teste, executar a SPEC-3-002: dashboard comparativo por formulário, versão e campanha conforme taxonomia, matriz de acesso registrada, baseline congelado com aprovação do Champion; encerrar somente após teste humano da task.
 - [ ] Revisar o aceite da consolidação @"Felipe Navaar" !06/10/2026 #aculturamento [interno]  <!-- id:4217198c-8077-4769-b2c0-7b7482136553 -->
   > Conferir a SPEC-3-001, CA-3.01 a CA-3.05, seus testes humanos e as evidências de consolidação; registrar aceite ou correções antes de encerrar esta SPEC.
-- [ ] Definir a fórmula e a janela da métrica norte @"Karol e Márcio" #aculturamento [interno]  <!-- id:2ce9c4fb-c143-4519-ba1f-e0ce80807e9b -->
-  > O Champion preenche B3-02 em `03-Projeto/decisoes-fase-3.md` com numerador, denominador, janela, data e confirmação verificável. Não inventar fórmula, meta ou período; nenhuma métrica é configurada nesta tarefa.
+- [x] Definir a fórmula e a janela da métrica norte @"Karol e Márcio" #aculturamento [interno]  <!-- id:2ce9c4fb-c143-4519-ba1f-e0ce80807e9b -->
+  > B3-02 concluída documentalmente em 24/09/2026: numerador “Agendamentos concluídos no período”, denominador “Encaminhamentos humanos no mesmo período”, janela “Últimos 30 dias corridos” e confirmação verificável de Karol. Nenhuma métrica foi configurada e nenhum produto foi alterado.
 - [ ] Decidir o vínculo entre triagem e agendamento @"Karol e Márcio" #aculturamento [interno]  <!-- id:bcc00bba-0eb4-4821-9ccf-b74755969f43 -->
   > O Champion preenche B3-03 em `03-Projeto/decisoes-fase-3.md` com o tratamento de agendamentos sem `lead_submission_id`, data e confirmação verificável. Nenhum código, banco ou integração é alterado.
 - [ ] Definir a matriz de acesso ao dashboard @"Karol e Márcio" #aculturamento [interno]  <!-- id:617b477e-d9f6-4256-ab84-530b932596fc -->
