@@ -20,3 +20,4 @@
 - 2026-09-21T17:25:00-03:00 · task F2-IMP-009 (debug r2) · capturado · `AP-2026-09-21-1725-hard-refresh-reteste-preview.md`
 - 2026-09-21T14:50:00-03:00 · task F2-IMP-009 (fechamento) · sem sinal reutilizável · limpeza pós-aceite seguiu o padrão já capturado no AP-2026-09-21-1049; fechamento documental sem falha técnica
 - 2026-09-24T14:34:00-03:00 · task B3-01 · capturado · `AP-2026-09-24-1434-taxonomia-utm.md`
+- 2026-09-24T16:34:00-03:00 · task B3-02 · capturado · `AP-2026-09-24-1634-metrica-norte-formula.md`
