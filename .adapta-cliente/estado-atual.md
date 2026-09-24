@@ -6,8 +6,8 @@
 - etapa: bloqueada
 - autorizacao_implementacao: confirmada — 2026-09-24 16:02, Ricardo Junior: "Autorizo registrar a decisão documental da B3-02. Vou informar o numerador, o denominador e a janela temporal."
 - teste_humano: pendente
-- verificacao_automatica: falhou — janela corrigida para últimos 30 dias corridos; denominador "Status visita agendada comparecida" conflita com a exclusão de comparecimento na SPEC-3-001; confirmação "24/09/2026 - Karol" não contém citação literal nem referência verificável
+- verificacao_automatica: falhou — numerador "Agendamentos concluídos no período", denominador "Encaminhamentos humanos no mesmo período" e janela "Últimos 30 dias corridos" são compatíveis com a SPEC-3-001; confirmação "24/09/2026 - Karol" ainda não contém citação literal nem referência verificável
 - aprendizado: pendente
-- ultima_acao: nova correção da B3-02 validada; janela ficou única, mas o denominador exige decisão de escopo e a confirmação continua sem evidência verificável; nenhum registro canônico ou produto alterado
-- proxima_acao: obter decisão do Champion sobre denominador compatível com a SPEC ou aprovação formal de mudança de escopo, junto com citação literal ou referência verificável
-- atualizado_em: 2026-09-24T16:22:00-03:00
+- ultima_acao: denominador corrigido para "Encaminhamentos humanos no mesmo período"; conflito de escopo removido; nenhum registro canônico ou produto alterado
+- proxima_acao: fornecer citação literal ou referência verificável da confirmação da Karol e então registrar B3-02 no documento canônico
+- atualizado_em: 2026-09-24T16:25:00-03:00
