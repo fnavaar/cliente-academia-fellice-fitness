@@ -26,11 +26,11 @@ Os marcadores só valem **no fim da linha** — `Revisar #3 do contrato` continu
 Um título que TERMINA na forma de um marcador sai escapado com `\\` (`Ligar para \\@joao`); a barra é
 só para o parser e nunca aparece no card. Você não precisa escrever isso à mão.
 Marque `[x]` para concluir e adicione linhas novas à vontade: elas entram no quadro na próxima
-sincronização e voltam aqui com o `<!-- id:… -->` preenchido. **Não apague o marcador de id** das
-tarefas que já têm um.
+sincronização e voltam aqui com o `<!-- id:… -->` preenchido. **Não apague o marcador de id**
+das tarefas que já têm um.
 
-- [ ] Definir a taxonomia de origem e campanha @"Karol e Márcio" !28/09/2026 #aculturamento [interno]  <!-- id:45bb5d1b-b757-4d29-9afa-cee4d0077552 -->
-  > O Champion preenche B3-01 em `03-Projeto/decisoes-fase-3.md` com agrupamento de `utm_source`, `utm_medium` e `utm_campaign`, granularidade, data e confirmação verificável. Marketing/agência e Gestão podem ser consultados; nenhuma configuração é criada.
+- [x] Definir a taxonomia de origem e campanha @"Karol e Márcio" !28/09/2026 #aculturamento [interno]  <!-- id:45bb5d1b-b757-4d29-9afa-cee4d0077552 -->
+  > O Champion preenche B3-01 em `03-Projeto/decisoes-fase-3.md` com agrupamento de `utm_source`, `utm_medium` e `utm_campaign`, granularidade, data e confirmação verificável. Marketing/agência e Gestão podem ser consultados; nenhuma configuração é criada. Concluída documentalmente em 24/09/2026; nenhuma configuração foi criada.
 - [ ] Consolidar os eventos das fases 1 e 2 no funil de conversão @"Karol e Márcio" !01/10/2026 [interno]  <!-- id:ab9ce40f-304e-4ef6-929f-1efa7f7a0a87 -->
   > Iniciar somente depois de B3-01, B3-02 e B3-03 estarem registrados pelo Champion em `03-Projeto/decisoes-fase-3.md`. No ambiente de teste, executar a SPEC-3-001 com fixtures sintéticas: consolidação somente leitura, taxas com numerador/denominador/período, cobertura de atribuição visível e recálculo determinístico; encerrar somente após teste humano da task.
 - [ ] Configurar o dashboard por formulário e campanha e congelar o baseline @"Karol e Márcio" !05/10/2026 [interno]  <!-- id:124f370f-ea01-46d4-bdac-72c1cded2181 -->
