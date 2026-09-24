@@ -14,10 +14,16 @@ Preencher uma seção por vez. Uma seção pendente, incompleta ou sem confirma�
 - **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”; regra complementar confirmada no chat: “mantenha cada valor separado”.
 
 ## B3-02 — Fórmula e janela da métrica norte
-- **Status:** PENDENTE
-- **Decisor:** Champion do cliente
-- **Decisão:** [preencher numerador, denominador e janela]
-- **Data/confirmação verificável:** [preencher]
+- **Status:** CONCLUÍDA — 2026-09-24
+- **Decisor:** Champion do cliente — Karol
+- **Decisão:**
+  - **Numerador:** contar os agendamentos concluídos no período.
+  - **Denominador:** contar os encaminhamentos humanos no mesmo período.
+  - **Janela temporal padrão:** últimos 30 dias corridos.
+  - **Fórmula:** agendamentos concluídos no período ÷ encaminhamentos humanos no mesmo período.
+  - **Meta:** não definida nesta decisão; nenhuma meta foi inferida.
+  - **Escopo:** definição documental da métrica norte; nenhuma métrica, configuração ou produto foi alterado nesta task.
+- **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”.
 
 ## B3-03 — Vínculo entre triagem e agendamento
 - **Status:** PENDENTE
