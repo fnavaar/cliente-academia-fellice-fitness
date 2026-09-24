@@ -26,10 +26,15 @@ Preencher uma seção por vez. Uma seção pendente, incompleta ou sem confirma�
 - **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”.
 
 ## B3-03 — Vínculo entre triagem e agendamento
-- **Status:** PENDENTE
-- **Decisor:** Champion do cliente
-- **Decisão:** [preencher tratamento de agendamentos sem lead_submission_id]
-- **Data/confirmação verificável:** [preencher]
+- **Status:** CONCLUÍDA — 2026-09-24
+- **Decisor:** Champion do cliente — Karol
+- **Decisão:**
+  - **Tratamento aprovado:** preservar o vínculo da triagem no fluxo de agendamento.
+  - **Regra complementar:** nenhuma.
+  - O agendamento deverá manter o `lead_submission_id` da triagem de origem, em vez de criar ou aceitar automaticamente um vínculo substituto quando a continuidade estiver disponível.
+  - Se um agendamento permanecer sem `lead_submission_id`, ele deve continuar visível como cobertura incompleta e não pode ser atribuído à triagem por inferência.
+  - **Escopo:** decisão documental do tratamento do vínculo; nenhuma alteração de código, banco, configuração, integração ou produto foi realizada nesta task.
+- **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”.
 
 ## B3-04 — Matriz de acesso ao dashboard
 - **Status:** PENDENTE
