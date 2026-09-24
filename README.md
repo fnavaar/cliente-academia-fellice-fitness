@@ -1,11 +1,9 @@
 # Academia Fellice Fitness — Operação
 
-A fase atual é a **Fase 2 — autoagendamento assistido e continuidade da jornada**.
+A unidade ativa é a **Fase 3 — dashboard de conversão por formulário e campanha**.
 
-## Caminhos oficiais
-
-- Tabela operacional: [`04_fase-atual/fase.md`](04_fase-atual/fase.md)
-- SPEC-2-001: [`04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md`](04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md)
-- SPEC-2-002: [`04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md`](04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md)
-
-O nome canônico é `04_fase-atual`, com underscore após `04`. Não usar `04-fase-atual`.
+- Jornada: `04_fase-atual/fase.md`
+- SPECs: `04_fase-atual/specs/`
+- Decisões B3: `03_documentos/decisoes-fase-3.md`
+- A Fase 2 está preservada em `05_entregas/fase-2/`.
+- Implementação permanece bloqueada até B3-01..B3-05 e os aceites previstos.
