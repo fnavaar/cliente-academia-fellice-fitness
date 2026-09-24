@@ -21,4 +21,4 @@
 
 ## Próxima ação
 
-Revisar e confirmar o registro documental da B3-03. Após o aceite humano, analisar em novo ciclo a task de consolidação dos eventos das fases 1 e 2 na SPEC-3-001. Nenhuma implementação, publicação de produção, mudança de permissão ou integração externa é autorizada nesta etapa.
+Em novo pedido, analisar a task de consolidação dos eventos das fases 1 e 2 na SPEC-3-001. A implementação deve ocorrer somente após análise e autorização explícita; nenhuma publicação de produção, mudança de permissão ou integração externa é autorizada nesta etapa.
