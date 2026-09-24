@@ -4,10 +4,10 @@
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-3-001-consolidacao-eventos-e-funil.md
 - etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente — B3-02 é decisão documental; a abertura da Fase 3 não autoriza inferir fórmula, meta ou janela
+- autorizacao_implementacao: confirmada — 2026-09-24 16:02, Ricardo Junior: "Autorizo registrar a decisão documental da B3-02. Vou informar o numerador, o denominador e a janela temporal."
 - teste_humano: pendente
-- verificacao_automatica: passou — estado anterior, fase.md, 00-Tasks_Gerais.md, SPEC-3-001, decisões-fase-3.md e STATUS.md conferidos; B3-01 concluída e B3-02 pendente
+- verificacao_automatica: passou — autorização recebida; numerador, denominador e janela ainda não informados; nenhum arquivo de decisão ou produto alterado
 - aprendizado: pendente
-- ultima_acao: B3-02 selecionada como próxima task documental; análise concluída sem preencher fórmula ou alterar produto
-- proxima_acao: aguardar autorização para registrar a decisão de B3-02 com numerador, denominador e janela temporal
-- atualizado_em: 2026-09-24T15:18:51-03:00
+- ultima_acao: autorização para registrar B3-02 recebida; registro ainda não escrito porque faltam numerador, denominador e janela temporal
+- proxima_acao: Champion informar numerador, denominador e janela temporal da métrica norte
+- atualizado_em: 2026-09-24T16:02:40-03:00
