@@ -6,11 +6,24 @@
     "adapta": "0.9.5",
     "adaptaCliente": "0.9.5"
   },
-  "generatedAt": "2026-09-16T15:20:50-03:00",
+  "generatedAt": "2026-09-24T11:57:25-03:00",
+  "reconciliation": {
+    "previousGeneratedAt": "2026-09-16T15:20:50-03:00",
+    "reason": "Gate Fase 2 → Fase 3: reconciliação do handoff/manifesto após fechamento da implementação (F2-IMP-001..009, SPEC-2-001 e SPEC-2-002 aceitas).",
+    "verifiedAgainst": "git blob SHA-1 via API do GitHub (fonte autoritativa), 2026-09-24",
+    "results": {
+      "04_fase-atual/fase.md": "atualizado (aceites e recibo da SPEC-2-002)",
+      "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md": "inalterado desde 2026-09-16",
+      "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md": "inalterado desde 2026-09-16",
+      "STATUS.md": "atualizado (fechamento 9/9)",
+      "changelog.md": "atualizado (fechamento 9/9)",
+      ".adapta-cliente/estado-atual.md": "atualizado (etapa concluida)"
+    }
+  },
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "51aee5503501bf4121e49f771b4621f0598d15be612ccf8c07c69f101386a9dc",
+      "sha256": "2d17f164b01b8aa79832d75e229ddff4cc2fbc9b3529ede7f7024cffe062f3a9",
       "classification": "fase-atual"
     },
     {
@@ -25,17 +38,17 @@
     },
     {
       "path": "STATUS.md",
-      "sha256": "a04fc635664b51e706778cf1c4b8b1bbd322e18f59eb28122915a12db5d54318",
+      "sha256": "fbcc631bfeb44047400906d568bad78471d2f7c3ceef7f08ffd1649d6ae3d229",
       "classification": "status"
     },
     {
       "path": "changelog.md",
-      "sha256": "1b51639cb75bdf6cf7bf04c2e5cddd2fd6528839d067039261324feed3538f56",
+      "sha256": "c0db2d0081a7f2bcb92c99a67d9a5e8892f6858392401b292968e1745a2fad3c",
       "classification": "changelog"
     },
     {
       "path": ".adapta-cliente/estado-atual.md",
-      "sha256": "7fbdfb597aa48073fc1da07087756d41846f2243be49c9520a72d738128bd877",
+      "sha256": "c47b742e1c0d98d7e79d9a48b82efef2a32ab270696db65bc44020398121c262",
       "classification": "estado-operacional"
     }
   ]
