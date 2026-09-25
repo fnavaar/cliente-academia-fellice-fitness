@@ -23,3 +23,4 @@
 - 2026-09-24T16:34:00-03:00 · task B3-02 · capturado · `AP-2026-09-24-1634-metrica-norte-formula.md`
 - 2026-09-24T16:47:00-03:00 · task B3-03 · capturado · `AP-2026-09-24-1647-vinculo-triagem-agendamento.md`
 - 2026-09-25T08:34:56-03:00 · task `ab9ce40f-304e-4ef6-929f-1efa7f7a0a87` (debug) · capturado · `AP-2026-09-25-0834-autenticacao-antes-do-papel.md`
+- 2026-09-25T16:46:40-03:00 · task `ab9ce40f-304e-4ef6-929f-1efa7f7a0a87` · capturado · `AP-2026-09-25-1646-janelas-isoladas-fixtures-funil.md`
