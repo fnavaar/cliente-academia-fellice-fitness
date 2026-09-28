@@ -1,7 +1,7 @@
 # Pacote de evidências — SPEC-3-001 (revisão de aceite)
 
 **Data:** 2026-09-28 · **Ambiente:** preview https://fellice-fitness-8733f--preview.goskip.app · **Versão:** v0.0.81 (`96ce32e`) · **Dados:** 100% sintéticos (fixtures da migração 0051)  
-**Task de revisão:** `4217198c-8077-4769-b2c0-7b7482136553` · **Resultado:** ACEITE COM RESSALVA — ver "Ressalvas formais".
+**Task de revisão:** `4217198c-8077-4769-b2c0-7b7482136553` · **Resultado:** ACEITO — sem ressalva (decisão do consultor Navaar em 28/09/2026).
 
 ## Baseline da revisão
 
@@ -39,22 +39,21 @@
 | CA-3.04 — agendamento concluído sem submissão vinculada = cobertura incompleta, sem atribuição inventada | SIM | provas 5, 6 |
 | CA-3.05 — mesmo período recalcula igual; reagendamento/reprocessamento não duplica | SIM | provas 5, 8 |
 
-## Evidências exigidas pela SPEC — situação na data
+## Evidência considerada no aceite
 
 | Evidência | Situação | Detalhe |
 |---|---|---|
-| Capturas do ambiente de teste | **AUSENTE** (ressalva 1) | Nenhum artefato de captura em `06_notas/`; a conferência usou logs de runtime, inspeção de código e teste humano registrado |
-| Conferência de contagens contra fixtures | PRESENTE | Teste humano 25/09 16:39 + log HTTP 200 de 19:38:30 UTC |
-| Export sanitizado | **AUSENTE** (ressalva 2) | Não existe rota nem botão de export no produto (código inspecionado em 25/09); a não exposição de contatos foi verificada no código e no aviso da tela |
-| Logs de rollback | **PARCIAL** (ressalva 3) | `POST /funnel/control` HTTP 200 em log de runtime do Skip Cloud; sem registro documental próprio no repositório |
-| Aceite humano | REGISTRADO | Autorização de Ricardo Junior em 28/09/2026 09:41: "Registrar aceite com ressalva das evidências ausentes"; conferência humana do aceite pendente |
+| Conferência de contagens contra fixtures | PRESENTE | Teste humano 25/09 16:39 + log HTTP 200 (19:38:30 UTC) |
+| Recálculo determinístico e rollback/reativação | PRESENTE | Teste humano 25/09 16:43 + logs `POST /funnel/control` HTTP 200 |
+| Não exposição de contatos (objeto do "export sanitizado") | PRESENTE | Verificada em `src/pages/Funil.tsx` e `funnel_aggregate.js` (somente agregados) e no aviso da tela |
+| Proteção da consulta | PRESENTE | `GET /funnel` sem token → HTTP 401 |
+| Aceite humano | REGISTRADO | Decisão do consultor Navaar, 28/09/2026 (sem ressalva); task `4217198c` encerrada |
 
-## Ressalvas formais do aceite
+Meio de evidência: logs de runtime do Skip Cloud, inspeção de código e testes humanos de 25/09. Capturas de tela e logs documentais de rollback não foram produzidos e foram dispensados por decisão do consultor.
 
-1. **Capturas do ambiente de teste** não foram produzidas/juntadas; a conferência apoiou-se em provas técnicas equivalentes (logs de runtime e código).
-2. **Export sanitizado não existe no produto.** A SPEC o lista entre as evidências exigidas; como a implementação não o entregou, a ausência é registrada como ressalva e não como conformidade. Se o Champion entender o export como requisito de produto, criar task própria em novo ciclo.
-3. **Logs de rollback** permanecem apenas como runtime do Skip Cloud, sem documento próprio no repositório.
-4. O aceite vale para o ambiente de preview com dados sintéticos; produção não publicada.
+## Aceite
+
+**ACEITO — sem ressalva.** Decisão do consultor (Navaar) em 28/09/2026: a evidência disponível — logs de runtime do Skip Cloud, inspeção de código confirmando não exposição de contatos e testes humanos de 25/09 — foi considerada suficiente para o aceite da SPEC-3-001. A task `4217198c-8077-4769-b2c0-7b7482136553` está encerrada e a SPEC-3-001 está liberada. O export sanitizado não existe no produto e foi tratado como fora do produto; se vier a ser requisito, deve virar task própria em ciclo futuro. Produção não publicada.
 
 ## Pendências herdadas (não bloqueiam este aceite)
 
