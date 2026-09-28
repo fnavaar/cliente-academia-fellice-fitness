@@ -1,7 +1,7 @@
 # SPEC-3-001 — Consolidação de eventos e funil de conversão rastreável
 
 **Fase:** 3  
-**Status:** ACEITA — sem ressalva em 28/09/2026 (decisão do consultor Navaar; task `4217198c-8077-4769-b2c0-7b7482136553` encerrada) — CA-3.01..05 conformes; evidência considerada suficiente (logs de runtime, inspeção de código, testes humanos de 25/09); SPEC liberada; produção não publicada.  
+**Status:** ACEITA — sem ressalva em 28/09/2026 (decisão do consultor Navaar; task `4217198c-8077-4769-b2c0-7b7482136553` encerrada) — CA-3.01..05 conformes; evidência considerada suficiente (logs de runtime, inspeção de código, testes humanos de 25/09); SPEC liberada; ratificada pelo operador ETHOS (Ricardo Junior) em 28/09/2026; produção não publicada.  
 **Dono:** Champion do cliente (decisor dos bloqueios); Marketing/agência e Gestão podem ser consultados  
 **Origem:** D-003, RQ-008 e Fase 3 do escopo definitivo  
 **Degrau:** recurso nativo da plataforma de pré-agendamento, somente leitura, sem Kommo, Lóvavel ou fontes externas.
