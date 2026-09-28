@@ -3,11 +3,11 @@
 - task_id: 4217198c-8077-4769-b2c0-7b7482136553
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-3-001-consolidacao-eventos-e-funil.md
-- etapa: aguardando_autorizacao
-- autorizacao_implementacao: ausente
-- teste_humano: pendente — para esta task de revisão; os testes humanos da implementação foram aprovados em 25/09 ("Conferi a janela isolada de 23/09: os valores batem com as fixtures da SPEC-3-001." e "Conferi o recálculo determinístico e o rollback/reativação da SPEC-3-001 no preview; os dois passaram.")
-- verificacao_automatica: passou — revisão de leitura em 25/09: CA-3.01..05 conformes com prova técnica (logs HTTP 200 de /backend/v1/funnel e /funnel/control, migrações 0050–0051 aplicadas, código de src/pages/Funil.tsx e funnel_aggregate.js inspecionado) e humana; pacote de evidências incompleto — faltam capturas do ambiente de teste e export sanitizado; logs de rollback existem apenas como logs de runtime do Skip Cloud
+- etapa: aguardando_teste_humano
+- autorizacao_implementacao: confirmada — 2026-09-28 09:41, Ricardo Junior: "Registrar aceite com ressalva das evidências ausentes"
+- teste_humano: pendente — conferência humana do aceite registrado; teste humano da implementação aprovado em 25/09 ("os valores batem com as fixtures"; recálculo e rollback/reativação "passaram")
+- verificacao_automatica: passou — aceite com ressalva registrado em 28/09: pacote em 06_notas/aceites/pacote-evidencias-spec-3-001.md; changelog (seção 2026-09-28); STATUS.md; linha de status da SPEC atualizada; nenhum produto alterado
 - aprendizado: pendente
-- ultima_acao: análise da task de revisão de aceite concluída em 25/09/2026; nada registrado em fase/STATUS/changelog e nenhum aceite declarado
-- proxima_acao: aguardar autorização para registrar o resultado da revisão e a juntada (ou pendência formal) das evidências ausentes
-- atualizado_em: 2026-09-25T17:15:00-03:00
+- ultima_acao: revisão formal de aceite executada e registrada em 28/09/2026 — CA-3.01..05 conformes; ressalvas: capturas ausentes, export sanitizado inexistente no produto, rollback só em log de runtime
+- proxima_acao: aguardar confirmação humana do aceite para concluir a task 4217198c (marcar fase.md, fechar a SPEC e capturar aprendizado)
+- atualizado_em: 2026-09-28T09:50:00-03:00

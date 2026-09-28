@@ -1,7 +1,7 @@
 # SPEC-3-001 — Consolidação de eventos e funil de conversão rastreável
 
 **Fase:** 3  
-**Status:** implementação concluída e validada no preview v0.0.81; revisão formal de aceite pendente na task `4217198c-8077-4769-b2c0-7b7482136553`; produção não publicada.  
+**Status:** ACEITA COM RESSALVA em 28/09/2026 (task `4217198c-8077-4769-b2c0-7b7482136553`) — CA-3.01..05 conformes; evidências ausentes registradas em `06_notas/aceites/pacote-evidencias-spec-3-001.md`; conferência humana do aceite pendente; produção não publicada.  
 **Dono:** Champion do cliente (decisor dos bloqueios); Marketing/agência e Gestão podem ser consultados  
 **Origem:** D-003, RQ-008 e Fase 3 do escopo definitivo  
 **Degrau:** recurso nativo da plataforma de pré-agendamento, somente leitura, sem Kommo, Lóvavel ou fontes externas.
