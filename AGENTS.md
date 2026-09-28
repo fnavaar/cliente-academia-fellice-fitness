@@ -13,3 +13,5 @@
 - Execute uma task por vez e mantenha evidências verificáveis.
 - Não publique, integre serviços ou altere dados externos sem autorização explícita.
 - Preserve os limites, responsáveis e critérios definidos nas tasks e SPECs da fase atual.
+- **Insumos e decisões vão junto com a task — nunca como gate que trava o projeto.** Se uma task precisar de uma decisão ou informação do Champion, a pergunta fica embutida na própria task e é respondida na mesma execução. Não marque a task como "bloqueada por falta de informação" e pare: entregue a task com as perguntas juntas ("manda tudo de uma vez") e execute com o que tiver, deixando a resposta registrada quando vier.
+- Pergunte o que faltar **na própria task**, em vez de abrir uma etapa separada de decisão que trava o andamento. Resposta de insumo não precisa encerrar a task sozinha; ela acompanha a execução.
