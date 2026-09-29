@@ -48,7 +48,16 @@ Preencher uma seção por vez. Uma seção pendente, incompleta ou sem confirma�
 - **Escopo:** registro documental da decisão. Esta atualização, isoladamente, não alterou permissões de runtime, código, configuração ou publicação.
 
 ## B3-05 — Critério de congelamento do baseline
-- **Status:** PENDENTE
-- **Decisor:** Champion do cliente
-- **Decisão:** [preencher quando e como congelar/versionar/interpretar]
-- **Data/confirmação verificável:** [preencher]
+- **Status:** DECISÃO REGISTRADA — 2026-09-29
+- **Decisor:** Champion do cliente — Karol
+- **Decisão:**
+  - **Período do baseline:** mês civil completo, do primeiro ao último dia do mês, no fuso local da unidade (`America/Bahia`). A métrica norte definida em B3-02 permanece com janela móvel padrão dos últimos 30 dias corridos; o mês civil é específico do baseline e não altera a fórmula nem a janela padrão de B3-02.
+  - **Quando congelar:** somente o Champion pode congelar a apuração do mês civil já completo mais recente. Congelar cria uma fotografia imutável com período, numerador, denominador, cobertura e versão. Nova apuração cria nova versão append-only; versões antigas não são sobrescritas.
+  - **Cobertura de suficiência:** contar submissões do período que, simultaneamente, têm nome não vazio, um número de telefone reconhecível no campo `canal_de_retorno` e uma resposta de proximidade exatamente igual a “Moro no Itaigara ou em bairros vizinhos” ou “Trabalho na região do Itaigara”; dividir essa contagem pelo total de submissões do mesmo período. Os valores individuais não são retornados nem exibidos.
+  - **Limiar:** cobertura de suficiência igual ou superior a 50% é suficiente. Abaixo de 50%, o Champion ainda pode salvar uma versão, que deve ser marcada claramente como `INSUFICIENTE`; a versão insuficiente não deve ser confundida com baseline de qualidade suficiente.
+  - **Denominador zero:** permitir salvar a versão com estado explícito `NAO_CALCULAVEL`, taxa nula (não zero), preservando período, numerador, denominador zero, coberturas e versão. Se também houver baixa cobertura, registrar essa condição de cobertura separadamente.
+  - **Sem submissões no mês:** cobertura de suficiência fica não calculável; se o denominador da métrica for zero, a versão fica marcada `NAO_CALCULAVEL` e preserva os contadores disponíveis, sem inventar taxa.
+  - **Fórmula e escopo:** nome, telefone e proximidade servem somente para medir cobertura/suficiência e marcar o estado da versão. Não filtram numerador ou denominador nem alteram a fórmula aprovada em B3-02. Sem meta, causalidade ou ação de campanha inferida.
+  - **Integridade da fonte:** se uma fonte necessária estiver indisponível ou houver leitura parcial, não congelar a apuração incompleta; permitir estado insuficiente é para dados lidos por completo que não atingem o limiar de cobertura.
+- **Data/confirmação verificável:** 29/09/2026 — confirmação atribuída a Karol e transmitida por Ricardo Junior nesta conversa: “Karol - 29/09/2026 - decisões confirmadas e autorizadas”. A mensagem também confirmou explicitamente mês civil do baseline sem mudar B3-02, limiar 50%, campos mínimos, salvamento como insuficiente e estado não calculável para denominador zero.
+- **Escopo:** decisão registrada para orientar implementação na task `124f370f`; registro documental não afirma por si só que a regra já esteja aplicada no runtime.
