@@ -1,14 +1,14 @@
 # SPEC-3-002 — Dashboard por formulário e campanha com baseline congelado
 
 **Fase:** 3  
-**Status:** tarefas de decisão liberadas ao Champion — implementação bloqueada até os bloqueios desta SPEC serem resolvidos com registro humano  
+**Status:** implementação no preview v0.0.82 e teste humano da prévia autenticada com fixtures sintéticas aprovados; aceite e validação operacional permanecem pendentes enquanto B3-05 e as evidências finais desta task não forem fechados. Produção não publicada.  
 **Dono:** Champion do cliente (decisor dos bloqueios); Marketing/agência e Gestão podem ser consultados  
 **Origem:** D-003, RQ-008, Fase 3 e §7 do escopo definitivo  
 **Degrau:** dashboard nativo sobre a consolidação da SPEC-3-001, sem integração externa, causalidade ou decisão automática de campanha.
 
 ## Contexto e resultado
 
-Não existe comparação por formulário, versão ou campanha. O resultado desejado é dashboard comparativo por formulário, versão, origem e campanha quando disponível, com fórmula, período, cobertura e primeiro baseline congelado; Marketing vê apenas agregados.
+Não existe comparação por formulário, versão ou campanha. O resultado desejado é dashboard comparativo por formulário, versão, origem e campanha quando disponível, com fórmula, período, cobertura e primeiro baseline congelado; matriz de leitura conforme B3-04. Marketing/agência e Consultor não têm acesso ao dashboard.
 
 ## BLOQUEIOS executáveis
 
@@ -16,7 +16,7 @@ Não existe comparação por formulário, versão ou campanha. O resultado desej
 |---|---|---|
 | B3-01 — taxonomia de origem/campanha | Champion | Decisão, data e confirmação verificável no registro canônico |
 | B3-02 — fórmula e janela da métrica norte | Champion | Decisão, data e confirmação verificável no registro canônico |
-| B3-04 — matriz de acesso por papel | Champion | Matriz registrada; Marketing sem contatos individuais |
+| B3-04 — matriz de acesso por papel | Champion | Matriz registrada com papéis permitidos e negados; Marketing/agência sem acesso |
 | B3-05 — critério e interpretação do baseline congelado | Champion | Critério, data e confirmação verificável no registro canônico |
 
 A SPEC-3-002 também depende de SPEC-3-001 testada e aceita. Nenhum bloqueio pendente autoriza GREEN.
@@ -25,7 +25,7 @@ A SPEC-3-002 também depende de SPEC-3-001 testada e aceita. Nenhum bloqueio pen
 
 Inclui dashboard por formulário/versão/origem/campanha, comparação respeitando vigência, baseline versionado e rollback para dados brutos. Ficam fora decisão automática de campanha, receita, matrícula, comparecimento, meta não aprovada, exportação individual e escrita externa.
 
-Marketing/agência, Gestão, Subgerente e Consultor leem agregados conforme B3-04. Apenas Champion cria, corrige ou congela baseline; toda escrita por outro papel é recusada. Registro imutável contém numerador, denominador, período, cobertura e versão. Nova apuração cria nova versão, nunca altera retroativamente a anterior.
+**Matriz aprovada em B3-04:** Champion, Gestão, Supervisora e Subgerente podem ler o dashboard agregado; Marketing/agência e Consultor não têm acesso. O dashboard não expõe contatos nem registros individuais. Apenas Champion cria, corrige ou congela baseline; toda escrita por outro papel é recusada. Registro imutável contém numerador, denominador, período, cobertura e versão. Nova apuração cria nova versão, nunca altera retroativamente a anterior. O registro da decisão não comprova, por si só, a aplicação técnica da matriz no runtime; essa evidência de acesso permanece parte dos critérios de aceite da task.
 
 ## Fluxo de execução
 
@@ -34,7 +34,7 @@ Marketing/agência, Gestão, Subgerente e Consultor leem agregados conforme B3-0
 3. Executor constrói dashboard com fixtures sintéticas, respeita vigência, mostra não classificada e sem atribuição, prova leitura/escrita negada e congela baseline somente com Champion.
 4. Obtém teste humano, aceite e autorização antes de publicar.
 
-Estado válido enquanto bloqueado: dashboard apenas em planejamento; nenhum baseline falso, permissão nova, dado real ou publicação.
+Estado enquanto B3-05 permanece pendente: o preview validado contém fixtures sintéticas; não há baseline operacional congelado nem GREEN. A aplicação técnica da matriz B3-04 ainda deve ser comprovada pelos testes de acesso da task. Produção não publicada; nenhum baseline falso, dado real ou publicação.
 
 ## Critérios de aceite
 

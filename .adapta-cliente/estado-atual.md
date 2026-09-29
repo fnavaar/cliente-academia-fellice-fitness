@@ -8,6 +8,6 @@
 - teste_humano: aprovado — 2026-09-29, Ricardo Junior: "testei e funcionou"; aprovado para a prévia autenticada com fixtures sintéticas, conforme captura compartilhada
 - verificacao_automatica: passou — Skip v0.0.82; setup, análise estática, build, integrações e testes PASS; migrações 0052/0053 aplicadas
 - aprendizado: pendente
-- ultima_acao: teste humano da prévia aprovado; screenshot mostra 3 agendamentos concluídos, 2 encaminhamentos, taxa 150%, cobertura 50% e agendamento sem atribuição em grupo próprio; B3-04/B3-05 continuam pendentes no registro canônico, sem GREEN ou baseline operacional
-- proxima_acao: registrar B3-04 e B3-05 no documento canônico com confirmação verificável de Karol, mantendo ambas as decisões dentro da task 124f370f
-- atualizado_em: 2026-09-29T09:11:00-03:00
+- ultima_acao: B3-04 registrada documentalmente em 29/09/2026 com matriz aprovada atribuída a Karol; aplicação técnica da matriz ainda requer prova na task. B3-05 continua pendente; sem GREEN ou baseline operacional
+- proxima_acao: registrar a decisão B3-05 com critério de congelamento, suficiência dos dados/denominador zero, versionamento e confirmação verificável do Champion; depois continuar a validação da task 124f370f
+- atualizado_em: 2026-09-29T11:44:00-03:00

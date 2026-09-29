@@ -37,10 +37,15 @@ Preencher uma seção por vez. Uma seção pendente, incompleta ou sem confirma�
 - **Data/confirmação verificável:** 24/09/2026 — Karol: “Karol confirma, libere as tasks”.
 
 ## B3-04 — Matriz de acesso ao dashboard
-- **Status:** PENDENTE
-- **Decisor:** Champion do cliente
-- **Decisão:** [preencher papéis de leitura; Marketing não acessa contatos individuais]
-- **Data/confirmação verificável:** [preencher]
+- **Status:** CONCLUÍDA — 2026-09-29
+- **Decisor:** Champion do cliente — Karol
+- **Decisão:**
+  - **Podem ler o dashboard agregado:** Champion, Gestão, Supervisora e Subgerente.
+  - **Não podem ler o dashboard:** Marketing/agência e Consultor.
+  - Marketing/agência não tem acesso ao dashboard; esta decisão é mais restritiva do que somente ocultar contatos individuais. O dashboard não deve expor contatos ou registros individuais.
+  - A permissão de escrita/criação/correção/congelamento de baseline continua restrita ao Champion, conforme a SPEC; esta decisão define leitura e não altera essa regra.
+- **Data/confirmação verificável:** 29/09/2026, 11:44 — confirmação atribuída a Karol e transmitida por Ricardo Junior no histórico desta conversa. Citação fornecida: “matriz correta e autorizada, não podem ler: marketing e consultor, os demais, autorizado”. “Os demais” corresponde aos papéis permitidos explicitados no contexto desta decisão: Champion, Gestão, Supervisora e Subgerente.
+- **Escopo:** registro documental da decisão. Esta atualização, isoladamente, não alterou permissões de runtime, código, configuração ou publicação.
 
 ## B3-05 — Critério de congelamento do baseline
 - **Status:** PENDENTE
