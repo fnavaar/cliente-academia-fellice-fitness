@@ -25,3 +25,4 @@
 - 2026-09-25T08:34:56-03:00 · task `ab9ce40f-304e-4ef6-929f-1efa7f7a0a87` (debug) · capturado · `AP-2026-09-25-0834-autenticacao-antes-do-papel.md`
 - 2026-09-25T16:46:40-03:00 · task `ab9ce40f-304e-4ef6-929f-1efa7f7a0a87` · capturado · `AP-2026-09-25-1646-janelas-isoladas-fixtures-funil.md`
 - 2026-09-28T16:20:00-03:00 · task `4217198c-8077-4769-b2c0-7b7482136553` · capturado · `AP-2026-09-28-1611-aceites-conflitantes-conferir-estado-antes-de-concluir.md`
+- 2026-09-30T15:02:59-03:00 · task `124f370f-ea01-46d4-bdac-72c1cded2181` (debug) · capturado · `AP-2026-09-30-1502-enum-baseline-audit.md`
