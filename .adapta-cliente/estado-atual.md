@@ -3,11 +3,11 @@
 - task_id: 124f370f-ea01-46d4-bdac-72c1cded2181
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-3-002-dashboard-campanha-e-baseline.md
-- etapa: aguardando_teste_humano
+- etapa: em_correcao
 - autorizacao_implementacao: confirmada — 2026-09-28 16:22, Ricardo Junior: "pode implementar"
-- teste_humano: pendente para v0.0.83; a aprovação de 2026-09-29 cobre somente v0.0.82 com fixtures sintéticas
-- verificacao_automatica: passou — Skip project 51806; QA setup, static analysis, build, integrations e test aprovados em v0.0.83 (`908e4d6`); migration 0054 aplicada
+- teste_humano: falhou — 2026-09-30, Ricardo Junior informou estar bloqueado na tela `/dashboard`; screenshot mostra aviso de papel não autorizado
+- verificacao_automatica: QA v0.0.83 passou em setup/static analysis/build/integrations/test; runtime autenticado falhou após login 200 com POST `/backend/v1/dashboard` 403
 - aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-30-1502-enum-baseline-audit.md
-- ultima_acao: QA completo passou e migration `0054_apply_dashboard_decisions` consta como aplicada; preview ativo em v0.0.83 e produção não publicada
-- proxima_acao: Ricardo executar o teste humano autenticado em `/dashboard` no preview v0.0.83 e informar resultado ou falha
-- atualizado_em: 2026-09-30T15:08:39-03:00
+- ultima_acao: logs Skip Cloud confirmam auth 200 e dashboard 403 em 18:45, 18:46 e 19:10 UTC; código atual lê `read_roles` JSON via `policy.get('read_roles')`; correção de normalização preparada mas ainda não aplicada
+- proxima_acao: verificar por reprodução mínima o valor JSVM de `policy.get('read_roles')`, aplicar uma correção mínima no hook, executar QA de preview e pedir novo teste humano autenticado
+- atualizado_em: 2026-09-30T16:11:49-03:00
