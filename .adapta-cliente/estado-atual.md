@@ -3,11 +3,11 @@
 - task_id: 124f370f-ea01-46d4-bdac-72c1cded2181
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-3-002-dashboard-campanha-e-baseline.md
-- etapa: em_correcao
+- etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — 2026-09-28 16:22, Ricardo Junior: "pode implementar"
-- teste_humano: pendente para qualquer nova versão; aprovação de 2026-09-29 cobre somente v0.0.82 com fixtures sintéticas
-- verificacao_automatica: falhou na inspeção estática — migration 0054 contém separadores literais `=======`; QA do Skip não executado
-- aprendizado: pendente
-- ultima_acao: leitura remota confirmou migration 0054 malformada no working tree; preview segue v0.0.82 sem publicação e migrações 0052–0053 aplicadas
-- proxima_acao: reproduzir localmente a falha da migration 0054 e corrigi-la em arquivo limpo; depois revisar hook/UI e só então executar QA do preview
-- atualizado_em: 2026-09-30T14:09:05-03:00
+- teste_humano: pendente para v0.0.83; a aprovação de 2026-09-29 cobre somente v0.0.82 com fixtures sintéticas
+- verificacao_automatica: passou — Skip project 51806; QA setup, static analysis, build, integrations e test aprovados em v0.0.83 (`908e4d6`); migration 0054 aplicada
+- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-30-1502-enum-baseline-audit.md
+- ultima_acao: QA completo passou e migration `0054_apply_dashboard_decisions` consta como aplicada; preview ativo em v0.0.83 e produção não publicada
+- proxima_acao: Ricardo executar o teste humano autenticado em `/dashboard` no preview v0.0.83 e informar resultado ou falha
+- atualizado_em: 2026-09-30T15:08:39-03:00
