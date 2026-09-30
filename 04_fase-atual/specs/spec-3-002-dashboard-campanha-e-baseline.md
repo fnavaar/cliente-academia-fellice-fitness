@@ -1,10 +1,13 @@
 # SPEC-3-002 — Dashboard por formulário e campanha com baseline congelado
 
 **Fase:** 3  
-**Status:** implementação no preview v0.0.82 e teste humano da prévia autenticada com fixtures sintéticas aprovados; aceite e validação operacional permanecem pendentes enquanto B3-05 e as evidências finais desta task não forem fechados. Produção não publicada.  
+**Status:** task de implementação/teste humano `124f370f` concluída por Ricardo Junior em 30/09/2026 no preview v0.0.85 (`c41cf7c`); login autenticado HTTP 200 e `POST /backend/v1/dashboard` HTTP 200. QA completo passou. A revisão formal independente do aceite na task `e88283fc` está pendente. Produção não publicada.
+
 **Dono:** Champion do cliente (decisor dos bloqueios); Marketing/agência e Gestão podem ser consultados  
 **Origem:** D-003, RQ-008, Fase 3 e §7 do escopo definitivo  
 **Degrau:** dashboard nativo sobre a consolidação da SPEC-3-001, sem integração externa, causalidade ou decisão automática de campanha.
+
+**Gate atual:** implementação/teste humano da task `124f370f` concluídos; aceite formal da SPEC-3-002 segue na task `e88283fc`.
 
 ## Contexto e resultado
 
@@ -34,7 +37,7 @@ Inclui dashboard por formulário/versão/origem/campanha, comparação respeitan
 3. Executor constrói dashboard com fixtures sintéticas, respeita vigência, mostra não classificada e sem atribuição, prova leitura/escrita negada e congela baseline somente com Champion.
 4. Obtém teste humano, aceite e autorização antes de publicar.
 
-Estado enquanto B3-05 permanece pendente: o preview validado contém fixtures sintéticas; não há baseline operacional congelado nem GREEN. A aplicação técnica da matriz B3-04 ainda deve ser comprovada pelos testes de acesso da task. Produção não publicada; nenhum baseline falso, dado real ou publicação.
+Estado após B3-05 e aprovação humana: Ricardo Junior confirmou em 30/09/2026 que testou e aprovou os critérios da task `124f370f` no preview. Os logs de runtime confirmam login e leitura autenticada do dashboard com HTTP 200; QA completo da versão v0.0.85 passou. Os critérios CA-3.06..10 foram conferidos no código e no teste humano conforme registro da task; nenhum baseline operacional foi congelado nesta validação. A revisão formal do aceite ainda está na task `e88283fc`; não publicar em produção antes do gate próprio.
 
 ## Critérios de aceite
 
