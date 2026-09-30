@@ -71,4 +71,8 @@
 ## 2026-09-29
 
 - 2026-09-29 · Ricardo Junior · **B3-04 concluída documentalmente:** matriz aprovada atribuída a Karol: Champion, Gestão, Supervisora e Subgerente podem ler o dashboard agregado; Marketing/agência e Consultor não têm acesso. Citação fornecida no chat às 11:44: “matriz correta e autorizada, não podem ler: marketing e consultor, os demais, autorizado”. Registro canônico atualizado em `03_documentos/decisoes-fase-3.md` e task documental B3-04 marcada como concluída em `04_fase-atual/fase.md`. A decisão não comprova aplicação técnica da matriz no runtime; nenhuma permissão de produção foi alterada.
-- A task `124f370f` permanece ativa. B3-05 continua pendente; não há GREEN nem baseline operacional e a produção não foi publicada.
+- 2026-09-29 · Ricardo Junior · A task `124f370f` permanece ativa. B3-05 foi registrada; a implementação técnica e os testes continuam pendentes. Não há baseline operacional congelado; produção não publicada.
+
+## 2026-09-30
+
+- 2026-09-30 · Ricardo Junior · DEBUG task `124f370f-ea01-46d4-bdac-72c1cded2181`: migration 0054 tinha separadores de patch literais e um evento proposto incompatível com o enum ativo `FROZEN`; migration aditiva limpa, hook e UI corrigidos. QA completo Skip v0.0.83 (`908e4d6`) passou; migration 0054 aplicada. Task permanece aguardando teste humano autenticado no preview. Produção não publicada. Nota: `06_notas/debug/debug-2026-09-30-spec-3-002-migration-0054.md`.
