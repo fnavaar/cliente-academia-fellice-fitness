@@ -1,28 +1,37 @@
-# Índice de SPECs — Fase 3
+# Índice de SPECs — Fase 4
 
-## SPECs liberadas
+**Status:** SPECs geradas em 30/09/2026 na transição F3→F4 e aprovadas pelo consultor em 30/09–01/10 ("libero todas as specs, pode executar"); tasks geradas na Jornada da Fase 4.
+
+## SPECs
 
 | ID | Arquivo | Status | Dono |
 |---|---|---|---|
-| SPEC-3-001 | [spec-3-001-consolidacao-eventos-e-funil.md](spec-3-001-consolidacao-eventos-e-funil.md) | tarefas de decisão liberadas ao Champion — implementação bloqueada por B3-01, B3-02 e B3-03 | Champion do cliente |
-| SPEC-3-002 | [spec-3-002-dashboard-campanha-e-baseline.md](spec-3-002-dashboard-campanha-e-baseline.md) | tarefas de decisão liberadas ao Champion — implementação bloqueada por B3-01, B3-02, B3-04 e B3-05 | Champion do cliente |
+| SPEC-4-001 | [spec-4-001-integracao-direta-ferramenta-comercial.md](spec-4-001-integracao-direta-ferramenta-comercial.md) | liberada — bloqueios B4-01, B4-02 e B4-05 (insumos embutidos nas tasks) | Champion do cliente |
+| SPEC-4-002 | [spec-4-002-painel-saude-integracao-e-historico.md](spec-4-002-painel-saude-integracao-e-historico.md) | liberada — bloqueio B4-03 (insumo embutido na task) | Champion do cliente |
+| SPEC-4-003 | [spec-4-003-loop-saude-da-conversao.md](spec-4-003-loop-saude-da-conversao.md) | liberada — bloqueio B4-04 + alvo aprovado (insumos embutidos na task) | Champion e Gestão |
 
 ## Dependências entre SPECs
 
-- SPEC-3-002 depende de SPEC-3-001 testada e com aceite humano.
-- Ambas dependem das SPECs das fases 1 e 2 aceitas: SPEC-1-001 e SPEC-1-002 (Fase 1 encerrada em 2026-09-10), SPEC-2-001 (aceita 2026-09-17) e SPEC-2-002 (aceita 2026-09-21).
-- Os bloqueios de taxonomia (B3-01) e fórmula/janela (B3-02) são compartilhados: resolvidos uma vez, liberam as duas SPECs.
+- SPEC-4-001 (integração) é a base: SPEC-4-002 (painel) observa o estado da integração e SPEC-4-003 (loop) consome eventos da plataforma e o estado da integração.
+- Sequência sugerida: SPEC-4-001 → SPEC-4-002 → SPEC-4-003.
+- Todas dependem das fases 1–3 aceitas (SPEC-1-001/002, SPEC-2-001/002, SPEC-3-001/002).
 
 ## Bloqueios transversais da fase
 
-| ID | Bloqueio | Dono | Especificado em | Task de desbloqueio |
+| ID | Bloqueio | Dono | Especificado em | Origem |
 |---|---|---|---|---|
-| B3-01 | Taxonomia de origem/campanha decidida e registrada | Champion | SPEC-3-001 e SPEC-3-002 | `45bb5d1b-b757-4d29-9afa-cee4d0077552` |
-| B3-02 | Fórmula da métrica norte e janela padrão decididas e registradas | Champion | SPEC-3-001 e SPEC-3-002 | `2ce9c4fb-c143-4519-ba1f-e0ce80807e9b` |
-| B3-03 | Decisão sobre vínculo triagem → agendamento (pendência herdada da F2) | Champion | SPEC-3-001 | `bcc00bba-0eb4-4821-9ccf-b74755969f43` |
-| B3-04 | Matriz de acesso ao dashboard | Champion | SPEC-3-002 | `617b477e-d9f6-4256-ab84-530b932596fc` |
-| B3-05 | Critério de congelamento do baseline decidido e registrado | Champion | SPEC-3-002 | `d30d0144-19d9-421d-b2a4-5c6bf4942533` |
+| B4-01 | Base legal/consentimento LGPD e autorização de escrita externa | Champion | SPEC-4-001, SPEC-4-002, SPEC-4-003 | EV-F3-01 |
+| B4-02 | Credenciais, permissões e capacidade do conector validados (Kommo e/ou Lóvavel) | Champion técnico | SPEC-4-001 | escopo F4 (call de setup) |
+| B4-03 | Matriz de acesso ao painel de saúde | Champion | SPEC-4-002 | EV-F3-03 |
+| B4-04 | Baseline operacional congelado (critério B3-05) | Champion | SPEC-4-003 | EV-F3-02 |
+| B4-05 | Mapeamento de campos e regra de conflito/sobrescrita aprovados | Comercial/Champion | SPEC-4-001 | escopo F4 |
+
+## Regras de construção (EV-F3-07)
+
+- Allowlist explícita como autoridade de permissão (evitar dupla checagem por JSON — falso 403 de 30/09).
+- Migrations aditivas e limpas (sem separadores de patch literais — migration 0054 de 30/09).
+- Segredos fora do repositório; logs sanitizados; nenhuma escrita externa sem bloqueio liberado.
 
 ## Nota de liberação
 
-SPECs liberadas documentalmente no repositório do cliente em 2026-09-23. Em 2026-09-24, as cinco tarefas de decisão B3-01 a B3-05 foram liberadas ao Champion do cliente, que as registra em `03-Projeto/decisoes-fase-3.md`; Marketing/agência e Gestão podem ser consultados. A SPEC-3-001 aguarda B3-01..B3-03; a SPEC-3-002 aguarda B3-01, B3-02, B3-04 e B3-05, além do aceite da SPEC-3-001.
+Transição preparada em 30/09/2026 após o fechamento da Fase 3 (`check-fase-3.md` APROVADO COM RESSALVAS, active-sha256=7bbfdac4e985eac699880e3539ab59e529db3636fc77c8eec4af10377652ede3). SPECs aprovadas pelo consultor e tasks geradas em 01/10/2026; promoção F3→F4 neste repositório autorizada pelo consultor ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Nenhuma credencial, conector, escrita externa ou publicação de produção é autorizada por estas SPECs; execução uma task por vez com teste humano entre elas.
