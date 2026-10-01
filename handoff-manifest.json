@@ -1,54 +1,71 @@
 {
   "schemaVersion": "adapta-cliente-handoff/v1",
-  "phase": 2,
+  "phase": 4,
   "versions": {
     "package": "0.9.5",
     "adapta": "0.9.5",
     "adaptaCliente": "0.9.5"
   },
-  "generatedAt": "2026-09-24T11:57:25-03:00",
+  "generatedAt": "2026-10-01T09:55:00-03:00",
   "reconciliation": {
-    "previousGeneratedAt": "2026-09-16T15:20:50-03:00",
-    "reason": "Gate Fase 2 → Fase 3: reconciliação do handoff/manifesto após fechamento da implementação (F2-IMP-001..009, SPEC-2-001 e SPEC-2-002 aceitas).",
-    "verifiedAgainst": "git blob SHA-1 via API do GitHub (fonte autoritativa), 2026-09-24",
+    "previousGeneratedAt": "2026-09-24T11:57:25-03:00",
+    "reason": "Gate Fase 3 → Fase 4: promoção autorizada pelo consultor (\"Confirmo o push: promova a Fase 4 no repositório da Fellice\", 01/10/2026). Fase 3 arquivada em 05_entregas/fase-3/; SPECs F3 removidas da unidade ativa.",
+    "verifiedAgainst": "sha256 dos bytes remotos reais (raw.githubusercontent.com, fonte autoritativa, 2026-10-01); fidelidade do arquivo F3 verificada por git blob SHA-1",
     "results": {
-      "04_fase-atual/fase.md": "atualizado (aceites e recibo da SPEC-2-002)",
-      "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md": "inalterado desde 2026-09-16",
-      "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md": "inalterado desde 2026-09-16",
-      "STATUS.md": "atualizado (fechamento 9/9)",
-      "changelog.md": "atualizado (fechamento 9/9)",
-      ".adapta-cliente/estado-atual.md": "atualizado (etapa concluida)"
+      "04_fase-atual/fase.md": "substituído pela Jornada da Fase 4 (8 tasks + 1 subtarefa; 5 UUIDs preservados)",
+      "04_fase-atual/00-Tasks_Gerais.md": "substituído pela tabela operacional da Fase 4",
+      "04_fase-atual/specs/00-INDICE.md": "substituído pelo índice da Fase 4",
+      "04_fase-atual/specs/spec-4-001..003": "criados (unidade ativa da Fase 4)",
+      "04_fase-atual/specs/spec-3-001 e spec-3-002": "removidos da unidade ativa e arquivados em 05_entregas/fase-3/specs/ (blob SHA idêntico ao original)",
+      "STATUS.md": "atualizado (Fase 4 ativa)",
+      "changelog.md": "atualizado (liberação da Fase 4)",
+      ".adapta-cliente/estado-atual.md": "atualizado (task 7953f975 como próxima ação)"
     }
   },
   "files": [
     {
       "path": "04_fase-atual/fase.md",
-      "sha256": "2d17f164b01b8aa79832d75e229ddff4cc2fbc9b3529ede7f7024cffe062f3a9",
+      "sha256": "87a66dea26fd61cc448f3b1307fe47a5094ebc58689bb07eb68e51875ef332a6",
       "classification": "fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-001-agenda-disponibilidade-e-reserva.md",
-      "sha256": "1fae60d97df0b1dd56c507baab51ea72aa40974d322d94c3247fbd6e979fa07b",
+      "path": "04_fase-atual/00-Tasks_Gerais.md",
+      "sha256": "7b7480910168581eb09151c118df8bff061373e8a84eb95032a7a3a74f374db1",
+      "classification": "fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/00-INDICE.md",
+      "sha256": "28f28c83a3a6cb435686a2733ef49c99746eafcbd5c294ce3b18620db26e7dfd",
+      "classification": "fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md",
+      "sha256": "47357d2dabd73c1933ac62cf08bdde2661d7a388d6fdd7dd237cb467dc5428a2",
       "classification": "spec-fase-atual"
     },
     {
-      "path": "04_fase-atual/specs/spec-2-002-visao-operacional-tentativas.md",
-      "sha256": "7059185b4aa8bb546861400be2826007fb604fff0c62ae52b8c3bb6d0d8c09f4",
+      "path": "04_fase-atual/specs/spec-4-002-painel-saude-integracao-e-historico.md",
+      "sha256": "a3060ae5718b074e8954d9fc2780a54e46c07ac9b9d08aa090e24ab47a57c019",
+      "classification": "spec-fase-atual"
+    },
+    {
+      "path": "04_fase-atual/specs/spec-4-003-loop-saude-da-conversao.md",
+      "sha256": "3c7a085b768a8c3f758f10847cc2dd8f0c8523898fe5fd8c9c276a96ca8ce229",
       "classification": "spec-fase-atual"
     },
     {
       "path": "STATUS.md",
-      "sha256": "fbcc631bfeb44047400906d568bad78471d2f7c3ceef7f08ffd1649d6ae3d229",
+      "sha256": "8d0da9c7b4a11c623b2dd94a40afa962e096e058ece2eece7dd6f724017c8a7e",
       "classification": "status"
     },
     {
       "path": "changelog.md",
-      "sha256": "c0db2d0081a7f2bcb92c99a67d9a5e8892f6858392401b292968e1745a2fad3c",
+      "sha256": "aedd363dadcf188ef37da79c9bfb0a172cb0b2dddc1ea6f2832b5f2e60053df4",
       "classification": "changelog"
     },
     {
       "path": ".adapta-cliente/estado-atual.md",
-      "sha256": "c47b742e1c0d98d7e79d9a48b82efef2a32ab270696db65bc44020398121c262",
+      "sha256": "444ee61de6339b2ec835de2e9295833265c77f6e4a5ed3ea4d960c63f87856c0",
       "classification": "estado-operacional"
     }
   ]

@@ -34,7 +34,7 @@ Inclui dashboard por formulário/versão/origem/campanha, comparação respeitan
 
 1. Champion registra B3-01, B3-02, B3-04 e B3-05.
 2. SPEC-3-001 é testada e aceita.
-3. Executor constrói dashboard com fixtures sintéticos, respeita vigência, mostra não classificada e sem atribuição, prova leitura/escrita negada e congela baseline somente com Champion.
+3. Executor constrói dashboard com fixtures sintéticas, respeita vigência, mostra não classificada e sem atribuição, prova leitura/escrita negada e congela baseline somente com Champion.
 4. Obtém teste humano, aceite e autorização antes de publicar.
 
 Estado após B3-05 e aprovação humana: Ricardo Junior confirmou em 30/09/2026 que testou e aprovou os critérios da task `124f370f` no preview. Os logs de runtime confirmam login e leitura autenticada do dashboard com HTTP 200; QA completo da versão v0.0.85 passou. Os critérios CA-3.06..10 foram conferidos no código e no teste humano conforme registro da task; nenhum baseline operacional foi congelado nesta validação. A revisão formal do aceite ainda está na task `e88283fc`; não publicar em produção antes do gate próprio.
