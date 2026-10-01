@@ -1,13 +1,11 @@
 # Estado atual — Adapta Cliente
 
-- task_id: e88283fc-42a2-48a5-9924-48b28dd4f0cb
+- task_id: 7953f975-0f69-42a0-a9a1-b028429550cb
 - champion: Karol e Márcio
-- spec: 04_fase-atual/specs/spec-3-002-dashboard-campanha-e-baseline.md
-- etapa: concluida
-- aceite_consultor: aceito sem ressalva — 2026-09-30 17:50, Navaar: "Aceitar a SPEC-3-002 sem ressalva"
-- teste_humano: aprovado — 2026-09-30 17:07, Ricardo Junior: "Testei os critérios no preview e funcionou"
-- verificacao_automatica: passou — QA completo Skip v0.0.85 `c41cf7c` (setup, análise estática, build, integrações e testes); `node --check` e 11 checks focados do hook passaram
-- aprendizado: capturado:06_notas/aprendizado-continuo/AP-2026-09-30-1639-dashboard-rbac-json.md
-- ultima_acao: revisão formal de aceite da SPEC-3-002 concluída; ACEITE SEM RESSALVA registrado pelo consultor; SPEC-3-002 liberada; task e88283fc encerrada
-- proxima_acao: Fase 3 documentalmente concluída (9/9); próxima transição depende de pedido/autorização explícita do consultor
-- atualizado_em: 2026-09-30T17:50:00-03:00
+- spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
+- etapa: a_fazer
+- autorizacao: SPECs da Fase 4 aprovadas pelo consultor em 30/09 ("libero todas as specs, pode executar"); promoção F3→F4 autorizada em 01/10 ("Confirmo o push: promova a Fase 4 no repositório da Fellice")
+- teste_humano: n/a (task ainda não executada)
+- ultima_acao: transição F3→F4 promovida — Fase 3 arquivada em 05_entregas/fase-3/; unidade ativa = Fase 4 (SPEC-4-001..003, 8 tasks + 1 subtarefa)
+- proxima_acao: executar a task "Definir contrato, acesso e fallback da integração" (7953f975) com as decisões B4-01/02/05 embutidas; uma task por vez com teste humano
+- atualizado_em: 2026-10-01T09:50:00-03:00
