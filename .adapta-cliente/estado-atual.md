@@ -5,9 +5,9 @@
 - spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: pendente — Ricardo revisar o rascunho documental; as decisões verificáveis do Champion/Comercial para B4-01/02/05 ainda não constam
-- verificacao_automatica: passou — changelog remoto confere byte a byte com o candidato reconstruído; blob-base e histórico integral preservados como prefixo; diff só adiciona registros de 02/10; controle de aprendizado preserva o blob-base e contém somente a nova linha de debug; documento de decisões contém B4-01/02/05 e salvaguardas, sem valor secreto detectado
+- teste_humano: correção do changelog aprovada por Ricardo em 2026-10-02 14:33 (America/Bahia): “Revisei: correção certa”; decisões verificáveis do Champion/Comercial para B4-01/02/05 continuam pendentes
+- verificacao_automatica: passou — changelog remoto corresponde ao blob-base seguido somente pelos registros de 02/10; controle de aprendizado preserva o blob-base com uma nova linha de debug; estrutura e salvaguardas do documento de decisões conferidas
 - aprendizado: sem_sinal: regra de preservação de documentos cumulativos já documentada em AP-2026-09-17-1608
-- ultima_acao: changelog reconstruído a partir do blob-base publicado no commit 5094c1fe; confirmação via GitHub Contents API SHA `3286f5234156b01f2ea7bfcea532d05dc5b054f1`; controle de aprendizado verificado com SHA `6122876355518574af38accba7f9313634142514`; Debug Summary em `06_notas/debug/debug-2026-10-02-spec-4-001-changelog.md`
-- proxima_acao: Ricardo revisar o rascunho em `03_documentos/decisoes-fase-4.md`; manter B4-01/02/05 pendentes até confirmação verificável do Champion/Comercial
-- atualizado_em: 2026-10-02T11:39:53-03:00
+- ultima_acao: registrada aprovação humana da correção do changelog; B4-01/02/05 seguem pendentes, sem conector/credencial ativados nem escrita externa
+- proxima_acao: coletar, dentro desta task, as respostas verificáveis do Champion/Comercial para B4-01/02/05; não concluir até registrá-las e obter a revisão humana do documento atualizado
+- atualizado_em: 2026-10-02T14:34:21-03:00
