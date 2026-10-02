@@ -14,7 +14,7 @@ campo não estiver aqui, ele não tem como ser preenchido, porque é este arquiv
 
 | marcador | o que define | se você não escrever |
 |---|---|---|
-| `- [ ]` / `- [/]` / `- [x]` | a fazer / em andamento / concluída | fica a fazer |
+| `- [ ]` / `- [/]` / `- [x]` | a fazer / em andamento / concluída | a fazer |
 | `@nome` | responsável (`@"Nome Composto"` com aspas) | fica **sem responsável** |
 | `!dd/mm/aaaa` | prazo | fica **sem prazo** |
 | `#projeto` / `#aculturamento` | tipo | Projeto de IA |

@@ -37,7 +37,7 @@
 - Registrado `.adapta/checks/check-fase-2.md` APROVADO COM RESSALVAS em 21/09, com digest ativo do estado encerrado e ressalvas com dono e prazo.
 - Mapeadas as evoluções do fechamento da F2 em `.adapta/evolucoes/delta-fase-3.md`: EV-F2-01 (vínculo triagem→agendamento) promovida a bloqueio B3-03 da Fase 3; LGPD, capacidade do sábado e CA-2.03 adiadas com dono e prazo; aprendizados técnicos registrados como notas de construção.
 - Geradas as SPECs da Fase 3 em modo onda: SPEC-3-001 (consolidação somente leitura dos eventos das fases 1 e 2 em funil com numerador/denominador/período e cobertura) e SPEC-3-002 (dashboard por formulário, versão e campanha com baseline congelado e matriz de acesso). Ambas bloqueadas por B3-01..B3-05 (taxonomia, fórmula/janela, vínculo, matriz de acesso, baseline).
-- Atualizados o índice da Fase 3, as tasks gerais da Fase 3, a matriz de rastreabilidade, a Jornada `fase_3.md` (4 tasks de decisão/fechamento com UUIDs preservados) e o `STATUS.md`; fase atual passa a ser Fase 3.
+- Atualizados o índice da Fase 3, as tasks gerais da Fase 3, a matriz de rastreabilidade, a Jornada `fase_3.md` (4 tasks de decisão/fechamento com UUIDs preservados) e o `STATUS.md`; fase atual passa a ser Fase 3. Nenhuma task de implementação foi gerada; `gerar-tasks` aguarda aprovação das SPECs.
 
 ## 2026-09-23
 
@@ -62,7 +62,7 @@
 
 ## 2026-10-01
 
-- 2026-10-01 · Navaar (consultor) · LIBERAÇÃO DA FASE 4: consultor aprovou as três SPECs da Fase 4 ("libero todas as specs, pode executar") e autorizou a promoção F3→F4 neste repositório ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Fase 3 arquivada em `05_entregas/fase-3/` (README, Jornada e as duas SPECs aceitas sem ressalva); SPECs F3 removidas da unidade ativa (histórico Git preserva). Unidade ativa promovida para a Fase 4: Jornada `04_fase-atual/fase.md` com 8 tasks + 1 subtarefa (5 UUIDs preservados: `7953f975`, `c86d168b`, `31dae29a`, `12bf95df`, `c5ccd038`), `00-Tasks_Gerais.md`, `specs/00-INDICE.md` e SPEC-4-001/002/003. Insumos do Champion (B4-01..B4-05, matriz do painel de saúde e alvo do loop) embutidos nos cards para registro em `03_documentos/decisoes-fase-4.md`. Nenhuma implementação, credencial, conector, escrita externa ou publicação de produção foi iniciada. Produção não publicada.
+- 2026-10-01 · Navaar (consultor) · LIBERAÇÃO DA FASE 4: consultor aprovou as três SPECs da Fase 4 ("libero todas as specs, pode executar") e autorizou a promoção F3→F4 neste repositório ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Fase 3 arquivada em `05_entregas/fase-3/` (README, Jornada e as duas SPECs aceitas sem ressalva); SPECs F3 removidas da unidade ativa (histórico Git preserva). Unidade ativa promovida para a Fase 4: Jornada `04_fase-atual/fase.md` com 8 tasks + 1 subtarefa (5 UUIDs preservados: `7953f975`, `c86d168b`, `31dae29a`, `12bf95df`, `c5ccd038`; 3 tasks novas aguardam UUID do sincronizador), `00-Tasks_Gerais.md`, `specs/00-INDICE.md` e SPEC-4-001/002/003. Insumos do Champion (B4-01..B4-05, matriz do painel de saúde e alvo do loop) embutidos nos cards para registro em `03_documentos/decisoes-fase-4.md`. Nenhuma implementação, credencial, conector, escrita externa ou publicação de produção foi iniciada. Produção não publicada.
 
 ## 2026-10-02
 
