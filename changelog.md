@@ -28,14 +28,14 @@
 - Registrada conclusão da Fase 1: F1-T001 a F1-T006 resolvidas com evidências humanas; gate da Fase 1 encerrado.
 - Geradas as SPECs da Fase 2: agenda de disponibilidade e reserva (SPEC-2-001) e visão operacional de tentativas (SPEC-2-002). Ambas marcadas como bloqueadas até resolução das tasks de desbloqueio.
 - O painel serial confirmou que grade de disponibilidade, duração, capacidade, responsável da agenda, campos mínimos de agendamento, papéis, permissões, regra de encaminhamento e critério de escalada não constam nas fontes. As duas SPECs foram marcadas como bloqueadas para evitar decisões ou configurações inventadas.
-- Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação externa.
+- Autorizada a primeira leva de tasks de desbloqueio da Fase 2: F2-T001 a F2-T005 registram, separadamente, grade/duração/capacidade, responsável pela agenda, campos mínimos, papéis/permissões/regra de encaminhamento e critério de escalada. Todas permanecem bloqueadas até decisão humana, sem criar slots, agenda, contas, conectores ou publicação.
 - Atualizados o índice da Fase 2 (`00-INDICE.md`), as tasks gerais da Fase 2 (`00-Tasks_Gerais.md`) e o `STATUS.md`; fase atual passa a ser Fase 2.
 
 ## 2026-09-21
 
-- Registrado o encerramento da Fase 2: F2-T001..T005 (documentais, 16/09) e F2-IMP-001..009 (implementação, 17–21/09) concluídas com testes humanos; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09); implementação 9/9 no ambiente de teste, sem publicação em produção.
-- Registrado `.adapta/checks/check-fase-2.md` APROVADO COM RESSALVAS em 21/09, com digest ativo do estado encerrado e ressalvas com dono e prazo.
-- Mapeadas as evoluções do fechamento da F2 em `.adapta/evolucoes/delta-fase-3.md`: EV-F2-01 (vínculo triagem→agendamento) promovida a bloqueio B3-03 da Fase 3; LGPD, capacidade do sábado e CA-2.03 adiadas com dono e prazo; aprendizados técnicos registrados como notas de construção.
+- Registrado o encerramento da Fase 2: F2-T001..T005 (documentais, 16/09) e F2-IMP-001..009 (implementação, 17–21/09) concluídas com testes humanos; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09) pelo Champion via consultor Ricardo Junior; implementação 9/9 no ambiente de teste, sem publicação em produção.
+- Registrado `.adapta/checks/check-fase-2.md` APROVADO COM RESSALVAS com o digest ativo do estado encerrado (active-sha256=9baf0925…, repo HEAD 1287e3d) e ressalvas com dono e prazo (LGPD, capacidade do sábado, vínculo triagem→agendamento, fortalecimento server-side do CA-2.03).
+- Mapeadas e decididas as evoluções do fechamento da F2 em `.adapta/evolucoes/delta-fase-3.md`: EV-F2-01 (vínculo triagem→agendamento) promovida a bloqueio B3-03 da Fase 3; LGPD, capacidade do sábado e CA-2.03 adiadas com dono e prazo; aprendizados técnicos registrados como notas de construção.
 - Geradas as SPECs da Fase 3 em modo onda: SPEC-3-001 (consolidação somente leitura dos eventos das fases 1 e 2 em funil com numerador/denominador/período e cobertura) e SPEC-3-002 (dashboard por formulário, versão e campanha com baseline congelado e matriz de acesso). Ambas bloqueadas por B3-01..B3-05 (taxonomia, fórmula/janela, vínculo, matriz de acesso, baseline).
 - Atualizados o índice da Fase 3, as tasks gerais da Fase 3, a matriz de rastreabilidade, a Jornada `fase_3.md` (4 tasks de decisão/fechamento com UUIDs preservados) e o `STATUS.md`; fase atual passa a ser Fase 3. Nenhuma task de implementação foi gerada; `gerar-tasks` aguarda aprovação das SPECs.
 
@@ -43,7 +43,7 @@
 
 - Registrada autorização do consultor para liberação da Fase 3 das SPECs da Fellice Fitness.
 - Publicadas SPEC-3-001 e SPEC-3-002 no repositório operacional do cliente (`Cliente — Academia Fellice Fitness/04_fase-atual/specs/`).
-- Autorizada a primeira leva de tarefas de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
+- Autorizada a primeira leva de tasks de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
 - Atualizados o índice da Fase 3 (`00-INDICE.md`), as tarefas gerais da Fase 3 (`00-Tasks_Gerais.md`), a matriz de rastreabilidade e o `STATUS.md` no Plano; resolvidos arquivos duplicados de conflito.
 - Repositório do cliente atualizado com handoff-manifest v1 (Fase 3), `fase.md`, `STATUS.md` e `README.md`.
 
