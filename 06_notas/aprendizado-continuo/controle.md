@@ -6,7 +6,7 @@
 - 2026-09-16T12:04:00-03:00 · task F2-T002 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T12:14:00-03:00 · task F2-T003 · sem sinal reutilizável · task documental executada sem falha técnica; decisão registrada na primeira passada
 - 2026-09-16T14:16:00-03:00 · task F2-T004 · sem sinal reutilizável · decisão documental executada sem falha técnica; decisão registrada na primeira passada
-- 2026-09-16T14:28:00-03:00 · task F2-T005 · sem sinal reutilizável · decisão documental executada sem falha técnica; decisão registrada na primeira passada
+- 2026-09-16T14:28:00-03:00 · task F2-T005 · sem sinal reutilizável · decisão documental executada na primeira passada
 - 2026-09-17T15:27:00-03:00 · task F2-IMP-001 · capturado · `AP-2026-09-17-1527-jsvm-set-e-slot-opcional.md`
 - 2026-09-17T15:51:00-03:00 · task F2-IMP-002 · sem sinal reutilizável · geração da grade e ciclo de vida passaram na primeira execução após validação local prévia da lógica (réplica do gerador testada antes do apply); padrão do AP-2026-09-17-1527 aplicado preventivamente
 - 2026-09-17T16:08:00-03:00 · task F2-IMP-003 · capturado · `AP-2026-09-17-1608-changelog-truncado.md`
@@ -29,3 +29,4 @@
 
 - 2026-09-30T16:39:00-03:00 · task `124f370f-ea01-46d4-bdac-72c1cded2181` (debug) · candidato; reteste autenticado pendente · `AP-2026-09-30-1639-dashboard-rbac-json.md`
 - 2026-09-30T17:19:43-03:00 · task `124f370f-ea01-46d4-bdac-72c1cded2181` (fechamento após teste humano) · aprendizado `AP-2026-09-30-1639-dashboard-rbac-json.md` confirmado após reteste autenticado 200.
+- 2026-10-02T11:10:12-03:00 · task `7953f975` (debug) · sem sinal reutilizável · regra de preservação de arquivo cumulativo já registrada em `AP-2026-09-17-1608-changelog-truncado.md`; nenhum aprendizado adicional.
