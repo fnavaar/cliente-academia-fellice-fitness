@@ -43,7 +43,7 @@
 
 - Registrada autorização do consultor para liberação da Fase 3 das SPECs da Fellice Fitness.
 - Publicadas SPEC-3-001 e SPEC-3-002 no repositório operacional do cliente (`Cliente — Academia Fellice Fitness/04_fase-atual/specs/`).
-- Autorizada a primeira leva de tasks de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
+- Autorizada a primeira leva de tarefas de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
 - Atualizados o índice da Fase 3 (`00-INDICE.md`), as tarefas gerais da Fase 3 (`00-Tasks_Gerais.md`), a matriz de rastreabilidade e o `STATUS.md` no Plano; resolvidos arquivos duplicados de conflito.
 - Repositório do cliente atualizado com handoff-manifest v1 (Fase 3), `fase.md`, `STATUS.md` e `README.md`.
 
