@@ -3,10 +3,10 @@
 ## Estado atual
 
 - **Fase atual:** Fase 4 — integração direta (Kommo/Lóvavel) e loop de saúde da conversão. Promovida em 01/10/2026 após aprovação das SPECs pelo consultor ("libero todas as specs, pode executar") e autorização do push ("Confirmo o push: promova a Fase 4 no repositório da Fellice"). Unidade ativa: SPEC-4-001..003 + Jornada com 8 tasks + 1 subtarefa.
-- **Progresso da Fase 4:** 0/8 tasks concluídas. Primeira elegível: "Definir contrato, acesso e fallback da integração" (`7953f975`), com as decisões B4-01/02/05 embutidas.
+- **Progresso da Fase 4:** 0/8 tasks concluídas. Task ativa: "Definir contrato, acesso e fallback da integração" (`7953f975`), em andamento. Primeira entrega documental registrada em `03_documentos/decisoes-fase-4.md`; B4-01/02/05 continuam pendentes de confirmação verificável do Champion/Comercial.
 - **Gate anterior:** Fase 3 encerrada em 2026-09-30 — 9/9 tasks; SPEC-3-001 e SPEC-3-002 ACEITAS SEM RESSALVA pelo consultor Navaar (28/09 e 30/09); `check-fase-3.md` APROVADO COM RESSALVAS com active-sha256=7bbfdac4e985eac699880e3539ab59e529db3636fc77c8eec4af10377652ede3 (repo HEAD `b1c045a`); Fase 3 arquivada em `05_entregas/fase-3/`.
 - **Gate anterior:** Fase 2 encerrada em 2026-09-21 — 14/14 tasks; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09); `check-fase-2.md` APROVADO COM RESSALVAS em 21/09.
-- **Gate atual:** transição F3→F4 publicada neste repositório. Nenhuma credencial, conector, escrita externa ou publicação de produção autorizada. Bloqueios B4-01..B4-05 são insumos do Champion (Karol e Márcio) embutidos nas tasks, com registro em `03_documentos/decisoes-fase-4.md`. Produção não publicada.
+- **Gate atual:** transição F3→F4 publicada neste repositório. Nenhuma credencial, conector, escrita externa ou publicação de produção autorizada. B4-01/02/05 permanecem pendentes e constam no rascunho `03_documentos/decisoes-fase-4.md`; o rascunho não libera integração. Produção não publicada.
 
 ## Decisões concluídas
 
@@ -20,4 +20,4 @@
 
 ## Próxima ação
 
-Executar a task `7953f975` ("Definir contrato, acesso e fallback da integração") uma por vez, com as decisões B4-01/02/05 respondidas pelo Champion dentro da própria task; teste humano entre tasks; nenhuma escrita externa antes de B4-01/02/05 liberados. Revisão do consultor (`c5ccd038`) ao fim da fase.
+Obter, dentro da task `7953f975`, as decisões verificáveis do Champion/Comercial para B4-01, B4-02 e B4-05 e completar `03_documentos/decisoes-fase-4.md`; revisar o registro humano antes de fechar a task. Até lá, não ativar credenciais/conector nem realizar escrita externa. Não iniciar outra task.

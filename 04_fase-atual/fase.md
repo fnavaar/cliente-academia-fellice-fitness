@@ -14,7 +14,7 @@ campo não estiver aqui, ele não tem como ser preenchido, porque é este arquiv
 
 | marcador | o que define | se você não escrever |
 |---|---|---|
-| `- [ ]` / `- [/]` / `- [x]` | a fazer / em andamento / concluída | a fazer |
+| `- [ ]` / `- [/]` / `- [x]` | a fazer / em andamento / concluída | fica a fazer |
 | `@nome` | responsável (`@"Nome Composto"` com aspas) | fica **sem responsável** |
 | `!dd/mm/aaaa` | prazo | fica **sem prazo** |
 | `#projeto` / `#aculturamento` | tipo | Projeto de IA |
@@ -29,7 +29,7 @@ Marque `[x]` para concluir e adicione linhas novas à vontade: elas entram no qu
 sincronização e voltam aqui com o `<!-- id:… -->` preenchido. **Não apague o marcador de id** das
 tarefas que já têm um.
 
-- [ ] Definir contrato, acesso e fallback da integração @Cliente !07/10/2026 #aculturamento [interno]  <!-- id:7953f975-0f69-42a0-a9a1-b028429550cb -->
+- [/] Definir contrato, acesso e fallback da integração @Cliente !07/10/2026 #aculturamento [interno]  <!-- id:7953f975-0f69-42a0-a9a1-b028429550cb -->
   > SPEC-4-001 — bloqueios B4-01, B4-02 e B4-05 (seções "BLOQUEIOS executáveis" e "Limites, dados e permissões"). Insumos do Champion embutidos nesta task, para registrar em `03_documentos/decisoes-fase-4.md` com data e confirmação verificável: (1) B4-01 — qual base legal/consentimento e autorização de escrita externa para dados de lead? (2) B4-02 — qual ferramenta será integrada (Kommo, Lóvavel ou ambas) e quais credenciais/permissões existem para a call de setup? (3) B4-05 — tabela de campos origem→destino, identificador externo e regra de conflito (proposta: dado conflitante nunca é sobrescrito sem regra aprovada). Leva 1. Pré-condição: SPECs da Fase 4 aprovadas. Ponto de parada: nenhuma credencial é ativada e nenhuma escrita externa acontece antes de B4-01/02/05 liberados. Estado final: decisões registradas; encerrar somente após registro humano verificável.
 - [ ] Configurar a integração em ambiente autorizado @Cliente !08/10/2026 [interno]  <!-- id:c86d168b-96c9-48ca-9eee-44e73a4ac648 -->
   > SPEC-4-001 — critérios CA-4-001..005 (seções "Fluxo de execução" e "Critérios de aceite"): campos, identificador externo, permissões, tratamento de erro e rollback documentados; evento repetido não cria duplicidade no destino; falha de escrita mantém a origem, entra em reconciliação com dono e nunca vira sucesso; dado conflitante não é sobrescrito sem regra aprovada; rollback suspende a escrita externa preservando a captura local. Recorte da prova: fixtures sintéticos (2 eventos iguais, 1 conflito, 1 falha de escrita) + prova negativa de permissão. Evidência esperada: contrato de campos aprovado, logs sanitizados, estado da fila, provas negativas e aceite humano. Leva 2. Pré-condição: B4-01, B4-02 e B4-05 liberados na task de contrato/acesso. Ponto de parada: nada roda contra ferramenta real fora de conta de teste autorizada. Estado final: integração demonstrada em ambiente autorizado; encerrar somente após registro humano verificável.
