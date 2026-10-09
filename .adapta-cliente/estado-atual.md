@@ -5,9 +5,9 @@
 - spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: pendente — Ricardo revisou e aprovou o registro parcial em 2026-10-09, 11:59 (America/Bahia); essa aprovação cobre apenas a revisão documental, não libera B4-01/02/05 nem substitui as confirmações e provas finais
-- verificacao_automatica: passou parcialmente — aprovação parcial registrada em `03_documentos/decisoes-fase-4.md`, `STATUS.md` e `changelog.md`; os quatro arquivos persistidos foram relidos remotamente após o commit; GitHub Advanced Security indisponível porque o recurso não está habilitado no repositório
+- teste_humano: pendente — Ricardo revisou a versão parcial anterior em 2026-10-09, 11:59 (America/Bahia); as respostas novas recebidas às 15:50 foram registradas como insumos parciais e ainda requerem revisão documental; nenhuma delas libera B4-01/02/05
+- verificacao_automatica: passou parcialmente — respostas registradas em `03_documentos/decisoes-fase-4.md`, `STATUS.md` e `changelog.md`; confirmar leitura remota dos quatro arquivos após o commit; GitHub Advanced Security indisponível porque o recurso não está habilitado; nenhuma conta real acessada ou teste de conector executado
 - aprendizado: sem_sinal: regra de preservação de documentos cumulativos já documentada em AP-2026-09-17-1608
-- ultima_acao: Ricardo aprovou a revisão do registro parcial em 09/10/2026 às 11:59; a aprovação foi registrada sem alterar o estado dos gates B4 e sem ativar credencial, conector ou escrita externa
-- proxima_acao: coletar e registrar as validações e verificações pendentes de B4-01, B4-02 e B4-05, com responsáveis e confirmação verificável
-- atualizado_em: 2026-10-09T11:59:00-03:00
+- ultima_acao: recebidas respostas de Ricardo em 2026-10-09 às 15:50; registradas como parciais: B4-01 segue pendente, contas Kommo/Lovable informadas como não sendo de teste, permissões e prova pendentes, destino Lovable/Skip ambíguo e regra de unificação sem aprovação verificável identificada; nenhum acesso ou escrita externa
+- proxima_acao: obter validação do consultor/Champion/Comercial sobre a DÚVIDA de escopo do destino e sobre a regra de unificação; manter os gates pendentes até evidência verificável
+- atualizado_em: 2026-10-09T15:50:00-03:00
