@@ -70,3 +70,7 @@
 - Criado `03_documentos/decisoes-fase-4.md` como rascunho da task: inclui os espaços de decisão B4-01 (base legal, minimização e autorização de escrita), B4-02 (ferramenta, escopos e conta de teste) e B4-05 (mapeamento, identificador externo e conflitos), além das salvaguardas de falha, reconciliação, rollback e tratamento de segredos da SPEC-4-001. As decisões e confirmações verificáveis do Champion/Comercial permanecem pendentes; nenhum valor foi inferido.
 - Registrada a situação no `STATUS.md` e na Jornada da Fase 4: 0/8 tasks concluídas, `7953f975` em andamento. Nenhuma credencial, conector, escrita externa ou publicação foi ativada; task aguarda respostas/validação humana para completar seu critério documental.
 - 2026-10-02 · Ricardo Junior · DEBUG task `7953f975`: regravação de documentos cumulativos alterou texto histórico; changelog reconstruído diretamente do blob-base verificado. Diff revisado; nenhuma entrada histórica foi alterada.
+
+## 2026-10-09
+
+- Ricardo forneceu insumos parciais para B4-01/02/05 na task `7953f975`; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. A base legal, ferramenta secundária, disponibilidade/permissões e prova da conta de teste, mapeamento final, identificador externo e aprovações verificáveis permanecem pendentes; nenhuma credencial, conector ou escrita externa foi ativada.
