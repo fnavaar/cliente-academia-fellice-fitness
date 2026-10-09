@@ -3,11 +3,11 @@
 - task_id: 7953f975-0f69-42a0-a9a1-b028429550cb
 - champion: Karol e Márcio
 - spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
-- etapa: aguardando_teste_humano
+- etapa: implementando
 - autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: correção do changelog aprovada por Ricardo em 2026-10-02 14:33 (America/Bahia): “Revisei: correção certa”; decisões verificáveis do Champion/Comercial para B4-01/02/05 continuam pendentes
-- verificacao_automatica: passou — changelog remoto corresponde ao blob-base seguido somente pelos registros de 02/10; controle de aprendizado preserva o blob-base com uma nova linha de debug; estrutura e salvaguardas do documento de decisões conferidas
+- teste_humano: pendente — a revisão de 2026-10-02 aprovou apenas a correção do changelog; revisão do documento de decisões atualizado e confirmações verificáveis do Champion/Comercial ainda pendentes
+- verificacao_automatica: pendente — registrar insumos recebidos de Ricardo em 2026-10-09 no documento B4, preservando pendências e atribuição; validar o resultado remoto após edição
 - aprendizado: sem_sinal: regra de preservação de documentos cumulativos já documentada em AP-2026-09-17-1608
-- ultima_acao: registrada aprovação humana da correção do changelog; B4-01/02/05 seguem pendentes, sem conector/credencial ativados nem escrita externa
-- proxima_acao: coletar, dentro desta task, as respostas verificáveis do Champion/Comercial para B4-01/02/05; não concluir até registrá-las e obter a revisão humana do documento atualizado
-- atualizado_em: 2026-10-02T14:34:21-03:00
+- ultima_acao: recebidas respostas de Ricardo (2026-10-09): base legal B4-01 segue pendente; B4-02 declara Kommo e “lovable” (segundo nome a esclarecer) e prevê ambiente de teste; B4-05 apresenta salvaguarda de conflito e telefone como candidato ainda sujeito a validação
+- proxima_acao: registrar no rascunho as informações como relato de Ricardo, sem atribuir citação direta a Karol nem liberar B4-01/02/05; preservar pendências de produto, permissões, prova e aprovações
+- atualizado_em: 2026-10-09T10:49:00-03:00
