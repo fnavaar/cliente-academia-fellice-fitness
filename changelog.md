@@ -33,7 +33,7 @@
 
 ## 2026-09-21
 
-- Registrado o encerramento da Fase 2: F2-T001..T005 (documentais, 16/09) e F2-IMP-001..009 (implementação, 17–21/09) concluídas com testes humanos; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09) pelo Champion via consultor Ricardo Junior; implementação 9/9 no ambiente de teste, sem publicação em produção.
+- Registrado o encerramento da Fase 2: F2-T001..T005 (documentais, 16/09) e F2-IMP-001..009 (implementação, 17–21/09) concluídas com testes humanos; SPEC-2-001 ACEITA (17/09) e SPEC-2-002 ACEITA (21/09); implementação 9/9 no ambiente de teste, sem publicação em produção.
 - Registrado `.adapta/checks/check-fase-2.md` APROVADO COM RESSALVAS com o digest ativo do estado encerrado (active-sha256=9baf0925…, repo HEAD 1287e3d) e ressalvas com dono e prazo (LGPD, capacidade do sábado, vínculo triagem→agendamento, fortalecimento server-side do CA-2.03).
 - Mapeadas e decididas as evoluções do fechamento da F2 em `.adapta/evolucoes/delta-fase-3.md`: EV-F2-01 (vínculo triagem→agendamento) promovida a bloqueio B3-03 da Fase 3; LGPD, capacidade do sábado e CA-2.03 adiadas com dono e prazo; aprendizados técnicos registrados como notas de construção.
 - Geradas as SPECs da Fase 3 em modo onda: SPEC-3-001 (consolidação somente leitura dos eventos das fases 1 e 2 em funil com numerador/denominador/período e cobertura) e SPEC-3-002 (dashboard por formulário, versão e campanha com baseline congelado e matriz de acesso). Ambas bloqueadas por B3-01..B3-05 (taxonomia, fórmula/janela, vínculo, matriz de acesso, baseline).
@@ -74,3 +74,4 @@
 ## 2026-10-09
 
 - Ricardo forneceu insumos parciais para B4-01/02/05 na task `7953f975`; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. A base legal, ferramenta secundária, disponibilidade/permissões e prova da conta de teste, mapeamento final, identificador externo e aprovações verificáveis permanecem pendentes; nenhuma credencial, conector ou escrita externa foi ativada.
+- Ricardo Junior revisou e aprovou o registro parcial de B4-01/02/05; a aprovação se restringe à revisão documental e não altera os gates pendentes nem autoriza credenciais, conector ou escrita externa.

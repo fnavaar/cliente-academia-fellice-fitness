@@ -1,11 +1,13 @@
 # Decisões da Fase 4 — Integração direta e saúde da conversão
 
-**Estado deste registro:** coleta parcial atualizada em 09/10/2026. B4-01, B4-02 e B4-05 ainda não liberam integração: a base legal não foi validada; ferramenta/conta/permissões/prova técnica requerem confirmação; e o mapeamento completo e suas aprovações não foram apresentados.
+**Estado deste registro:** coleta parcial atualizada em 09/10/2026. B4-01, B4-02 e B4-05 ainda não liberam integração: a base legal não foi validada; ferramenta/conta/permissões/prova técnica requerem confirmação; e o mapeamento completo e suas aprovações não foram apresentados. Ricardo aprovou a revisão documental do registro parcial em 09/10/2026 às 11:59 (America/Bahia), sem liberar esses gates.
 **Criado em:** 02/10/2026.  
 **Atualizado em:** 09/10/2026.  
 **Referência:** SPEC-4-001 e task `7953f975-0f69-42a0-a9a1-b028429550cb`.
 
 Este documento reúne as perguntas da task e as respostas recebidas, sem preencher lacunas por inferência. As informações de 09/10 abaixo foram fornecidas por Ricardo via chat; quando Ricardo atribui autorização a Karol, isso é registrado como relato de Ricardo, sem transformar a atribuição em citação direta da Karol. Campo vazio, proposta ou relato não equivale a aprovação verificável do Champion/Comercial nem libera integração. Não incluir senhas, tokens, chaves, credenciais ou dados reais de leads neste arquivo, no repositório ou no chat; segredos devem ser tratados somente pelo mecanismo autorizado, após aprovação aplicável.
+
+Em 09/10/2026 às 11:59 (America/Bahia), Ricardo declarou: “ok, então tudo revisado e aprovo o registro parcial”. Essa aprovação se limita à revisão documental do estado parcial descrito aqui; não confirma os valores pendentes nem libera B4-01, B4-02 ou B4-05.
 
 **Limite até liberação:** nenhuma credencial é ativada e nenhuma escrita externa é realizada com base neste rascunho. A integração também depende das pré-condições e provas técnicas definidas na SPEC-4-001; produção exige autorização própria.
 
@@ -61,5 +63,6 @@ Estas salvaguardas são requisitos documentais da SPEC; não são evidência de 
 
 - 02/10/2026 — o rascunho foi criado sem respostas do Champion/Comercial.
 - 09/10/2026 — Ricardo forneceu insumos parciais para B4-01, B4-02 e B4-05. A base legal, esclarecimento sobre “lovable”, disponibilidade/permissões da conta de teste, prova técnica, campos finais de destino, identificador externo e aprovações verificáveis permanecem pendentes. A atribuição “autorizado por Karol” foi registrada como relato de Ricardo, sem inventar fala direta de Karol. Nenhuma credencial, conector ou escrita externa foi ativada.
+- 09/10/2026, 11:59 (America/Bahia) — Ricardo declarou “ok, então tudo revisado e aprovo o registro parcial”. A aprovação se restringe à revisão documental; não altera o estado PENDENTE dos gates B4-01/02/05 e não autoriza credenciais, conector ou escrita externa.
 
 Atualizar as decisões finais somente após validação/confirmacão verificável dos responsáveis, sem preencher lacunas por inferência.

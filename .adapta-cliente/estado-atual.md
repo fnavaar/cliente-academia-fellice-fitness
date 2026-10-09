@@ -5,9 +5,9 @@
 - spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
 - etapa: aguardando_teste_humano
 - autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: pendente — revisão humana solicitada do registro parcial em 03_documentos/decisoes-fase-4.md; a revisão de 2026-10-02 aprovou apenas a correção do changelog. B4-01/02/05 não liberados
-- verificacao_automatica: passou parcialmente — documento B4, STATUS e changelog confirmados remotamente; changelog recebeu apenas nova seção 2026-10-09, com histórico prévio preservado como prefixo; varredura GitHub Advanced Security indisponível porque o recurso não está habilitado no repositório
+- teste_humano: pendente — Ricardo revisou e aprovou o registro parcial em 2026-10-09, 11:59 (America/Bahia); essa aprovação cobre apenas a revisão documental, não libera B4-01/02/05 nem substitui as confirmações e provas finais
+- verificacao_automatica: passou parcialmente — aprovação parcial registrada em `03_documentos/decisoes-fase-4.md`, `STATUS.md` e `changelog.md`; confirmar leitura remota dos quatro arquivos após o commit; GitHub Advanced Security indisponível porque o recurso não está habilitado no repositório
 - aprendizado: sem_sinal: regra de preservação de documentos cumulativos já documentada em AP-2026-09-17-1608
-- ultima_acao: registrado o insumo parcial de Ricardo de 09/10 em B4-01/02/05, STATUS e changelog; preservadas base legal, ferramenta ambígua, permissões/prova técnica, mapeamento final e aprovações como pendentes; nenhuma credencial, conector ou escrita externa ativada
-- proxima_acao: Ricardo revisar o registro atualizado; depois, coletar as confirmações/verificações ainda pendentes dos responsáveis antes de concluir esta task
-- atualizado_em: 2026-10-09T10:49:00-03:00
+- ultima_acao: Ricardo aprovou a revisão do registro parcial em 09/10/2026 às 11:59; a aprovação foi registrada sem alterar o estado dos gates B4 e sem ativar credencial, conector ou escrita externa
+- proxima_acao: coletar e registrar as validações e verificações pendentes de B4-01, B4-02 e B4-05, com responsáveis e confirmação verificável
+- atualizado_em: 2026-10-09T11:59:00-03:00
