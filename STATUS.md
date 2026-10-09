@@ -3,10 +3,10 @@
 ## Estado atual
 
 - **Fase atual:** Fase 4 — integração direta e loop de saúde da conversão. Promovida em 01/10/2026 após aprovação das SPECs pelo consultor e autorização da promoção da fase. Unidade ativa: SPEC-4-001..003 + Jornada com 8 tasks + 1 subtarefa.
-- **Progresso da Fase 4:** 0/8 tasks concluídas. A task `7953f975` (“Definir contrato, acesso e fallback da integração”) permanece ativa, porém **bloqueada por DÚVIDA material de escopo**. Ricardo aprovou às 16:07 de 09/10/2026 somente o registro parcial das respostas; B4-01/02/05 seguem sem liberação.
+- **Progresso da Fase 4:** 0/8 tasks concluídas. A task `7953f975` (“Definir contrato, acesso e fallback da integração”) permanece ativa e **bloqueada**; Ricardo forneceu nova atribuição de escopo às 16:24 de 09/10, mas os gates B4-01/02/05 seguem pendentes.
 - **Gate anterior:** Fase 3 encerrada em 2026-09-30 — 9/9 tasks; SPEC-3-001 e SPEC-3-002 aceitas sem ressalva pelo consultor; Fase 3 arquivada em `05_entregas/fase-3/`.
-- **Gate atual:** B4-01 segue pendente (base legal e escopo de escrita marcados como PENDENTE). B4-02 segue pendente: Ricardo informou preferência por Kommo + Lovable e contas existentes que não são de teste; permissões e prova técnica seguem pendentes. Não acessar essas contas nem realizar leitura/escrita: a SPEC exige prova em conta de teste sem massa real. B4-05 segue pendente: destino Lovable ou plataforma Skip não foi decidido, identificador externo não está definido e a regra relatada de unificar histórico por nome completo + telefone não tem identificação/evidência verificável dos aprovadores nem semântica segura/auditável/reversível definida.
-- **DÚVIDA bloqueante:** a SPEC-4-001 prevê Kommo e/ou Lóvavel, enquanto as respostas citam Lovable e também a plataforma Skip como possíveis destinos. Não presumir equivalência entre Lovable e Lóvavel, nem ampliar ou alterar a SPEC. Confirmar destino/escopo com consultor/Champion antes de avançar. Produção não publicada.
+- **Gate atual:** B4-01 continua pendente: base legal e escopo de escrita não informados. B4-02 continua pendente: Ricardo indicou Kommo + plataforma Skip e atribuiu a decisão a Karol (Champion), em 09/10; isso é relato de Ricardo, sem mensagem original. A conta Kommo foi anteriormente informada como não sendo de teste; permissões e prova em ambiente autorizado não foram validadas. Não acessar contas não-testes. B4-05 continua pendente: falta mapear direção/campos/identificador externo; a aprovação da regra de unificar histórico por nome completo + telefone foi atribuída por Ricardo a Karol, mas sem evidência direta ou aprovação verificável do Comercial, e sem definição de escopo, auditoria, proveniência e rollback.
+- **Dúvida residual de execução:** o par mais recente é Kommo + plataforma Skip conforme relato de Ricardo; a direção da integração (Skip→Kommo, Kommo→Skip ou outra), o papel de cada sistema e se Lovable foi descartado ainda não estão documentados por fonte direta. Não presumir a direção nem alterar a SPEC. Produção não publicada.
 
 ## Decisões concluídas
 
@@ -20,4 +20,4 @@
 
 ## Próxima ação
 
-Obter do consultor/Champion esclarecimento verificável sobre o sistema-alvo (Lovable, Lóvavel ou plataforma Skip) e a regra de unificação; em seguida, completar as validações pendentes de B4-01/02/05. Até lá, manter a task bloqueada e não acessar contas que não são de teste nem realizar escrita externa.
+Obter confirmação verificável da Champion/Comercial sobre o par e a direção Kommo↔Skip, além da regra de unificação (escopo, auditoria, proveniência e rollback); completar também B4-01 e os requisitos de conta/permissões/prova em ambiente de teste de B4-02. Até lá, manter a task bloqueada e não acessar contas que não sejam de teste nem realizar escrita externa.
