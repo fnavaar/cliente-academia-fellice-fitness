@@ -5,9 +5,9 @@
 - spec: 04_fase-atual/specs/spec-4-001-integracao-direta-ferramenta-comercial.md
 - etapa: bloqueada
 - autorizacao_implementacao: confirmada — 2026-10-02, 10:37 (America/Bahia); Ricardo Junior: “pode implementar”, após análise desta task entregue anteriormente
-- teste_humano: pendente — Ricardo aprovou somente o registro parcial anterior às 16:07; nova resposta às 16:24 indica Kommo + plataforma Skip e atribui decisões a Karol/Champion, mas esta atualização ainda não foi revisada; nenhum gate foi liberado
-- verificacao_automatica: passou parcialmente — atualização registrada em decisões, STATUS e changelog; prefixo do changelog preservado com apenas uma nova linha; conferência do commit `3dd44a6` passou; GitHub Advanced Security indisponível porque o recurso não está habilitado; nenhuma conta real acessada, nenhum teste ou escrita externa executada
+- teste_humano: pendente — 13/10/2026 16:25 (America/Bahia): Ricardo respondeu ao roteiro de confirmação B4 (direção Skip → Kommo; conflito: nada se sobrescreve com reconciliação humana; escopo da fusão e identificador externo ainda a definir; base legal indicada Consentimento; conta de teste segregada a criar); evidência apresentada “Karol - 13/10/2026” sem citação literal e sem hora — registrado como relato de Ricardo atribuído à Champion; nenhum gate liberado; revisão documental desta atualização ainda não realizada por Ricardo
+- verificacao_automatica: passou — commit único `9afc9b7` (decisões-fase-4, STATUS, changelog); diff conferido como aditivo (decisões 21+/17−, STATUS 4+/4−, changelog 5+/1−), prefixo histórico do changelog preservado; atualização do estado em commit separado
 - aprendizado: sem_sinal: regra de preservação de documentos cumulativos já documentada em AP-2026-09-17-1608
-- ultima_acao: recebido de Ricardo às 16:24 o par Kommo + plataforma Skip, com atribuição a Karol (Champion) para a decisão de destino e para a regra de unificação; registrado como relato, não como confirmação direta; atualização remota conferida; nenhuma conta acessada
-- proxima_acao: obter fonte verificável da decisão da Champion/Comercial, definir direção e mapeamento/identificador externo e esclarecer semântica auditável e reversível da unificação; manter B4-01/02/05 pendentes
-- atualizado_em: 2026-10-09T16:34:17-03:00
+- ultima_acao: recebidas e registradas as respostas do roteiro de confirmação B4 de 13/10 como relato de Ricardo atribuído a Karol (Champion); commit `9afc9b7` conferido; nenhuma conta acessada, nenhum teste ou escrita externa
+- proxima_acao: obter citação literal com data/hora da mensagem original da Champion (destino e direção Skip → Kommo) e do Comercial (regra de unificação B4-05), criar conta de teste segregada (B4-02) e validar a base legal Consentimento com o responsável LGPD (B4-01); revisão documental desta atualização por Ricardo
+- atualizado_em: 2026-10-13T16:28:00-03:00
