@@ -44,7 +44,7 @@
 - Registrada autorização do consultor para liberação da Fase 3 das SPECs da Fellice Fitness.
 - Publicadas SPEC-3-001 e SPEC-3-002 no repositório operacional do cliente (`Cliente — Academia Fellice Fitness/04_fase-atual/specs/`).
 - Autorizada a primeira leva de tarefas de desbloqueio da Fase 3: F3-T001 a F3-T005 registram taxonomia de origem/campanha, fórmula/janela da métrica norte, decisão de vínculo triagem-agendamento, matriz de acesso e critério de aprovação do baseline congelado. Todas permanecem bloqueadas até decisão humana, sem criar dashboard, agregações, banco ou publicação externa.
-- Atualizados o índice da Fase 3 (`00-INDICE.md`), as tarefas gerais da Fase 3 (`00-Tasks_Gerais.md`), a matriz de rastreabilidade e o `STATUS.md` no Plano; resolvidos arquivos duplicados de conflito.
+- Atualizados o índice da Fase 3 (`00-INDICE.md`), as tarefas gerais da Fase 3 (`00-Tasks_Gerais.md`), a matriz de rastreabilidade e o `STATUS.md` no Plano; resolvidos arquivos cumulativos de conflito.
 - Repositório do cliente atualizado com handoff-manifest v1 (Fase 3), `fase.md`, `STATUS.md` e `README.md`.
 
 ## 2026-09-24
@@ -67,7 +67,7 @@
 ## 2026-10-02
 
 - Ricardo Junior autorizou a implementação da task `7953f975` ("pode implementar") após análise e plano apresentados; estado persistente atualizado e task marcada em andamento.
-- Criado `03_documentos/decisoes-fase-4.md` como rascunho da task: inclui os espaços de decisão B4-01 (base legal, minimização e autorização de escrita), B4-02 (ferramenta, escopos e conta de teste) e B4-05 (mapeamento, identificador externo e conflitos), além das salvaguardas de falha, reconciliação, rollback e tratamento de segredos da SPEC-4-001. As decisões e confirmações verificáveis do Champion/Comercial permanecem pendentes; nenhum valor foi inferido.
+- Criado `03_documentos/decisoes-fase-4.md` como rascunho da task: inclui os espaços de decisão B4-01 (base legal, Consentimento), B4-02 (ferramenta, escopos e conta de teste) e B4-05 (mapeamento, identificador externo e conflitos), além das salvaguardas de falha, reconciliação, rollback e tratamento de segredos da SPEC-4-001. As decisões e confirmações verificáveis do Champion/Comercial permanecem pendentes; nenhum valor foi inferido.
 - Registrada a situação no `STATUS.md` e na Jornada da Fase 4: 0/8 tasks concluídas, `7953f975` em andamento. Nenhuma credencial, conector, escrita externa ou publicação foi ativada; task aguarda respostas/validação humana para completar seu critério documental.
 - 2026-10-02 · Ricardo Junior · DEBUG task `7953f975`: regravação de documentos cumulativos alterou texto histórico; changelog reconstruído diretamente do blob-base verificado. Diff revisado; nenhuma entrada histórica foi alterada.
 
@@ -83,7 +83,7 @@
 
 ## 2026-10-13
 
-- Ricardo respondeu ao roteiro de confirmação B4 da task `7953f975` às 16:25 (America/Bahia): direção relatada Skip → Kommo (lead nasce no Skip; Kommo espelha para o comercial); escopo do “todo o histórico” da fusão ainda a definir; prevalência em conflito: nada se sobrescreve, com conflito encaminhado a reconciliação humana; identificador externo ainda a definir, com nome completo + telefone restrito a critério de busca; base legal indicada: Consentimento (B4-01); conta de teste segregada ainda não disponível — criar antes da prova técnica (B4-02). Evidência apresentada ("Karol - 13/10/2026") não atende ao padrão exigido (citação literal com data/hora); itens registrados como relato de Ricardo atribuído à Champion, sem confirmação do Comercial. B4-01/02/05 seguem pendentes e a task permanece bloqueada; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. Nenhuma conta foi acessada nem houve teste ou escrita externa.
+- Ricardo respondeu ao roteiro de confirmação B4 da task `7953f975` às 16:25 (America/Bahia): direção relatada Skip → Kommo (lead nasce no Skip; Kommo espelha para o comercial); escopo do “todo o histórico” da fusão ainda a definir; prevalência em conflito: nada se sobrescreve, com conflito encaminhado a reconciliação humana; identificador externo ainda a definir, com nome completo + telefone restrito a critério de busca; base legal indicada: Consentimento (B4-01); conta de teste segregada ainda não disponível — criar antes da prova técnica (B4-02). Evidência apresentada (“Karol - 13/10/2026”) não atende ao padrão exigido (citação literal com data/hora); itens registrados como relato de Ricardo atribuído à Champion, sem confirmação do Comercial. B4-01/02/05 seguem pendentes e a task permanece bloqueada; atualizados `03_documentos/decisoes-fase-4.md` e `STATUS.md`. Nenhuma conta foi acessada nem houve teste ou escrita externa.
 
 ## 2026-10-16
 
