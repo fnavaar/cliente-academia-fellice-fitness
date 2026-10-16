@@ -31,3 +31,4 @@
 - 2026-09-30T17:19:43-03:00 · task `124f370f-ea01-46d4-bdac-72c1cded2181` (fechamento após teste humano) · aprendizado `AP-2026-09-30-1639-dashboard-rbac-json.md` confirmado após reteste autenticado 200.
 - 2026-10-02T11:10:12-03:00 · task `7953f975` (debug) · sem sinal reutilizável · regra de preservação de arquivo cumulativo já registrada em `AP-2026-09-17-1608-changelog-truncado.md`; nenhum aprendizado adicional.
 - 2026-10-16T17:05:00-03:00 · task `7953f975` (registro documental B4) · capturado · `AP-2026-10-16-1600-transcricao-mcp-corrompida.md`
+- 2026-10-16T17:35:00-03:00 · ciclo paralelo design system A+B (v0.0.89) · capturado · `AP-2026-10-16-1730-design-system-fundacao-ociosa.md`
